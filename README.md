@@ -5,7 +5,7 @@
 | 来源 | 条数 | 内容域 | 标注状态 | 文件 |
 |---|---|---|---|---|
 | Physion-Eval | 300 | 通用/受控物理（general & controlled physics） | 6fps+原生帧率逐帧复核确认 TP，分层抽选 | `data/physfixbench_physion300.{jsonl,csv}` |
-| RoboJudge（**test split only**） | TBD（目标 100+ 可修） | embodied 机器人/人手操作 | agent 6fps+native 逐帧**重新标注**，draft 待审 | `data/physfixbench_robojudge*.{jsonl,csv}` |
+| RoboJudge（**test split only**） | 115（400 条全量重审；TP=115 / CLEAN=285） | embodied 机器人/人手操作 | worker 6fps+native 逐帧**重新标注**，编排者逐条原生帧像素 QC，draft 待人工复核 | `data/physfixbench_robojudge115.{jsonl,csv}` |
 | PhyGround | 91 | 通用物理 | 协作者 juyil agent 标注，直接搬运转换，我方未逐帧复核 | `data/physfixbench_phyground.{jsonl,csv}` |
 | VideoPhy2 | 100 | 通用物理 | 协作者 juyil agent 标注，直接搬运转换，我方未逐帧复核 | `data/physfixbench_videophy2.{jsonl,csv}` |
 
@@ -23,9 +23,10 @@
 
 ### RoboJudge · test split（re-annotation draft）
 
-- 仅使用 RoboJudge **test split**（不使用 train）。从 800 条 test 池中抽选 150 条候选（RoboJudge physical-adherence 分布 PA1=9 / PA2=11 / PA3=45 / PA4=85），覆盖 Robotwin/Agibot/Droid/EpiKitchens 等 embodied corpora 与多个生成模型。
-- RoboJudge 原始 judge-model 标注质量低，**不直接搬运**：每条视频按统一协议从像素**重新独立标注**物理缺陷（6fps 全片 + 原生帧率接触/抓取时刻放大），输出中文问题描述、应然行为、证据帧与 confidence；无缺陷的条目不进入发布文件。
-- 这些结果是 agent draft，confidence 与 `needs_human_frame_step_confirmation` 字段保留供人工抽检。
+- 仅使用 RoboJudge **test split**（绝不使用 train conversations）。对 400 条 test 视频做全量逐帧重标注，覆盖 Robotwin / Agibot / Droid / EgoDex / EgoScaler / EpiKitchens / Open-X / GR1 等 8 个 embodied corpora 与 20 个生成模型变体（cogvideo / cosmos3 / wan22 / wan26 / gigaworld / wow-wan / abot-physworld / veo / kling / happyhorse 等）。
+- RoboJudge 原始 judge-model reasoning 质量低，**不直接搬运**：每条视频按统一协议从像素**重新独立标注**物理缺陷（6fps 全片抽帧 + 原生帧率在接触/抓取时刻放大），输出中文问题描述、应然行为、≥4 个证据原生帧与 confidence；编排者对每条 TP 草案再做一轮原生帧像素 QC，误报一律推翻为 CLEAN（如把夹爪正常接触阴影误判为悬空、把腕部衣夹状配件误判为复制方块、把真实入镜人手误判为机械臂熔接）。最终 400 条中确认可修物理缺陷 **115 条**（其余 285 条 CLEAN 不发布）。
+- 只标物理问题：语义/指令对齐、任务是否完成、相机/模糊/美学、转场一律排除；连续边缘的真实人手/手臂入镜（无材质熔接）记为 agent 语义、不计物理缺陷，但机械夹爪结构断裂/熔毁/多肢等结构性缺陷计入。
+- 115 条共 150 个问题实例（25 条多错误），类别：物体/场景一致性 93 · 智能体结构 26 · 接触/交互 19 · 力与运动 12；obviousness 以 4–5 为主（obvious 93 / subtle 22），confidence 中位 0.91，其中 17 条 `needs_human_frame_step_confirmation=true`（低分辨率/单帧歧义）建议人工逐帧复核。视频扁平命名为 `robojudge__<dir_name>.mp4`。这些结果是 agent draft（已过编排者像素 QC），confidence 与 needs_human 字段保留供人工抽检。
 
 ### PhyGround (91) / VideoPhy2 (100)
 
