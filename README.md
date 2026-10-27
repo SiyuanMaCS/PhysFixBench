@@ -10,7 +10,7 @@
 | VideoPhy2 | 100 | 通用物理 | 协作者 juyil agent 标注，直接搬运转换，我方未逐帧复核 | `data/physfixbench_videophy2.{jsonl,csv}` |
 
 视频（扁平文件命名，按来源前缀区分）托管在 Hugging Face dataset：
-[https://huggingface.co/datasets/HuggingFriends/PhysFixBench](https://huggingface.co/datasets/HuggingFriends/PhysFixBench)（私有；`videos/` + 同样的 `data/`）。
+[https://huggingface.co/datasets/HuggingFriends/PhysFixBench](https://huggingface.co/datasets/HuggingFriends/PhysFixBench)（公开可访问，无需登录；`videos/` + 同样的 `data/`）。
 
 ## 各来源说明
 
@@ -66,7 +66,7 @@ CSV 为同内容表格（UTF-8 BOM，Excel 可开），并附 `审核结论(pass
 
 ## 人工审核方式
 
-1. Physion-300：打开 `index.html`（与 HF 数据目录同级；视频走 HF resolve URL，需登录有访问权限的 HF 账号）。
+1. Physion-300：打开 `index.html`（与 HF 数据目录同级；视频走 HF resolve URL，仓库公开可直接播放，无需登录）。
 2. 播放视频，对照 ❶问题 / ❷正确表现 / ❸保持不变 三块；可直接在框中修改文字。
 3. 每条选择 **通过 / 需修改 / 驳回**，可填备注；结果自动暂存在浏览器，点右上角「导出审核结果 JSON」回收。
 4. RoboJudge / PhyGround / VideoPhy2 的审核页随后发布（字段与 CSV 审核列完全一致）。
