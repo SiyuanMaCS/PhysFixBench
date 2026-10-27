@@ -1,3 +1,23 @@
+---
+pretty_name: PhysFixBench
+language:
+- zh
+size_categories:
+- 100M<n<1B
+task_categories:
+- text-to-video
+- image-to-video
+tags:
+- video-generation
+- video-editing
+- physics
+- physical-common-sense
+- benchmark
+- embodied-ai
+license: other
+license_name: PhysFixBench Custom Research Use License
+---
+
 # PhysFixBench · batch1（draft，待人工审核）
 
 带**物理缺陷**的文生视频样本 + 结构化中文修复标注（fixing prompts），用于物理视频修复（physics video correction）基准。batch1 由四个并列来源构成，每条标注只针对**物理问题**（不含语义对齐 / instruction following / control 问题）。除 Physion-300 已经过我方 6fps 逐帧复核外，其余三个来源均为 agent draft，等待人工审核（pass / edit / reject）。
