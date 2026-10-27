@@ -15,7 +15,7 @@ tags:
 - benchmark
 - embodied-ai
 license: other
-license_name: PhysFixBench Custom Research Use License
+license_name: physfixbench-custom-research-use-license
 ---
 
 # PhysFixBench · batch1（draft，待人工审核）
