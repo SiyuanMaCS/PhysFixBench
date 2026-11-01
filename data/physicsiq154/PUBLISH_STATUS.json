@@ -1,0 +1,9 @@
+{
+  "dataset": "PhysicsIQ-154",
+  "accepted_machine_candidates": 154,
+  "independently_human_confirmed_in_subset": 1,
+  "pending_human_review": 153,
+  "status": "publication_in_progress",
+  "media_uploaded": false,
+  "note": "This is a separate dataset from Physion. Publication is not complete until all 154 original MP4 files are durably accessible and hash-verified."
+}
