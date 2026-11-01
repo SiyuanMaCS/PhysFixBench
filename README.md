@@ -29,6 +29,14 @@
 
 > ⚠️ 除 Physion-300 已经逐帧复核确认外，其余三个来源均为 **agent draft**，保留了 `confidence` / `needs_human_frame_step_confirmation` 字段供人工抽审（pass / edit / reject）。
 
+## ⏳ 即将发布（独立数据集，未并入 batch1）
+
+| 数据集 | 条数 | 状态 | 说明 |
+|---|---:|---|---|
+| **PhysicsIQ-154** | 154 | `publication_in_progress`（媒体 .b64 文本待上传） | 视频由用户基于 Physics-IQ（Google DeepMind 2025）的 switch frames + bpp_base prompts 自行 I2V 生成，**非官方 reference**；70 v1 + 84 v2 并行版本；仅 `0034_v2` 独立人工确认 issue（人工 issue：2.5–2.92s 绿色块无接触倾倒；机器 issue：1–4s 间距过小，二者不一致，以人工为准）。其余 153 条待人工抽审。详见 [候选浏览页](physicsiq.html) 与 [发布状态](data/physicsiq154/PUBLISH_STATUS.json)。 |
+
+> 该数据集**不并入**上方 batch1 的 606 计数；媒体上传完成前不对外宣称可播放。
+
 ## 🚀 快速使用
 
 ```python
@@ -58,15 +66,22 @@ video_url = f"https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolv
 ```
 PhysFixBench/
 ├── README.md                  # 本文件
+├── datasets.html              # 数据集导航（Physion-300 / PhysicsIQ-154）
 ├── index.html                 # Physion-300 人工审核页（视频走 HF 公开 URL）
+├── physicsiq.html             # PhysicsIQ-154 候选浏览页（媒体 .b64 文本待上传）
 ├── data/
 │   ├── physfixbench_physion300.{jsonl,csv}   # 300
 │   ├── physfixbench_robojudge115.{jsonl,csv} # 115
 │   ├── physfixbench_videophy2.{jsonl,csv}    # 100
-│   └── physfixbench_phyground.{jsonl,csv}    # 91
+│   ├── physfixbench_phyground.{jsonl,csv}    # 91
+│   └── physicsiq154/
+│       ├── physicsiq154.jsonl   # 154 条机器候选（权威，待数据方精简 core 版）
+│       ├── media_map.json
+│       ├── MANIFEST.json
+│       └── PUBLISH_STATUS.json  # publication_in_progress / media_uploaded=false
 └── docs/
     ├── annotation_protocol.md  # 四来源构造流程与逐帧复核协议
-    ├── data_schema.md          # 18 个字段定义与修复指令格式
+    ├── data_schema.md          # 18 个字段定义 + PhysicsIQ-154 字段
     └── human_review.md         # 人工审核操作说明
 ```
 
@@ -74,10 +89,28 @@ JSONL 为权威格式；CSV（UTF-8 BOM，Excel 可直接打开）额外附带 `
 
 ## 📖 文档
 
+- [数据集导航](datasets.html) — Physion-300 人工审核页 ↔ PhysicsIQ-154 候选浏览页
 - [标注构造流程与逐帧复核协议](docs/annotation_protocol.md) — 各来源数据如何产生、误报如何剔除、分布统计
-- [数据字段与修复指令格式](docs/data_schema.md) — 18 个字段逐一说明
+- [数据字段与修复指令格式](docs/data_schema.md) — batch1 的 18 个字段 + PhysicsIQ-154 字段
 - [人工审核说明](docs/human_review.md) — 审核页面使用与结论回收
 
-## License
+## 🧭 Provenance（来源）
 
-仅限非商业研究与评测用途；视频版权遵循各来源数据集许可（Physion-Eval Custom Research Use、RoboJudge / PhyGround / VideoPhy2 各自许可），结构化中文标注为 PhysFixBench 项目所有。详见 [标注协议文档](docs/annotation_protocol.md#license--使用限制)。
+- **batch1**：4 个来源并列——Physion-Eval（severity 4–5 抽选 300）、RoboJudge test split（全量重标注 115）、PhyGround（协作者 agent 标注 91）、VideoPhy2（协作者 agent 标注 100）。
+- **PhysicsIQ-154**：源数据集为 Physics-IQ（Google DeepMind 2025，<https://github.com/google-deepmind/physics-iq-benchmark>，站点 <https://physics-iq.github.io/>；输入 gated：<https://huggingface.co/datasets/Anates-Labs-Research/Physics-IQ-Verified>）。本仓库 154 条视频是用户基于其 switch frames + bpp_base prompts **自行 I2V 生成**的派生样本，**非官方 reference clip**。
+- 完整 394 条机器标注里仅 2 条经独立人工复核：`0034_v2`（确认 issue，纳入）与 `0092_v2`（判 `reject_no_clear_issue`，**未纳入**）。
+
+## ⚖️ License / 使用限制
+
+- 仅限非商业研究与评测用途。
+- **batch1 视频版权**遵循各来源数据集许可（Physion-Eval Custom Research Use、RoboJudge / PhyGround / VideoPhy2 各自许可）。
+- **PhysicsIQ-154 源材料**遵循 Physics-IQ 项目许可：代码 Apache License 2.0（<https://www.apache.org/licenses/LICENSE-2.0>），其他材料 CC BY 4.0（<https://creativecommons.org/licenses/by/4.0/legalcode>）。本仓库派生的 I2V 视频与中文修复标注的再分发须同时满足上述源许可与 PhysFixBench 项目约定；**不声明全部内容可自由再分发**。
+- **结构化中文修复标注**（fixing prompts）为 PhysFixBench 项目所有，研究用途。
+- 详见 [标注协议文档](docs/annotation_protocol.md#license--使用限制)。
+
+## 📝 NOTICE
+
+- 本仓库**未声明** MIT / Apache-2.0 等开源软件许可证；batch1 视频与标注的再分发受上述各来源许可约束。
+- `0092_v2` 经独立人工复核判 `reject_no_clear_issue`，**不包含**在 PhysicsIQ-154 内。
+- `0034_v2` 是 PhysicsIQ-154 内**唯一**经独立人工复核确认 issue 的记录；其人工 issue（2.5–2.92s 绿色块无接触倾倒）与机器 issue（1–4s 间距过小）不一致，UI 以人工 issue 为准、机器原注释折叠保留。
+- PhysicsIQ-154 媒体以 `videos/physicsiq154/<rid>.b64` base64 文本文件持久存储，页面 fetch 后解码并 SHA256 校验；媒体上传完成前不对外宣称可播放。

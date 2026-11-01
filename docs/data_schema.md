@@ -51,3 +51,25 @@
 | `审核结论(pass/edit/reject)` | pass = 标注正确可用；edit = 需修改（在旁边列给出改后内容）；reject = 误报 / 视频不可修 |
 | `修改后内容` | edit 时填写修正后的 fixing prompt 或字段 |
 | `备注` | 任何补充说明 |
+
+---
+
+## PhysicsIQ-154（独立 release `physicsiq154-v1.0.0`，未并入 batch1）
+
+本来源**不沿用**上方 18 字段，使用独立 schema。发布状态见 `data/physicsiq154/PUBLISH_STATUS.json`（当前 `publication_in_progress` / `media_uploaded=false`）。
+
+| 字段路径 | 含义 |
+|---|---|
+| `record_id` | 全局唯一键，形如 `0034_v2`；等于 `{id}_{version}`。 |
+| `id` / `version` | 同一物理演示的两个**并行 I2V 生成版本**：`v1`（70 条）/ `v2`（84 条）。v1 与 v2 是用户基于 Physics-IQ prompts 自行生成的候选，不是对同一段视频的两次独立复核。 |
+| `scenario` | 场景 slug（如 `block-domino`、`ball-and-block-fall`）。 |
+| `original_prompt` | 生成时使用的英文 prompt（来自 Physics-IQ switch frames + bpp_base prompts）。 |
+| `duration_s` / `stream` | 时长与流信息（codec / width / height / avg_frame_rate / nb_frames）。 |
+| `video.path` / `video.sha256` / `video.bytes` | 相对路径 `videos/physicsiq154/{record_id}.mp4`（发布时以 `.b64` 文本形式提交）、SHA-256、字节数。**当前媒体尚未上传。** |
+| `machine_review.decision` | 当前全部为 `accept`；`machine_review.observed_summary` 为中文观察摘要。 |
+| `machine_review.issues[]` | 每条记录固定 1 个 issue：`time_start_s` / `time_end_s` / `issue_description` / `fix_expected`（修复指令）/ `evidence` / `ambiguity`。 |
+| `human_review.status` | `independent_confirmed`（仅 `0034_v2` 一条）/ `pending_human_review`（其余 153 条）。 |
+| `human_review.issue` / `human_review.fix` | 仅 `0034_v2` 有人工独立确认的 issue（2.5–2.92s 绿色块无接触倾倒）与对应 fix；UI 以此为准，机器原注释折叠保留。 |
+| `source.dataset` / `source.release` | 固定 `Physics-IQ` / `physicsiq154-v1.0.0`。源数据集：Google DeepMind Physics-IQ（代码 Apache 2.0，其他材料 CC BY 4.0）。 |
+
+**人工复核事实**：在完整 394 条机器标注里，只有 2 条经过独立人工复核——`0034_v2`（已确认 issue，纳入本 release）和 `0092_v2`（复核后判 `reject_no_clear_issue`，**未纳入**）。本 release 不对外宣称任何额外的人工验证；其余 153 条均为机器预标注，待人工抽审。154 条视频为用户自行 I2V 生成的派生样本，**非 Physics-IQ 官方 reference clip**。

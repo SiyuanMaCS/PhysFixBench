@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhysFixBench · 数据集导航</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c2230'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<style>
+ body{font-family:-apple-system,"PingFang SC","Segoe UI",Arial,sans-serif;margin:0;background:#f5f6f8;color:#1c2230;min-height:100vh}
+ .wrap{max-width:980px;margin:0 auto;padding:48px 20px}
+ h1{font-size:22px;margin:0 0 6px}
+ .sub{color:#5b6472;font-size:13.5px;margin:0 0 28px}
+ .grid{display:grid;grid-template-columns:1fr;gap:16px}
+ @media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+ a.card{display:block;background:#fff;border:1px solid #dde0e6;border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:border-color .15s, box-shadow .15s}
+ a.card:hover{border-color:#9ec1f7;box-shadow:0 4px 16px rgba(20,40,80,.08)}
+ .tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:20px;margin-bottom:10px}
+ .tag.done{background:#e6f6ec;color:#1a7f37}
+ .tag.pending{background:#fdf3e3;color:#b4550f}
+ h2{font-size:16px;margin:0 0 6px}
+ .desc{font-size:13px;color:#444;line-height:1.6;margin:0 0 12px}
+ .meta{font-size:12px;color:#5b6472}
+ .arrow{float:right;color:#9ec1f7;font-weight:700}
+</style></head>
+<body>
+<div class="wrap">
+  <h1>PhysFixBench · 数据集导航</h1>
+  <p class="sub">选择要浏览的数据集。batch1 已发布（606 条）；PhysicsIQ-154 正在发布中（媒体待上传）。</p>
+  <div class="grid">
+    <a class="card" href="index.html">
+      <span class="tag done">已发布 · batch1</span>
+      <span class="arrow">→</span>
+      <h2>Physion-300 人工审核页</h2>
+      <p class="desc">300 条经 6fps + 原生帧率逐帧复核确认的真实物理缺陷；视频走 HF 公开 URL。</p>
+      <div class="meta">仓库根目录 index.html</div>
+    </a>
+    <a class="card" href="physicsiq.html">
+      <span class="tag pending">发布中 · 媒体待上传</span>
+      <span class="arrow">→</span>
+      <h2>PhysicsIQ-154 候选浏览页</h2>
+      <p class="desc">154 条机器候选（70 v1 + 84 v2 并行版本）；仅 0034_v2 独立人工确认，其余 153 条待人工抽审。视频尚未就位。</p>
+      <div class="meta">仓库根目录 physicsiq.html · 状态 PUBLISH_STATUS.json</div>
+    </a>
+  </div>
+</div>
+</body></html>
