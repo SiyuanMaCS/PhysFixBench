@@ -9,22 +9,32 @@
 
 ```
 data/physicsiq154/
-  physicsiq154.jsonl            # SLIM canonical — 154 records, one JSON object per line
-  physicsiq154.full.jsonl       # local-only full provenance; NOT published
-  media_map.json                # record_id -> {video_path, sha256, bytes, ...}
-  MANIFEST.json                 # release metadata, counts, source receipt hashes
-  NOTICE.md                      # upstream attribution and rights separation
   README.md                      # this card
+  NOTICE.md                      # upstream attribution and rights separation
+  MANIFEST.json                  # release metadata, counts, source receipt hashes
   PUBLISH_STATUS.json            # publication_in_progress / media_uploaded=false
+  records/
+    index.json                   # 5-shard manifest (154 records total)
+    shard_00.jsonl               # 31 records
+    shard_01.jsonl               # 31 records
+    shard_02.jsonl               # 31 records
+    shard_03.jsonl               # 31 records
+    shard_04.jsonl               # 30 records
 videos/physicsiq154/
-  {id}_{version}.mp4             # e.g. 0002_v2.mp4, 0059_v1.mp4 (pending upload)
+  {record_id}.mp4                # pending upload; e.g. 0002_v2.mp4, 0059_v1.mp4
 ```
+
+The slim canonical 154-record JSONL is sharded under `records/` (see `index.json` for the
+shard manifest). The single-file `physicsiq154.jsonl` and `media_map.json` are kept locally
+for reproducibility but are not published to this repo; shards are the authoritative on-disk
+form here.
 
 ## Record primary key
 
-Unique key is `record_id = "{id}_{version}"` (e.g. `0034_v2`). This release contains
-70 v1 and 84 v2 records. v1 and v2 are two generated variants per source scene; the
-per-record `version` field distinguishes them and must not be conflated.
+Unique key is `record_id` (e.g. `0034_v2`). The trailing `_v1` / `_v2` suffix is part of
+the opaque unique key and distinguishes generated variants per source scene; it is **not**
+a display grouping — the browsing page renders them as `Sample 001..154` with the original
+`record_id` kept as the key only.
 
 ## Per-record fields (slim canonical)
 
@@ -86,11 +96,9 @@ The underlying benchmark is **Physics-IQ / Physics-IQ Verified** by Google DeepM
   International (CC-BY-4.0) for other materials. Copyright 2025 Google LLC.
   ("This is not an official Google product.")
 
-The 154 MP4s in this release are **generated I2V videos conditioned on Physics-IQ Verified
-switch frames and bpp_base prompts**. They are NOT the official real-camera Physics-IQ
-reference footage. v1 is the first generated variant; v2 is a self-refine variant built on
-the corresponding v1 video and prompt. No official PhysicsIQ metric score is computed or
-claimed here, and no specific generator model version is named in this public package.
+The 154 MP4s in this release are **generated I2V videos produced by Seedance 2.5**, conditioned
+on Physics-IQ Verified switch frames and bpp_base prompts. They are NOT the official real-camera
+Physics-IQ reference footage. No official PhysicsIQ metric score is computed or claimed here.
 
 ## License and redistribution
 
@@ -101,9 +109,8 @@ Two distinct right layers apply — do not conflate them:
    Copyright 2025 Google LLC. Our use of them is conditioned on those terms.
 2. **This release's generated videos and annotations** are derivative outputs. Their
    redistribution terms are **to be confirmed** before public upload:
-   - Annotation text (`physicsiq154.jsonl`, `media_map.json`, `MANIFEST.json`, docs):
-     license not yet chosen; do not treat as public domain or any specific license until
-     explicitly confirmed.
+   - Annotation text (`records/*.jsonl`, `MANIFEST.json`, docs): license not yet chosen;
+     do not treat as public domain or any specific license until explicitly confirmed.
    - Generated videos (`videos/physicsiq154/*.mp4`): redistribution status pending
      confirmation; this package does NOT attach a MIT/Apache/CC license to them.
    - A `LICENSE` file will be added only after the annotation license and video
