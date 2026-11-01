@@ -1,0 +1,43 @@
+{
+  "release": "physicsiq154-v1.0.0",
+  "created_utc": "2026-11-01T13:33:15+00:00",
+  "record_count": 154,
+  "video_count": 154,
+  "video_total_bytes": 32538467,
+  "video_max": {
+    "record_id": "0159_v2",
+    "bytes": 386577
+  },
+  "video_min": {
+    "record_id": "0059_v1",
+    "bytes": 132646
+  },
+  "by_version": {
+    "v1": 70,
+    "v2": 84
+  },
+  "human_review_status_breakdown": {
+    "independent_confirmed": 1,
+    "pending_human_review": 153
+  },
+  "human_independent_confirmed_record_ids": [
+    "0034_v2"
+  ],
+  "note_human_reviews_outside_this_release": "Across the full 394-record machine annotation, exactly 2 records carry an independent human review: 0034_v2 (inside this release) and 0092_v2 (reviewed but rejected as reject_no_clear_issue, NOT included here). The remaining 153 records are machine pre-annotations awaiting human review.",
+  "source_receipt_sha256": "0634e546c2d11059a89ae98c1ee8a9cebc3520c2245b36ec470c5936217260cd",
+  "source_jsonl_sha256": "d517d599e2f8730bb7068d1e95371109e69c9fd52e5e56be1c92d6835d2e5d87",
+  "paths": {
+    "data_dir": "data/physicsiq154/",
+    "videos_dir": "videos/physicsiq154/",
+    "records_file_slim": "data/physicsiq154/physicsiq154.jsonl",
+    "records_file_full_local": "data/physicsiq154/physicsiq154.full.jsonl",
+    "media_map_file": "data/physicsiq154/media_map.json",
+    "video_manifest_file": "videos/physicsiq154/SHA256SUMS.txt"
+  },
+  "sha256_of_release_files": {
+    "data/physicsiq154/physicsiq154.jsonl": "e5a9db0757c5014ac5b593f52b443eee854dd25072cb425c51626516176b0a9c",
+    "data/physicsiq154/physicsiq154.full.jsonl": "097ba55c1def952f6bf93ead373df57d70e610a69dde313db06fda9708cd925a",
+    "data/physicsiq154/media_map.json": "89358420313f6dae5fb5604f8ee4cfba6779830d4c10b0a10e18db392b7ef990",
+    "videos/physicsiq154/SHA256SUMS.txt": "adc525dbb646de89d5f59274c2c9649d76e9cc75c192a936ea4a4eb885bda4b7"
+  }
+}
