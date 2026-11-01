@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhysFixBench · PhysicsIQ-154 候选</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b4550f'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E">
+<style>
+ body{font-family:-apple-system,"PingFang SC","Segoe UI",Arial,sans-serif;margin:0;background:#f5f6f8;color:#1c2230;line-height:1.55}
+ .navstrip{background:#1c2230;color:#cfd6e4;padding:6px 16px;font-size:12.5px}
+ .navstrip a{color:#9ec1f7;text-decoration:none;margin-right:14px}
+ .navstrip .cur{color:#fff;font-weight:600}
+ header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #dde0e6;padding:10px 16px}
+ h1{font-size:16px;margin:0 0 6px}
+ .sub{font-size:12.5px;color:#5b6472;margin:-2px 0 8px}
+ .warn{background:#fdf3e3;border:1px solid #f0d98c;color:#7a5b00;padding:8px 12px;border-radius:8px;margin:8px 16px 0;font-size:13px}
+ .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:13px;margin-top:8px}
+ select{padding:4px 8px;font-size:13px}
+ #count{font-weight:600;color:#1a7f37}
+ #progress{font-size:12.5px;color:#5b6472}
+ main{padding:14px 16px;max-width:1400px;margin:0 auto}
+ .card{background:#fff;border:1px solid #dde0e6;border-radius:10px;margin-bottom:14px;padding:12px}
+ .card.hum{border-left:4px solid #1a7f37}
+ .head{display:flex;gap:10px;align-items:center;margin-bottom:8px;font-size:13px;color:#5b6472;flex-wrap:wrap}
+ .idx{font-weight:700;color:#111;font-size:14px}
+ .rid{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#8a93a3}
+ .scn{color:#5b6472;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+ .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+ .badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600}
+ .b-hum{background:#1a7f37;color:#fff}
+ .b-pend{background:#fdf3e3;color:#b4550f}
+ .cols{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+ .leftcol{width:400px;max-width:100%}
+ .vbox{width:400px;max-width:100%;aspect-ratio:16/9;border-radius:8px;background:#111;color:#9aa3b2;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;text-align:center;padding:10px;box-sizing:border-box}
+ .vbox .path{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#6b7480;margin-top:4px;word-break:break-all}
+ .meta{flex:1;min-width:0;font-size:13px}
+ @media(min-width:900px){.meta{min-width:460px}}
+ .block{margin:6px 0}
+ .pl{font-weight:700;margin-bottom:3px;color:#1c2230;font-size:12.5px}
+ .pl.hum{color:#1a7f37}
+ .pv{border:1px solid #c9d2e0;border-radius:8px;padding:7px 10px;background:#fcfdff;white-space:pre-wrap;font-size:12.5px}
+ .pv.prob{border-left:4px solid #b42318}
+ .pv.fix{border-left:4px solid #1a7f37;background:#f7fcf9}
+ .pv.ev{border-left:4px solid #25408f;background:#fbfcff}
+ .pv.mach{border-left:4px solid #8a93a3;background:#fafbfc;color:#444}
+ details{margin-top:6px}
+ summary{cursor:pointer;color:#25408f;font-weight:600}
+ .ann{background:#fafbfc;border:1px solid #eef0f3;border-radius:8px;padding:8px 10px;margin:6px 0;white-space:pre-wrap;color:#444;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="navstrip">
+  <a href="index.html">Physion-300 人工审核</a>
+  <a href="datasets.html">数据集导航</a>
+  <span class="cur">PhysicsIQ-154 候选</span>
+  <a href="README.md">README</a>
+</div>
+<header>
+  <h1>PhysicsIQ-154 · 机器候选</h1>
+  <div class="sub">数据来源：Google DeepMind Physics-IQ（代码 Apache-2.0，材料 CC-BY-4.0）。本批 154 条为基于 Physics-IQ switch frames + bpp_base prompts、由 Seedance 2.5 生成的 I2V 派生样本；issue/fix 为机器初判，其中 1 条已经独立人工复核，其余 153 条待人工复核。独立于 batch1 人工审核 606 条。</div>
+  <div class="warn">技术阻塞：视频 0/154 尚未上传至本仓库（PUBLISH_STATUS: media_uploaded=false）。下方视频区域仅为占位符，显示相对路径与 SHA256。</div>
+  <div class="filters">
+    <label>场景 <select id="fscn"><option value="">全部</option></select></label>
+    <label>状态 <select id="fstat"><option value="">全部</option><option value="hum">已独立人工确认</option><option value="pend">待人工复核</option></select></label>
+    <span id="count">加载中…</span>
+    <span id="progress"></span>
+  </div>
+</header>
+<main id="main"><div class="ann">正在加载 records/index.json …</div></main>
+<script>
+const BASE = 'data/physicsiq154/records/';
+let ALL = [];
+
+async function load(){
+  const idx = await fetch(BASE + 'index.json').then(r=>r.json());
+  const scns = new Set();
+  let done = 0;
+  for(const s of idx.shards){
+    document.getElementById('progress').textContent = `加载分片 ${++done}/${idx.shards.length}`;
+    const txt = await fetch(s.file.replace('data/physicsiq154/records/','')).then(r=>r.text());
+    for(const line of txt.split('\n')){
+      if(!line.trim()) continue;
+      try{
+        const o = JSON.parse(line);
+        ALL.push(o);
+        scns.add(o.scenario);
+      }catch(e){console.error('parse fail',e,line.slice(0,120));}
+    }
+  }
+  ALL.sort((a,b)=>a.record_id.localeCompare(b.record_id));
+  const fscn = document.getElementById('fscn');
+  [...scns].sort().forEach(s=>{
+    const o=document.createElement('option');o.value=s;o.textContent=s;fscn.appendChild(o);
+  });
+  document.getElementById('progress').textContent = '';
+  render();
+  ['fscn','fstat'].forEach(id=>document.getElementById(id).addEventListener('change',render));
+}
+
+function esc(s){return String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+
+function render(){
+  const fscn=document.getElementById('fscn').value;
+  const fstat=document.getElementById('fstat').value;
+  const list = ALL.filter(r=>{
+    if(fscn && r.scenario!==fscn) return false;
+    const isHum = r.human_review && r.human_review.status==='independent_confirmed';
+    if(fstat==='hum' && !isHum) return false;
+    if(fstat==='pend' && isHum) return false;
+    return true;
+  });
+  document.getElementById('count').textContent = `${list.length} / ${ALL.length} 条`;
+  const main = document.getElementById('main');
+  if(!list.length){main.innerHTML='<div class="ann">无匹配记录。</div>';return;}
+  main.innerHTML = list.map((r,i)=>card(r,i+1)).join('');
+}
+
+function card(r,n){
+  const isHum = r.human_review && r.human_review.status==='independent_confirmed';
+  const sBadge = isHum ? '<span class="badge b-hum">已独立人工确认</span>' : '<span class="badge b-pend">待人工复核</span>';
+  const machSuperseded = r.machine_review && r.machine_review.superseded_by_human_review;
+  const issues = (r.machine_review && r.machine_review.issues) || [];
+  const issue = issues[0] || null;
+  const hr = r.human_review && r.human_review.independent_review;
+  const sn = 'Sample ' + String(n).padStart(3,'0');
+
+  let body = '';
+  if(isHum && hr){
+    body += `<div class="block">
+      <div class="pl hum">人工独立复核（authoritative） · ${hr.time_start_s}–${hr.time_end_s}s</div>
+      <div class="pv fix">${esc(hr.issue_description)}</div>
+      <div class="pl hum">人工修复指令</div>
+      <div class="pv fix">${esc(hr.fix_expected)}</div>
+    </div>`;
+  }
+  if(issue){
+    const cls = machSuperseded ? 'pv mach' : 'pv prob';
+    const note = machSuperseded ? ' <span class="badge b-pend" style="font-weight:400">机器 issue 已被人工复核取代，折叠保留</span>' : '';
+    body += `<details ${machSuperseded?'':'open'}><summary>机器 issue · ${issue.time_start_s}–${issue.time_end_s}s${note}</summary>
+      <div class="${cls}">${esc(issue.issue_description)}</div>
+      <div class="pl">机器 fix_expected</div>
+      <div class="pv ${machSuperseded?'mach':'fix'}">${esc(issue.fix_expected)}</div>
+      <div class="pl">机器 evidence</div>
+      <div class="pv ev">${esc(issue.evidence)}</div>
+      <div class="pl">机器 ambiguity</div>
+      <div class="pv ev">${esc(issue.ambiguity)}</div>
+    </details>`;
+  }
+  body += `<div class="block">
+    <div class="pl">original_prompt（完整保留）</div>
+    <div class="pv">${esc(r.original_prompt)}</div>
+  </div>`;
+
+  return `<div class="card ${isHum?'hum':''}">
+    <div class="head">
+      <span class="idx">${sn}</span>
+      <span class="rid">key:${esc(r.record_id)}</span>
+      <span class="scn">${esc(r.scenario)}</span>
+      ${sBadge}
+    </div>
+    <div class="cols">
+      <div class="leftcol">
+        <div class="vbox">
+          <span>视频待上传（0/154）</span>
+          <span class="path">${esc(r.video.path)}</span>
+          <span class="path">sha256:${esc(r.video.sha256.slice(0,16))}… · ${r.video.bytes}B</span>
+        </div>
+      </div>
+      <div class="meta">${body}</div>
+    </div>
+  </div>`;
+}
+
+load().catch(e=>{
+  document.getElementById('main').innerHTML = '<div class="ann" style="color:#b42318">加载失败：'+esc(e.message)+'<br>请确认本页通过 HTTP(S) 访问（file:// 下无法 fetch 分片）。</div>';
+});
+</script>
+</body>
+</html>
