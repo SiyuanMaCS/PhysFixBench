@@ -1,0 +1,11 @@
+{
+  "release": "physicsiq154-v1.0.0",
+  "record_count": 154,
+  "shards": [
+    {"file": "data/physicsiq154/records/shard_00.jsonl", "count": 31, "first_id": "0002_v2", "last_id": "0043_v1"},
+    {"file": "data/physicsiq154/records/shard_01.jsonl", "count": 31, "first_id": "0043_v2", "last_id": "0077_v2"},
+    {"file": "data/physicsiq154/records/shard_02.jsonl", "count": 31, "first_id": "0079_v2", "last_id": "0116_v2"},
+    {"file": "data/physicsiq154/records/shard_03.jsonl", "count": 31, "first_id": "0119_v2", "last_id": "0157_v1"},
+    {"file": "data/physicsiq154/records/shard_04.jsonl", "count": 30, "first_id": "0159_v2", "last_id": "0198_v1"}
+  ]
+}
