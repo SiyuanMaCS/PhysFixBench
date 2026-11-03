@@ -1,0 +1,3370 @@
+{
+  "schema": "physfixbench-human-review-v1",
+  "reviewer": "叶程",
+  "review_dates": [
+    "2026-11-02",
+    "2026-11-03"
+  ],
+  "timezone": "Asia/Shanghai",
+  "upstream_repository": "SiyuanMaCS/PhysFixBench",
+  "decision_labels": {
+    "pass": "通过",
+    "edit": "需修改标注",
+    "reject": "拒绝",
+    "unsure": "待确认"
+  },
+  "field_notes": {
+    "review_decision": "维持原判按审阅前的通过或拒绝展开；修改卡片记为 edit，暂不确定记为 unsure。",
+    "review_note": "复核人原文；修改意见未自动写入卡片。",
+    "issues_before_review": "复核界面显示的审阅前标注，不是修改后的最终卡片。"
+  },
+  "annotation_edits_applied": false,
+  "source_exports": [
+    {
+      "filename": "抽查复核_叶程_2026-11-02.json",
+      "sha256": "dcf448850c6bbcdb709cc81d472f33f1a537d5abd492e9824ed3421205824b24",
+      "exported_at": "2026-11-02T03:28:30.500Z",
+      "record_count": 87
+    },
+    {
+      "filename": "抽查复核_叶程_2026-11-03.json",
+      "sha256": "8057e15c7723d0f8e1ff28e447a520fbb705347a13df9ba1f47cf3b7e623c30b",
+      "exported_at": "2026-11-03T07:48:06.924Z",
+      "record_count": 142
+    }
+  ],
+  "summary": {
+    "reviewed_records": 142,
+    "decisions": {
+      "edit": 24,
+      "pass": 77,
+      "reject": 40,
+      "unsure": 1
+    },
+    "sources": {
+      "phyground": 29,
+      "physion_eval": 57,
+      "robojudge": 29,
+      "videophy2": 27
+    }
+  },
+  "records": [
+    {
+      "record_id": "phyground::ltx-2.3-22b-dev-1stage::0125_perspective-center_trimmed-mug-breaks",
+      "dir_name": "0001_phyground_ltx-2.3-22b-dev-1stage_0125_perspective-center_trimmed-mug-breaks",
+      "video_id": "0125_perspective-center_trimmed-mug-breaks",
+      "source": "phyground",
+      "generator": "LTX-2.3 22B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0001_phyground_ltx-2.3-22b-dev-1stage_0125_perspective-center_trimmed-mug-breaks.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:02:47.880Z",
+      "issues_before_review": [
+        {
+          "expected": "马克杯应连续加速下落，撞砖后摔成陶瓷碎片",
+          "problem": "松开的马克杯向上漂浮，后闪现到砖上且未摔碎",
+          "timestamp": "0.25–3.75"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::0191_perspective-center_trimmed-weight-on-paper",
+      "dir_name": "0004_phyground_cosmos-predict2.5-2b_0191_perspective-center_trimmed-weight-on-paper",
+      "video_id": "0191_perspective-center_trimmed-weight-on-paper",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 2B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0004_phyground_cosmos-predict2.5-2b_0191_perspective-center_trimmed-weight-on-paper.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:50:23.754Z",
+      "issues_before_review": [
+        {
+          "expected": "泡沫杯应保持压扁起皱的永久变形",
+          "problem": "被壶铃压扁的泡沫杯自行回弹成近乎完整的杯子",
+          "timestamp": "4.0–5.5"
+        },
+        {
+          "expected": "水杯变形应该从接触点开始往下，然后剩余部分向两侧延展",
+          "problem": "变形不恰当",
+          "timestamp": "1.06-2.6"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::veo-3.1::0002_perspective-center_trimmed-ball-and-block-fall",
+      "dir_name": "0005_phyground_veo-3.1_0002_perspective-center_trimmed-ball-and-block-fall",
+      "video_id": "0002_perspective-center_trimmed-ball-and-block-fall",
+      "source": "phyground",
+      "generator": "Veo 3.1",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0005_phyground_veo-3.1_0002_perspective-center_trimmed-ball-and-block-fall.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T16:51:11.441Z",
+      "issues_before_review": [
+        {
+          "expected": "枕头受压缓冲，两物至多小幅弹跳后静止",
+          "problem": "球和木块落到软枕上反复高弹回夹具附近",
+          "timestamp": "2.67–6.25"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::ltx-2-19b-dev-1stage::mechanics_97",
+      "dir_name": "0009_phyground_ltx-2-19b-dev-1stage_mechanics_97",
+      "video_id": "mechanics_97",
+      "source": "phyground",
+      "generator": "LTX-2 19B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0009_phyground_ltx-2-19b-dev-1stage_mechanics_97.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T08:28:05.441Z",
+      "issues_before_review": [
+        {
+          "expected": "木碗应贴着桌面在重力下翻滚并侧倒",
+          "problem": "木碗无支撑地悬浮在桌面上方数帧",
+          "timestamp": "0.5–1.25"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::veo-3.1::mechanics_55",
+      "dir_name": "0010_phyground_veo-3.1_mechanics_55",
+      "video_id": "mechanics_55",
+      "source": "phyground",
+      "generator": "Veo 3.1",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0010_phyground_veo-3.1_mechanics_55.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "这个扔标枪的动作不对吧。？",
+      "reviewed_at": "2026-11-02T02:19:08.459Z",
+      "issues_before_review": [
+        {
+          "expected": "枪尖应扎入泥中斜插静止，只溅起少量泥浆",
+          "problem": "标枪扎入泥地激起巨大泥冠后向上弹出",
+          "timestamp": "5.0–7.25"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::wan2.2-i2v-a14b::collision_298",
+      "dir_name": "0013_phyground_wan2.2-i2v-a14b_collision_298",
+      "video_id": "collision_298",
+      "source": "phyground",
+      "generator": "Wan 2.2 I2V-A14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0013_phyground_wan2.2-i2v-a14b_collision_298.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:56:23.815Z",
+      "issues_before_review": [
+        {
+          "expected": "棒球撞墙后弹开或掉落，墙上只留小擦痕或缺口",
+          "problem": "棒球嵌入砖墙凿出深洞，自身却圆整无损",
+          "timestamp": "2.75–3.75"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::omniweaving::0152_perspective-center_trimmed-roll-in-box",
+      "dir_name": "0014_phyground_omniweaving_0152_perspective-center_trimmed-roll-in-box",
+      "video_id": "0152_perspective-center_trimmed-roll-in-box",
+      "source": "phyground",
+      "generator": "OmniWeaving",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0014_phyground_omniweaving_0152_perspective-center_trimmed-roll-in-box.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "第二张卡片没看懂",
+      "reviewed_at": "2026-11-02T02:16:02.602Z",
+      "issues_before_review": [
+        {
+          "expected": "接触瞬间球应减速，布箱沿来球方向被向右推",
+          "problem": "球撞上时布箱不动，数秒后无推力反向左滑",
+          "timestamp": "0.75–4.75"
+        },
+        {
+          "expected": "应该是箱子从右往左先动，箱子停下来，球再从箱子出来",
+          "problem": "球先从右往左出来，然后箱子才动",
+          "timestamp": "3.36-5.06"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::wan2.2-i2v-a14b::mechanics_166",
+      "dir_name": "0022_phyground_wan2.2-i2v-a14b_mechanics_166",
+      "video_id": "mechanics_166",
+      "source": "phyground",
+      "generator": "Wan 2.2 I2V-A14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0022_phyground_wan2.2-i2v-a14b_mechanics_166.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:56:41.028Z",
+      "issues_before_review": [
+        {
+          "expected": "球应在草面短暂压缩后弹起或停在表面",
+          "problem": "球落地后半陷入草地，并溅起大片绿屑",
+          "timestamp": "2.75–4.75"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::omniweaving::1jnsHJ1u3Pk_10_0to149",
+      "dir_name": "0023_phyground_omniweaving_1jnsHJ1u3Pk_10_0to149",
+      "video_id": "1jnsHJ1u3Pk_10_0to149",
+      "source": "phyground",
+      "generator": "OmniWeaving",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0023_phyground_omniweaving_1jnsHJ1u3Pk_10_0to149.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "我觉得第二条也挺对的，倒了一大堆水最后只涨了一点点",
+      "reviewed_at": "2026-11-02T03:01:49.211Z",
+      "issues_before_review": [
+        {
+          "expected": "绿液只应经液柱流入碗中，溢出后才在桌面漫开",
+          "problem": "碗未溢出，桌面却凭空出现并扩大绿色液洼",
+          "timestamp": "0.0–2.5"
+        },
+        {
+          "expected": "碗里的液体应该涨幅更多一点",
+          "problem": "一开始流下的时候，碗里液体涨幅太少",
+          "timestamp": "0-2.06"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::ltx-2.3-22b-dev-1stage::0188_perspective-center_trimmed-weight-on-ceramic",
+      "dir_name": "0027_phyground_ltx-2.3-22b-dev-1stage_0188_perspective-center_trimmed-weight-on-ceramic",
+      "video_id": "0188_perspective-center_trimmed-weight-on-ceramic",
+      "source": "phyground",
+      "generator": "LTX-2.3 22B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0027_phyground_ltx-2.3-22b-dev-1stage_0188_perspective-center_trimmed-weight-on-ceramic.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:08:05.431Z",
+      "issues_before_review": [
+        {
+          "expected": "杯子应在重压下开裂碎塌，壶铃随之下沉",
+          "problem": "陶瓷杯被壶铃重压仍直立近乎完好，仅小裂口",
+          "timestamp": "1.0–3.0"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::wan2.2-i2v-a14b::0029_perspective-center_trimmed-ball-train",
+      "dir_name": "0030_phyground_wan2.2-i2v-a14b_0029_perspective-center_trimmed-ball-train",
+      "video_id": "0029_perspective-center_trimmed-ball-train",
+      "source": "phyground",
+      "generator": "Wan 2.2 I2V-A14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0030_phyground_wan2.2-i2v-a14b_0029_perspective-center_trimmed-ball-train.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:57:52.843Z",
+      "issues_before_review": [
+        {
+          "expected": "灰球应减速或偏转，棕橙两球被撞离接触点",
+          "problem": "灰球撞上后棕橙两球几乎不动，灰球反向左弹",
+          "timestamp": "1.5–2.5"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-14b::0197_perspective-center_trimmed-weight-protects-duck",
+      "dir_name": "0032_phyground_cosmos-predict2.5-14b_0197_perspective-center_trimmed-weight-protects-duck",
+      "video_id": "0197_perspective-center_trimmed-weight-protects-duck",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0032_phyground_cosmos-predict2.5-14b_0197_perspective-center_trimmed-weight-protects-duck.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "这条视频最重要的问题是球有点走曲线吧哑铃球绕开吧，当然卡片上说的问题都存在",
+      "reviewed_at": "2026-11-02T16:49:16.686Z",
+      "issues_before_review": [
+        {
+          "expected": "鸭子应被沿桌面推向右方，网球减速或轻弹",
+          "problem": "网球撞上鸭子却推不动，自身骤停在旁边",
+          "timestamp": "1.25–2.0"
+        },
+        {
+          "expected": "两物停稳后应保持静止不再移动",
+          "problem": "两物静止后无外力缓缓向左漂向壶铃",
+          "timestamp": "2.5–5.5"
+        },
+        {
+          "expected": "鸭子应该就站在1.91s这个位置，头是面对球方向来的方向",
+          "problem": "鸭子在没有力的作用下，往上走去接球",
+          "timestamp": "1.21-1.91"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::mechanics_286",
+      "dir_name": "0037_phyground_cosmos-predict2.5-2b_mechanics_286",
+      "video_id": "mechanics_286",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 2B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0037_phyground_cosmos-predict2.5-2b_mechanics_286.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T16:51:41.039Z",
+      "issues_before_review": [
+        {
+          "expected": "脱落的混凝土碎块应在重力下坠落、弹跳翻滚",
+          "problem": "锤落的混凝土块脱离墙面后悬停原处不下落",
+          "timestamp": "1.75–5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-14b::HaWe0Af_0hg_6_0to222",
+      "dir_name": "0039_phyground_cosmos-predict2.5-14b_HaWe0Af_0hg_6_0to222",
+      "video_id": "HaWe0Af_0hg_6_0to222",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0039_phyground_cosmos-predict2.5-14b_HaWe0Af_0hg_6_0to222.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "第一个其实也有下降，但是下降幅度相比流出的液体来说太小了",
+      "reviewed_at": "2026-11-02T02:57:37.162Z",
+      "issues_before_review": [
+        {
+          "expected": "烧杯注满的同时漏斗液位应同步下降",
+          "problem": "烧杯持续注液，漏斗内液位与分层却不下降",
+          "timestamp": "0.25–5.5"
+        },
+        {
+          "expected": "液流应从阀门竖直平滑落入烧杯",
+          "problem": "下落液柱无故变成向侧弯曲的粗液柱",
+          "timestamp": "1.25–5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::wan2.2-i2v-a14b::mechanics_193",
+      "dir_name": "0040_phyground_wan2.2-i2v-a14b_mechanics_193",
+      "video_id": "mechanics_193",
+      "source": "phyground",
+      "generator": "Wan 2.2 I2V-A14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0040_phyground_wan2.2-i2v-a14b_mechanics_193.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:08:33.646Z",
+      "issues_before_review": [
+        {
+          "expected": "锤子本身没有那么高的弹性，锤子应全程可见，连续飞行、弹跳一次后落定",
+          "problem": "锤子叹气的高度太高了，空中的锤子完全消失一秒多，后在画面顶部突现",
+          "timestamp": "0.75–2.5"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::omniweaving::mechanics_294",
+      "dir_name": "0041_phyground_omniweaving_mechanics_294",
+      "video_id": "mechanics_294",
+      "source": "phyground",
+      "generator": "OmniWeaving",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0041_phyground_omniweaving_mechanics_294.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:17:11.829Z",
+      "issues_before_review": [
+        {
+          "expected": "只有接触点附近石块碎裂移位，近距散落伴少量尘",
+          "problem": "一锤击中石堆后爆炸式喷发，巨石被抛高飞远",
+          "timestamp": "0.25–2.25"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::veo-3.1::AupVdYKP3bo_5_0to165",
+      "dir_name": "0047_phyground_veo-3.1_AupVdYKP3bo_5_0to165",
+      "video_id": "AupVdYKP3bo_5_0to165",
+      "source": "phyground",
+      "generator": "Veo 3.1",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0047_phyground_veo-3.1_AupVdYKP3bo_5_0to165.mp4",
+      "original_verdict": "reject",
+      "review_decision": "pass",
+      "review_action": "pass",
+      "review_note": "这个唯一的问题是倒进去的水比液面上升的量多太多，二者不匹配，但是第一条卡片的“液面不升”有问题",
+      "reviewed_at": "2026-11-02T16:54:29.768Z",
+      "issues_before_review": [
+        {
+          "expected": "杯满后继续注入的液体应溢出杯沿并溅到黑垫上",
+          "problem": "红色液体注入已满的玻璃杯，液面不升也不溢出",
+          "timestamp": "4.5–6.25"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::veo-3.1::mechanics_547",
+      "dir_name": "0048_phyground_veo-3.1_mechanics_547",
+      "video_id": "mechanics_547",
+      "source": "phyground",
+      "generator": "Veo 3.1",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0048_phyground_veo-3.1_mechanics_547.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:10:48.337Z",
+      "issues_before_review": [
+        {
+          "expected": "树枝受压弯曲，触地处仅扬起少量木屑落叶并迅速下落",
+          "problem": "小树倒地激起爆炸般高耸并久留的碎屑烟柱",
+          "timestamp": "5.0–6.5"
+        },
+        {
+          "expected": "油锯被双手持有并横向切割树，树干树枝在切割前是一体的，切割后断面能对齐",
+          "problem": "油锯被单手持有竖着切割木桩，且倒下的是后侧树枝，后侧树枝断面与树桩不匹配",
+          "timestamp": "0-3"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::ltx-2-19b-dev-1stage::0104_perspective-center_trimmed-marble-run-x",
+      "dir_name": "0049_phyground_ltx-2-19b-dev-1stage_0104_perspective-center_trimmed-marble-run-x",
+      "video_id": "0104_perspective-center_trimmed-marble-run-x",
+      "source": "phyground",
+      "generator": "LTX-2 19B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0049_phyground_ltx-2-19b-dev-1stage_0104_perspective-center_trimmed-marble-run-x.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:08:16.517Z",
+      "issues_before_review": [
+        {
+          "expected": "弹珠应始终可见，沿轨道一直下降",
+          "problem": "黄色弹珠在轨道上消失又重现又消失",
+          "timestamp": "0.35–3"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::mechanics_182",
+      "dir_name": "0055_phyground_cosmos-predict2.5-2b_mechanics_182",
+      "video_id": "mechanics_182",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 2B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0055_phyground_cosmos-predict2.5-2b_mechanics_182.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:18:01.523Z",
+      "issues_before_review": [
+        {
+          "expected": "锤子应击打蛋壳外侧使其裂开外散，红帽始终连在锤上",
+          "problem": "玩具锤头穿入并融进蓝色蛋壳，还出现多余红色碎块",
+          "timestamp": "1.5–4.25"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-14b::mechanics_286",
+      "dir_name": "0059_phyground_cosmos-predict2.5-14b_mechanics_286",
+      "video_id": "mechanics_286",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0059_phyground_cosmos-predict2.5-14b_mechanics_286.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "我觉得这个视频的问题在于敲击墙的上半部分后在石头掉落过程中下半部分几乎瞬间就空缺了，而且石头掉落和人砸锤子的次数和强度不太匹配",
+      "reviewed_at": "2026-11-02T03:00:20.526Z",
+      "issues_before_review": [
+        {
+          "expected": "未断开的块应连着墙体，脱落的块应立即受重力坠落",
+          "problem": "断裂的混凝土大块无支撑地悬挂在墙面上，久不掉落",
+          "timestamp": "2.25–5.25"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::collision_403",
+      "dir_name": "0064_phyground_cosmos-predict2.5-2b_collision_403",
+      "video_id": "collision_403",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 2B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0064_phyground_cosmos-predict2.5-2b_collision_403.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T16:51:27.176Z",
+      "issues_before_review": [
+        {
+          "expected": "冰球保持直线运动 ",
+          "problem": "冰球在人靠近后未受外力而改变运动",
+          "timestamp": "2–5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::ltx-2.3-22b-dev-1stage::mechanics_268",
+      "dir_name": "0067_phyground_ltx-2.3-22b-dev-1stage_mechanics_268",
+      "video_id": "mechanics_268",
+      "source": "phyground",
+      "generator": "LTX-2.3 22B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0067_phyground_ltx-2.3-22b-dev-1stage_mechanics_268.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "确实是还没碰到就倒了",
+      "reviewed_at": "2026-11-02T16:47:05.129Z",
+      "issues_before_review": [
+        {
+          "expected": "保龄球应始终可见，沿球道平滑滚入该位置",
+          "problem": "保龄球凭空突然出现在球道上",
+          "timestamp": "0.25–0.5"
+        },
+        {
+          "expected": "保龄球与壶发生碰撞后才倒\n",
+          "problem": "保龄球未与壶发生碰撞但是壶有倾倒",
+          "timestamp": "3.44-3.88"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::omniweaving::Sl3C5JMaCTo_22_0to159",
+      "dir_name": "0068_phyground_omniweaving_Sl3C5JMaCTo_22_0to159",
+      "video_id": "Sl3C5JMaCTo_22_0to159",
+      "source": "phyground",
+      "generator": "OmniWeaving",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0068_phyground_omniweaving_Sl3C5JMaCTo_22_0to159.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "第一条可以保留，但是第二条的正确状态可以稍微改写一下",
+      "reviewed_at": "2026-11-02T16:50:51.240Z",
+      "issues_before_review": [
+        {
+          "expected": "倒入的液体应落在碗内积聚，液面逐渐升高",
+          "problem": "锅中食物持续倒入白碗，碗内液面却不上升",
+          "timestamp": "3.25–4.75"
+        },
+        {
+          "expected": "应该从锅的后面哪个白碗出来，再把这个液体倒到碗里",
+          "problem": "凭空出现一个白碗",
+          "timestamp": "3.0-5.06"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::ltx-2.3-22b-dev-1stage::collision_431",
+      "dir_name": "0077_phyground_ltx-2.3-22b-dev-1stage_collision_431",
+      "video_id": "collision_431",
+      "source": "phyground",
+      "generator": "LTX-2.3 22B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0077_phyground_ltx-2.3-22b-dev-1stage_collision_431.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:51:17.755Z",
+      "issues_before_review": [
+        {
+          "expected": "红衣球员应实体撞击对手，使其倒地摊在冰上",
+          "problem": "撞人时两名球员身体相互穿插，融成一团",
+          "timestamp": "0.5–3.0"
+        },
+        {
+          "expected": "撞击应该保持刚体的形状，而不是直接像漏气",
+          "problem": "两个队员撞在一起的时候，后面的队员形变很夸张",
+          "timestamp": "1.52-3.0"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::wan2.2-i2v-a14b::0134_perspective-center_trimmed-paper-fall-water",
+      "dir_name": "0082_phyground_wan2.2-i2v-a14b_0134_perspective-center_trimmed-paper-fall-water",
+      "video_id": "0134_perspective-center_trimmed-paper-fall-water",
+      "source": "phyground",
+      "generator": "Wan 2.2 I2V-A14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0082_phyground_wan2.2-i2v-a14b_0134_perspective-center_trimmed-paper-fall-water.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:03:19.761Z",
+      "issues_before_review": [
+        {
+          "expected": "纸团应落在水面激起水花，浸湿 展开 下落后浮起",
+          "problem": "松开后纸团沉入碗中低处停留，不浮在水面，也没体现出浸湿，落水的水花几乎没有",
+          "timestamp": "0.25–4.75"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::veo-3.1::collision_570",
+      "dir_name": "0084_phyground_veo-3.1_collision_570",
+      "video_id": "collision_570",
+      "source": "phyground",
+      "generator": "Veo 3.1",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0084_phyground_veo-3.1_collision_570.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "建议把“恢复平整完好”改为“部分撞损结构自行恢复”，避免夸大。",
+      "reviewed_at": "2026-11-02T02:10:01.276Z",
+      "issues_before_review": [
+        {
+          "expected": "引擎盖、格栅、保险杠和车灯应持续保持撞瘪变形",
+          "problem": "撞瘪的车头几帧后自行恢复平整完好",
+          "timestamp": "4.25–5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::wan2.2-i2v-a14b::collision_581",
+      "dir_name": "0090_phyground_wan2.2-i2v-a14b_collision_581",
+      "video_id": "collision_581",
+      "source": "phyground",
+      "generator": "Wan 2.2 I2V-A14B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0090_phyground_wan2.2-i2v-a14b_collision_581.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "无明显错误",
+      "reviewed_at": "2026-11-02T01:49:22.517Z",
+      "issues_before_review": [
+        {
+          "expected": "击球后球应沿连续平滑路径滚向球洞",
+          "problem": "高尔夫球被打击消失后又跳到果岭另一处",
+          "timestamp": "1.0–2.75"
+        }
+      ]
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::mechanics_293",
+      "dir_name": "0091_phyground_cosmos-predict2.5-2b_mechanics_293",
+      "video_id": "mechanics_293",
+      "source": "phyground",
+      "generator": "Cosmos-Predict2.5 2B",
+      "upstream_data_file": "data/physfixbench_phyground.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0091_phyground_cosmos-predict2.5-2b_mechanics_293.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:52:17.639Z",
+      "issues_before_review": [
+        {
+          "expected": "篮球被篮筐弹开",
+          "problem": "篮球击中篮筐却穿模进球",
+          "timestamp": "4–5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01334",
+      "dir_name": "0001_physion_eval_full_T1_01334",
+      "video_id": "T1_01334",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0001_physion_eval_full_T1_01334.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T16:55:41.883Z",
+      "issues_before_review": [
+        {
+          "expected": "融化时冰块逐渐缩小，水量与体积变化应大致守恒",
+          "problem": "融水增加时冰块体积反而增大",
+          "timestamp": "1.0–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_04499",
+      "dir_name": "0017_physion_eval_full_T1_04499",
+      "video_id": "T1_04499",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0017_physion_eval_full_T1_04499.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "太阳确实没有这样动的",
+      "reviewed_at": "2026-11-03T02:50:06.496Z",
+      "issues_before_review": [
+        {
+          "expected": "太阳应沿平滑上升弧线移动",
+          "problem": "太阳近乎水平移动后反向下沉",
+          "timestamp": "0.8–4.0"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_09986",
+      "dir_name": "0021_physion_eval_full_T1_09986",
+      "video_id": "T1_09986",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0021_physion_eval_full_T1_09986.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "最后看不出体积变化，但我觉得这个问题在前期也存在",
+      "reviewed_at": "2026-11-02T03:07:42.979Z",
+      "issues_before_review": [
+        {
+          "expected": "黄油块应留在锅中继续塌软融化",
+          "problem": "黄油块无外力悬空上升",
+          "timestamp": "3.4–3.8"
+        },
+        {
+          "expected": "碎块脱落时主体应同步出现缺损",
+          "problem": "黄油碎块脱落而主体体积未减",
+          "timestamp": "4.8–5.0"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::7c60a04e-a3f8-5e5b-b741-d1bb5065e162",
+      "dir_name": "0026_physion_eval_full_7c60a04e-a3f8-5e5b-b741-d1bb5065e162",
+      "video_id": "7c60a04e-a3f8-5e5b-b741-d1bb5065e162",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0026_physion_eval_full_7c60a04e-a3f8-5e5b-b741-d1bb5065e162.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "这个没有明显错误",
+      "reviewed_at": "2026-11-02T16:55:25.517Z",
+      "issues_before_review": [
+        {
+          "expected": "旋钮随手转动，火焰强度与旋钮角度同步",
+          "problem": "手拧旋钮时旋钮不转，火焰却变化并熄灭",
+          "timestamp": "2.8–4.8"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_00063",
+      "dir_name": "0030_physion_eval_full_T1_00063",
+      "video_id": "T1_00063",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0030_physion_eval_full_T1_00063.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:42:20.460Z",
+      "issues_before_review": [
+        {
+          "expected": "食物应在抖动过程中保持原有形态",
+          "problem": "漏勺内饺子突然变成长面条",
+          "timestamp": "0.9–1.0"
+        },
+        {
+          "expected": "盘子里的餐具应该始终保持一致",
+          "problem": "盘子里的餐具在中途合并",
+          "timestamp": "2.5~3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02625",
+      "dir_name": "0038_physion_eval_full_T1_02625",
+      "video_id": "T1_02625",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0038_physion_eval_full_T1_02625.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:38:14.480Z",
+      "issues_before_review": [
+        {
+          "expected": "火柴头在燃烧时应该从点燃处首先发白然后发黑发黑，并且燃烧线向整个火柴头扩散",
+          "problem": "火柴持续燃烧但火柴头未被消耗",
+          "timestamp": "0.0–5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_06912",
+      "dir_name": "0052_physion_eval_full_T1_06912",
+      "video_id": "T1_06912",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0052_physion_eval_full_T1_06912.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:19:21.700Z",
+      "issues_before_review": [
+        {
+          "expected": "子弹从枪口射出后沿连续轨迹离开画面",
+          "problem": "射出的子弹在空中运送姿态、朝向和速度不自然，和火、烟也未完全对应",
+          "timestamp": "0.6"
+        },
+        {
+          "expected": "两枚子弹应从枪口连续射出",
+          "problem": "两枚子弹从火光中凭空出现",
+          "timestamp": "1.7–2.0"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_06093",
+      "dir_name": "0055_physion_eval_full_T1_06093",
+      "video_id": "T1_06093",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0055_physion_eval_full_T1_06093.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T03:11:15.691Z",
+      "issues_before_review": [
+        {
+          "expected": "面包被碾压后应保持压扁和褶皱状态",
+          "problem": "面包被车轮碾压后恢复原状",
+          "timestamp": "5.2–7.6"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::3ec9711a-29b2-5a9e-8b15-85b45209adbf",
+      "dir_name": "0059_physion_eval_full_3ec9711a-29b2-5a9e-8b15-85b45209adbf",
+      "video_id": "3ec9711a-29b2-5a9e-8b15-85b45209adbf",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0059_physion_eval_full_3ec9711a-29b2-5a9e-8b15-85b45209adbf.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "如何溶解无法有太强的先验假设",
+      "reviewed_at": "2026-11-02T02:20:26.912Z",
+      "issues_before_review": [
+        {
+          "expected": "在水龙头开启后才出现水流",
+          "problem": "水龙头未开启却自行出水",
+          "timestamp": "0.0–1.1"
+        },
+        {
+          "expected": "容器液位应与实际流入水量匹配",
+          "problem": "容器液位上升远快于注水量",
+          "timestamp": "0.0–5.5"
+        },
+        {
+          "expected": "应该慢慢溶解，溶解一部分，底部残留一部分",
+          "problem": "溶质溶解的太快",
+          "timestamp": "1.9-2.38"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02251",
+      "dir_name": "0085_physion_eval_full_T1_02251",
+      "video_id": "T1_02251",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0085_physion_eval_full_T1_02251.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "没啥问题",
+      "reviewed_at": "2026-11-03T02:52:33.082Z",
+      "issues_before_review": [
+        {
+          "expected": "方盒外形和黑色外壳前后保持一致",
+          "problem": "窗台右侧黑色方盒变成白色方盒",
+          "timestamp": "3.9–4.2"
+        },
+        {
+          "expected": "桌下始终保留原有白色散热器",
+          "problem": "桌下白色散热器变成暗色储物柜",
+          "timestamp": "3.9–4.2"
+        },
+        {
+          "expected": "床毯花纹和颜色前后保持一致",
+          "problem": "床毯花纹和颜色无故变化",
+          "timestamp": "3.9–4.2"
+        },
+        {
+          "expected": "床端始终保留原有双层弧形框",
+          "problem": "床端双层弧形框无故弯曲",
+          "timestamp": "3.9–4.2"
+        },
+        {
+          "expected": "去除夹板，变回散热器",
+          "problem": "桌下应该保持白色散热柜，但是变成了放东西的夹板",
+          "timestamp": "3.9-4.2"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_07560",
+      "dir_name": "0101_physion_eval_full_T1_07560",
+      "video_id": "T1_07560",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0101_physion_eval_full_T1_07560.mp4",
+      "original_verdict": "reject",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "加一条在第2到2.8秒绿方块与黄色挡板穿模，正确状态应该是被挡板挡住",
+      "reviewed_at": "2026-11-03T02:51:57.234Z",
+      "issues_before_review": [
+        {
+          "expected": "夹爪中的同一方块始终保持绿色",
+          "problem": "夹爪中的绿色方块瞬间变红",
+          "timestamp": "3.9"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::c902394b-76bb-5d12-8492-258a018fa0d2",
+      "dir_name": "0105_physion_eval_full_c902394b-76bb-5d12-8492-258a018fa0d2",
+      "video_id": "c902394b-76bb-5d12-8492-258a018fa0d2",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0105_physion_eval_full_c902394b-76bb-5d12-8492-258a018fa0d2.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "整体太差",
+      "reviewed_at": "2026-11-02T03:04:55.286Z",
+      "issues_before_review": [
+        {
+          "expected": "刀刃接触后洋葱被切开并形成分离切面不应该恢复",
+          "problem": "菜刀两次压切后洋葱仍完整无变化",
+          "timestamp": "4.7–5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_07464",
+      "dir_name": "0132_physion_eval_full_T1_07464",
+      "video_id": "T1_07464",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0132_physion_eval_full_T1_07464.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:37:58.865Z",
+      "issues_before_review": [
+        {
+          "expected": "剪刀继续向上剪开纸张",
+          "problem": "剪刀停在半途时纸张自行裂成两半",
+          "timestamp": "3.9–4.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01591",
+      "dir_name": "0136_physion_eval_full_T1_01591",
+      "video_id": "T1_01591",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0136_physion_eval_full_T1_01591.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:55:35.985Z",
+      "issues_before_review": [
+        {
+          "expected": "水雾接触火焰后使其逐渐缩小或熄灭",
+          "problem": "水雾持续喷入火焰但火势不减反增",
+          "timestamp": "0.0–4.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01361",
+      "dir_name": "0147_physion_eval_full_T1_01361",
+      "video_id": "T1_01361",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0147_physion_eval_full_T1_01361.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "母鸡其实应该不移动；最后球进了框里之后全消失了",
+      "reviewed_at": "2026-11-02T03:06:15.381Z",
+      "issues_before_review": [
+        {
+          "expected": "母鸡沿受力后的连续轨迹运动且不瞬移",
+          "problem": "母鸡消失后在轨道接点重新出现",
+          "timestamp": "0.8–1.2"
+        },
+        {
+          "expected": "始终只保留原有的一黄一绿两个球",
+          "problem": "蓝轨上凭空多出黄球和绿球",
+          "timestamp": "0.9–1.5"
+        },
+        {
+          "expected": "不新增球，现有球颜色保持稳定",
+          "problem": "蓝轨中段凭空出现并变红的球",
+          "timestamp": "2.5–3.0"
+        },
+        {
+          "expected": "黄球持续存在并沿轨道正常滚动",
+          "problem": "蓝轨上的一个黄球突然消失",
+          "timestamp": "3.1"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_07091",
+      "dir_name": "0169_physion_eval_full_T1_07091",
+      "video_id": "T1_07091",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0169_physion_eval_full_T1_07091.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:42:07.720Z",
+      "issues_before_review": [
+        {
+          "expected": "刀刃明显下压切入后胡萝卜才分离",
+          "problem": "胡萝卜块未被切下便自行分成两块",
+          "timestamp": "5.7–6.2"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01283",
+      "dir_name": "0183_physion_eval_full_T1_01283",
+      "video_id": "T1_01283",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0183_physion_eval_full_T1_01283.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "我觉得这视频没啥问题",
+      "reviewed_at": "2026-11-02T03:09:08.763Z",
+      "issues_before_review": [
+        {
+          "expected": "云层应保持连续平滑且方向一致的移动",
+          "problem": "整层云无故突然反向移动",
+          "timestamp": "5.3"
+        },
+        {
+          "expected": "静止小屋的立面纹理和窗户位置应稳定",
+          "problem": "右侧小屋立面和窗户持续变形闪烁",
+          "timestamp": "0.0–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_07448",
+      "dir_name": "0188_physion_eval_full_T1_07448",
+      "video_id": "T1_07448",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0188_physion_eval_full_T1_07448.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T03:08:57.514Z",
+      "issues_before_review": [
+        {
+          "expected": "彩色固体应持续存在并随水流落地或留在水洼",
+          "problem": "水滴内彩色固体撞地时瞬间消失",
+          "timestamp": "3.5"
+        },
+        {
+          "expected": "第三个水珠也至少要有水花",
+          "problem": "第三颗水珠下落到固体，但是直接消失",
+          "timestamp": "0.7-2.0"
+        },
+        {
+          "expected": "第五个水珠也至少要有水花",
+          "problem": "第五颗水珠也没有水花",
+          "timestamp": "2.13-3"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_08671",
+      "dir_name": "0204_physion_eval_full_T1_08671",
+      "video_id": "T1_08671",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0204_physion_eval_full_T1_08671.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "我觉得没有明显问题",
+      "reviewed_at": "2026-11-02T01:56:31.634Z",
+      "issues_before_review": [
+        {
+          "expected": "手应该是从保鲜膜中直接出来，而不是穿出来",
+          "problem": "保鲜膜拿出来时像是手直接传过保鲜膜出来",
+          "timestamp": "3.6–3.78"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_04738",
+      "dir_name": "0221_physion_eval_full_T1_04738",
+      "video_id": "T1_04738",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0221_physion_eval_full_T1_04738.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "感觉没有大问题",
+      "reviewed_at": "2026-11-02T02:40:32.136Z",
+      "issues_before_review": [
+        {
+          "expected": "沸水上方应出现与沸腾强度相符的上升蒸汽",
+          "problem": "锅中水持续沸腾却没有产生蒸汽",
+          "timestamp": "2.3–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_08995",
+      "dir_name": "0223_physion_eval_full_T1_08995",
+      "video_id": "T1_08995",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0223_physion_eval_full_T1_08995.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:38:29.155Z",
+      "issues_before_review": [
+        {
+          "expected": "一次切割只产生一片香蕉",
+          "problem": "一次切割后无因多出一片香蕉",
+          "timestamp": "0.7–1.0"
+        },
+        {
+          "expected": "右侧不凭空出现额外香蕉片",
+          "problem": "一片香蕉从无人的右侧凭空出现",
+          "timestamp": "1.5–1.8"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_03014",
+      "dir_name": "0288_physion_eval_full_T1_03014",
+      "video_id": "T1_03014",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0288_physion_eval_full_T1_03014.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "蛋凭空跑到了盘子里，右手的袋子也是自己变大的",
+      "reviewed_at": "2026-11-02T03:11:18.301Z",
+      "issues_before_review": [
+        {
+          "expected": "两枚鸡蛋应持续可见或被明确放入容器",
+          "problem": "手中一枚鸡蛋凭空消失",
+          "timestamp": "6.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_09593",
+      "dir_name": "0303_physion_eval_full_T1_09593",
+      "video_id": "T1_09593",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0303_physion_eval_full_T1_09593.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "问题不大",
+      "reviewed_at": "2026-11-03T02:41:03.022Z",
+      "issues_before_review": [
+        {
+          "expected": "车辆应受冲击位移并破损，并出现径向飞散碎片",
+          "problem": "爆炸后车辆未位移且无径向碎片",
+          "timestamp": "1.6–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01325",
+      "dir_name": "0312_physion_eval_full_T1_01325",
+      "video_id": "T1_01325",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0312_physion_eval_full_T1_01325.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T03:09:22.601Z",
+      "issues_before_review": [
+        {
+          "expected": "压头回升后木条保持碎裂摊倒",
+          "problem": "碎裂木条无外力自动恢复直立形状",
+          "timestamp": "2.8–4.9"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01405",
+      "dir_name": "0313_physion_eval_full_T1_01405",
+      "video_id": "T1_01405",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0313_physion_eval_full_T1_01405.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "这俩卡片可以合起来",
+      "reviewed_at": "2026-11-02T03:12:51.050Z",
+      "issues_before_review": [
+        {
+          "expected": "水流经可见瓶口进入或沿外壁流下",
+          "problem": "水流穿过连续塑料壶壁进入壶内",
+          "timestamp": "0.0–5.5"
+        },
+        {
+          "expected": "水流经瓶口进入或沿外壁流下",
+          "problem": "水流穿过连续塑料瓶壁进入瓶内",
+          "timestamp": "5.5-6.6"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02956",
+      "dir_name": "0336_physion_eval_full_T1_02956",
+      "video_id": "T1_02956",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0336_physion_eval_full_T1_02956.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:04:36.680Z",
+      "issues_before_review": [
+        {
+          "expected": "子弹在开火后离开枪筒，沿可见轨迹击中头模",
+          "problem": "枪未开火前眼部凭空出现子弹",
+          "timestamp": "0.3–0.7"
+        },
+        {
+          "expected": "子弹离开头模后沿重力轨迹下坠",
+          "problem": "子弹水平漂移数秒且完全不下落",
+          "timestamp": "1.2–4.8"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02968",
+      "dir_name": "0341_physion_eval_full_T1_02968",
+      "video_id": "T1_02968",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0341_physion_eval_full_T1_02968.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:58:26.576Z",
+      "issues_before_review": [
+        {
+          "expected": "爆点保留焦痕、压倒草丛与散落碎屑",
+          "problem": "地面爆炸后草地与爆点毫无受损痕迹",
+          "timestamp": "0.0–4.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_00267",
+      "dir_name": "0344_physion_eval_full_T1_00267",
+      "video_id": "T1_00267",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0344_physion_eval_full_T1_00267.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "水不是无来源，但是水增加后冰块没有相应缩小",
+      "reviewed_at": "2026-11-03T02:37:39.942Z",
+      "issues_before_review": [
+        {
+          "expected": "水由可见注入或缓慢融冰形成",
+          "problem": "杯底无来源出现大量水并持续上涨",
+          "timestamp": "1.2–2.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_00523",
+      "dir_name": "0345_physion_eval_full_T1_00523",
+      "video_id": "T1_00523",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0345_physion_eval_full_T1_00523.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:40:04.635Z",
+      "issues_before_review": [
+        {
+          "expected": "金属条接触圆盘后应保持在其外部",
+          "problem": "金属条穿入不透明黑色圆盘",
+          "timestamp": "1.6–3.1"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_06090",
+      "dir_name": "0388_physion_eval_full_T1_06090",
+      "video_id": "T1_06090",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0388_physion_eval_full_T1_06090.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:37:52.818Z",
+      "issues_before_review": [
+        {
+          "expected": "浪峰应连续推进、破碎并回落",
+          "problem": "浪峰与破浪带悬空冻结",
+          "timestamp": "0.0–7.7"
+        },
+        {
+          "expected": "海水应向岸边流动并带动水线变化",
+          "problem": "海水与岸边水线始终不前移",
+          "timestamp": "0.0–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_05894",
+      "dir_name": "0419_physion_eval_full_T1_05894",
+      "video_id": "T1_05894",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0419_physion_eval_full_T1_05894.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:38:46.544Z",
+      "issues_before_review": [
+        {
+          "expected": "深红吸管应始终留在中右玻璃杯中",
+          "problem": "深红吸管在搅拌遮挡中消失",
+          "timestamp": "2.6"
+        },
+        {
+          "expected": "吸管应该明确是手放进来的",
+          "problem": "吸管凭空出现",
+          "timestamp": "0-0.31"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01566",
+      "dir_name": "0421_physion_eval_full_T1_01566",
+      "video_id": "T1_01566",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0421_physion_eval_full_T1_01566.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:55:12.999Z",
+      "issues_before_review": [
+        {
+          "expected": "薯块随左手连续移动且不消失",
+          "problem": "手中薯块突然消失",
+          "timestamp": "3.8"
+        },
+        {
+          "expected": "每次横切仅产生对应薄片并缩小主体",
+          "problem": "反复切割却凭空产生薯丁",
+          "timestamp": "5.3–6.3"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02515",
+      "dir_name": "0434_physion_eval_full_T1_02515",
+      "video_id": "T1_02515",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0434_physion_eval_full_T1_02515.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:46:15.788Z",
+      "issues_before_review": [
+        {
+          "expected": "杯中水位上升并在装满后溢出",
+          "problem": "水杯持续进水却无溢流",
+          "timestamp": "0.0–4.0"
+        },
+        {
+          "expected": "水纹仅从实际落水点向外传播",
+          "problem": "无水流处凭空出现平滑水纹",
+          "timestamp": "2.7–3.8"
+        },
+        {
+          "expected": "水柱遇手后向周围飞溅并偏转",
+          "problem": "水柱冲到手上却不飞溅偏转",
+          "timestamp": "5.6"
+        },
+        {
+          "expected": "落水处产生与水量匹配的细碎飞溅",
+          "problem": "入槽水柱仅产生光滑扭曲水纹",
+          "timestamp": "4.0–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_08974",
+      "dir_name": "0481_physion_eval_full_T1_08974",
+      "video_id": "T1_08974",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0481_physion_eval_full_T1_08974.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:41:37.439Z",
+      "issues_before_review": [
+        {
+          "expected": "小部件持续留在指间直至主动放下",
+          "problem": "指间发光小部件突然消失",
+          "timestamp": "1.8"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01358",
+      "dir_name": "0497_physion_eval_full_T1_01358",
+      "video_id": "T1_01358",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0497_physion_eval_full_T1_01358.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:03:44.640Z",
+      "issues_before_review": [
+        {
+          "expected": "绿球应保持存在并沿连续轨迹滚动",
+          "problem": "滚动中的绿球突然消失",
+          "timestamp": "1.7"
+        },
+        {
+          "expected": "红黄两球应沿相连轨道受力运动",
+          "problem": "红黄两球无外力跃上上层轨道",
+          "timestamp": "3.1–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_00742",
+      "dir_name": "0503_physion_eval_full_T1_00742",
+      "video_id": "T1_00742",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0503_physion_eval_full_T1_00742.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:44:27.093Z",
+      "issues_before_review": [
+        {
+          "expected": "球瓶仅在保龄球接触后被击倒",
+          "problem": "球未触瓶时球瓶自行散开",
+          "timestamp": "6.3–7.7"
+        },
+        {
+          "expected": "右侧人物腿部应该与保龄球架子保持分离",
+          "problem": "右侧人物右腿始终穿模",
+          "timestamp": "0.0-7.0"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_05985",
+      "dir_name": "0512_physion_eval_full_T1_05985",
+      "video_id": "T1_05985",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0512_physion_eval_full_T1_05985.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "整体太差",
+      "reviewed_at": "2026-11-03T02:53:34.201Z",
+      "issues_before_review": [
+        {
+          "expected": "黄蜡应由受热表面守恒熔化并自然滴落聚积",
+          "problem": "黄色材料凭空长成粗柱和大池",
+          "timestamp": "0.8–5.5"
+        },
+        {
+          "expected": "喷枪这么近的情况，蓝色材料也应该被少范围融化",
+          "problem": "蓝色材料没有被遗弃融化",
+          "timestamp": "0.8-5.5"
+        },
+        {
+          "expected": "下面的材料看起来像是棉质物品，遇到高温度的时候应该碳化并且冒烟",
+          "problem": "材料熔化到下面白色材料上，没有冒烟",
+          "timestamp": "3.55-5.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::029a135b-17fc-5e65-b012-16c8bfe7feed",
+      "dir_name": "0526_physion_eval_full_029a135b-17fc-5e65-b012-16c8bfe7feed",
+      "video_id": "029a135b-17fc-5e65-b012-16c8bfe7feed",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0526_physion_eval_full_029a135b-17fc-5e65-b012-16c8bfe7feed.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:12:09.273Z",
+      "issues_before_review": [
+        {
+          "expected": "白色部件从台面或画外拿入手中",
+          "problem": "手中凭空出现白色搅拌器部件",
+          "timestamp": "3.1"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02367",
+      "dir_name": "0555_physion_eval_full_T1_02367",
+      "video_id": "T1_02367",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0555_physion_eval_full_T1_02367.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "没啥问题",
+      "reviewed_at": "2026-11-03T02:52:51.073Z",
+      "issues_before_review": [
+        {
+          "expected": "草地随风暴气流连贯摆动",
+          "problem": "强风暴中草地始终静止",
+          "timestamp": "0.0–5.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_03062",
+      "dir_name": "0570_physion_eval_full_T1_03062",
+      "video_id": "T1_03062",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0570_physion_eval_full_T1_03062.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:39:00.737Z",
+      "issues_before_review": [
+        {
+          "expected": "无人关闭龙头时水流应持续",
+          "problem": "无人操作时水流自行停止",
+          "timestamp": "3.0–3.2"
+        },
+        {
+          "expected": "水龙头出水处的嘴部连接件应该与管道连接",
+          "problem": "水龙头嘴部凭空悬浮",
+          "timestamp": "0.0-2.0"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_09972",
+      "dir_name": "0574_physion_eval_full_T1_09972",
+      "video_id": "T1_09972",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0574_physion_eval_full_T1_09972.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "冰块没有瞬间消失",
+      "reviewed_at": "2026-11-02T02:22:36.169Z",
+      "issues_before_review": [
+        {
+          "expected": "冰块逐渐融化并持续缩小",
+          "problem": "冰块瞬间消失",
+          "timestamp": "4.8–5.2"
+        },
+        {
+          "expected": "水落到冰上应该变成水膜或者水流往下流",
+          "problem": "水落到冰上变为水珠",
+          "timestamp": "1.1-2.57"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_03239",
+      "dir_name": "0584_physion_eval_full_T1_03239",
+      "video_id": "T1_03239",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0584_physion_eval_full_T1_03239.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:11:43.206Z",
+      "issues_before_review": [
+        {
+          "expected": "融液增加时冰淇淋同步缩小变形",
+          "problem": "融液增多但冰淇淋体积未减",
+          "timestamp": "1.0–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01190",
+      "dir_name": "0585_physion_eval_full_T1_01190",
+      "video_id": "T1_01190",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0585_physion_eval_full_T1_01190.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "除了台灯之外，书也在无外力作用下自行移动",
+      "reviewed_at": "2026-11-02T02:41:21.589Z",
+      "issues_before_review": [
+        {
+          "expected": "无外力时台灯颈部和灯头应保持静止",
+          "problem": "台灯无人接触却自行弯曲转动",
+          "timestamp": "0.2–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_08367",
+      "dir_name": "0591_physion_eval_full_T1_08367",
+      "video_id": "T1_08367",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0591_physion_eval_full_T1_08367.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T03:09:09.580Z",
+      "issues_before_review": [
+        {
+          "expected": "肉盘应落稳于支撑面或因失衡倾落",
+          "problem": "两盒肉盘大幅悬空却不倾落",
+          "timestamp": "7.0–7.8"
+        },
+        {
+          "expected": "左边的肉盒子的封面应当从始至终保持不变",
+          "problem": "左边的肉盒子上面有不明刀片",
+          "timestamp": "2.57-7.8"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_04058",
+      "dir_name": "0628_physion_eval_full_T1_04058",
+      "video_id": "T1_04058",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0628_physion_eval_full_T1_04058.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:38:43.882Z",
+      "issues_before_review": [
+        {
+          "expected": "两个番茄接触后碰撞、变形或反弹",
+          "problem": "第二个番茄穿过并重叠第一个番茄",
+          "timestamp": "0.8–1.3"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02931",
+      "dir_name": "0637_physion_eval_full_T1_02931",
+      "video_id": "T1_02931",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0637_physion_eval_full_T1_02931.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "挡风玻璃不仅没破，火焰还直接从挡风玻璃烧到外面，这显然是不对的",
+      "reviewed_at": "2026-11-02T03:04:24.661Z",
+      "issues_before_review": [
+        {
+          "expected": "挡风玻璃应随车内爆炸破裂并产生碎片",
+          "problem": "车内爆炸时挡风玻璃始终完好",
+          "timestamp": "0.4–4.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_06734",
+      "dir_name": "0638_physion_eval_full_T1_06734",
+      "video_id": "T1_06734",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0638_physion_eval_full_T1_06734.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T03:09:35.959Z",
+      "issues_before_review": [
+        {
+          "expected": "人形物爆炸后应留下并散落对应碎片",
+          "problem": "人形物爆炸后未留下可辨碎片",
+          "timestamp": "1.0–4.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_08106",
+      "dir_name": "0639_physion_eval_full_T1_08106",
+      "video_id": "T1_08106",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0639_physion_eval_full_T1_08106.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:38:13.712Z",
+      "issues_before_review": [
+        {
+          "expected": "锥形瓶内液面应随持续注水逐渐上升",
+          "problem": "持续注水时锥形瓶液面没有上升",
+          "timestamp": "0.0–4.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02632",
+      "dir_name": "0640_physion_eval_full_T1_02632",
+      "video_id": "T1_02632",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0640_physion_eval_full_T1_02632.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:09:38.618Z",
+      "issues_before_review": [
+        {
+          "expected": "粉尘应从可见源头连续喷出并扩散",
+          "problem": "南瓜上方大量粉尘凭空出现",
+          "timestamp": "0.8"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02955",
+      "dir_name": "0643_physion_eval_full_T1_02955",
+      "video_id": "T1_02955",
+      "source": "physion_eval",
+      "generator": "Hailuo 2.3",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0643_physion_eval_full_T1_02955.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "比较差",
+      "reviewed_at": "2026-11-02T03:10:27.632Z",
+      "issues_before_review": [
+        {
+          "expected": "子弹应静止或受明确外力后运动",
+          "problem": "子弹无受力从假人头部倒退回枪管",
+          "timestamp": "0.0–1.1"
+        },
+        {
+          "expected": "假人头部应在子弹接触后才破裂飞散",
+          "problem": "子弹未撞击假人头部便先破裂",
+          "timestamp": "2.0–2.2"
+        },
+        {
+          "expected": "子弹飞出的瞬间，枪管应该要冒火，子弹尾部有被加热的迹象，而不是子弹头",
+          "problem": "子弹飞出的瞬间，枪管没有冒火",
+          "timestamp": "1.37-1.55"
+        },
+        {
+          "expected": "子弹头从头到尾都应该是普通金属颜色",
+          "problem": "子弹头先是红的，再是金属颜色",
+          "timestamp": "1.60-2.3"
+        },
+        {
+          "expected": "这时候枪不应该喷火了",
+          "problem": "子弹已经飞出，但是枪喷火了",
+          "timestamp": "2.63-2.73"
+        },
+        {
+          "expected": "子弹还没有穿过头骨，头骨后面不应该喷火",
+          "problem": "骨头后面喷火",
+          "timestamp": "3.36-3.43"
+        },
+        {
+          "expected": "子弹应该穿过头骨后，头骨后面才发生断裂，然后才有爆炸",
+          "problem": "子弹没有触碰到头骨后方，头骨后方就断裂往后飞去",
+          "timestamp": "2.73-5.67"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01290",
+      "dir_name": "0649_physion_eval_full_T1_01290",
+      "video_id": "T1_01290",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0649_physion_eval_full_T1_01290.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:52:49.768Z",
+      "issues_before_review": [
+        {
+          "expected": "欧泊应与夹持手指同步转动并保持夹持",
+          "problem": "手指几乎不转而欧泊大幅自转",
+          "timestamp": "0.0–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_04814",
+      "dir_name": "0650_physion_eval_full_T1_04814",
+      "video_id": "T1_04814",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0650_physion_eval_full_T1_04814.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T01:57:43.019Z",
+      "issues_before_review": [
+        {
+          "expected": "冰棒保持盘面支撑，无外力时不腾空",
+          "problem": "冰棒无外力从盘中腾空",
+          "timestamp": "3.8–6.0"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02540",
+      "dir_name": "0657_physion_eval_full_T1_02540",
+      "video_id": "T1_02540",
+      "source": "physion_eval",
+      "generator": "Kling 2.5",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0657_physion_eval_full_T1_02540.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "我觉得没有明显问题",
+      "reviewed_at": "2026-11-02T01:54:00.338Z",
+      "issues_before_review": [
+        {
+          "expected": "冰块应在飞溅后仍浮在冰面可见并保持固体形态",
+          "problem": "两块冰块在白球入水后消失",
+          "timestamp": "0.5–4.8"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_02934",
+      "dir_name": "0672_physion_eval_full_T1_02934",
+      "video_id": "T1_02934",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0672_physion_eval_full_T1_02934.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T03:10:16.561Z",
+      "issues_before_review": [
+        {
+          "expected": "镜片左侧白边始终洁净无文字",
+          "problem": "光学镜片左侧白边突然出现文字",
+          "timestamp": "2.4"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_06574",
+      "dir_name": "0690_physion_eval_full_T1_06574",
+      "video_id": "T1_06574",
+      "source": "physion_eval",
+      "generator": "Veo 3.1 Fast",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0690_physion_eval_full_T1_06574.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "第二条删去",
+      "reviewed_at": "2026-11-03T03:11:57.998Z",
+      "issues_before_review": [
+        {
+          "expected": "碾压后只留下棕黄面条碎段和碎屑",
+          "problem": "碎裂面条突然变成灰白小石块",
+          "timestamp": "2.8"
+        },
+        {
+          "expected": "左侧木质垫块应始终紧压地面",
+          "problem": "左侧木质垫块突然上翘",
+          "timestamp": "4.1-4.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_06058",
+      "dir_name": "0696_physion_eval_full_T1_06058",
+      "video_id": "T1_06058",
+      "source": "physion_eval",
+      "generator": "Sora 2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0696_physion_eval_full_T1_06058.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "主要是液体增加体积不匹配",
+      "reviewed_at": "2026-11-03T02:40:12.350Z",
+      "issues_before_review": [
+        {
+          "expected": "液体体积与铺展范围随固体熔化增加",
+          "problem": "绿色固体熔化但周围液体量未增加",
+          "timestamp": "0.0–7.7"
+        }
+      ]
+    },
+    {
+      "record_id": "physion_eval::full::T1_01665",
+      "dir_name": "0700_physion_eval_full_T1_01665",
+      "video_id": "T1_01665",
+      "source": "physion_eval",
+      "generator": "Wan 2.2",
+      "upstream_data_file": "data/physfixbench_physion300.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0700_physion_eval_full_T1_01665.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T02:41:27.002Z",
+      "issues_before_review": [
+        {
+          "expected": "白块受可见外力后再沿连续轨迹飞出",
+          "problem": "白块从浅液体中自行弹出碟外",
+          "timestamp": "0.0–0.7"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__robotwin__generated_data__happyhorse_prefix__task_0107__episode_0001__1__task_0107_episode_0001",
+      "dir_name": "0053_robojudge_test_data__robotwin__generated_data__happyhorse_prefix__task_0107__episode_0001__1__task_0107_episode_0001",
+      "video_id": "data__robotwin__generated_data__happyhorse_prefix__task_0107__episode_0001__1__task_0107_episode_0001",
+      "source": "robojudge",
+      "generator": "happyhorse_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0053_robojudge_test_data__robotwin__generated_data__happyhorse_prefix__task_0107__episode_0001__1__task_0107_episode_0001.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:42:30.005Z",
+      "issues_before_review": [
+        {
+          "expected": "夹爪应始终由连续完整的左机械臂连接并驱动，不能断离后独自悬空移动。",
+          "problem": "左机械臂消失，断离夹爪携红瓶悬空移动",
+          "timestamp": "2–5"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0116__episode_0001__1__task_0116_episode_0001",
+      "dir_name": "0091_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0116__episode_0001__1__task_0116_episode_0001",
+      "video_id": "data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0116__episode_0001__1__task_0116_episode_0001",
+      "source": "robojudge",
+      "generator": "wan22_ti2v5b_1280x704_f169_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0091_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0116__episode_0001__1__task_0116_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:47:10.397Z",
+      "issues_before_review": [
+        {
+          "expected": "玉米应保持在桌面静止，只有夹爪实际接触并施力后才移动。",
+          "problem": "玉米无接触自行高速横飞出框",
+          "timestamp": "1–1.2"
+        },
+        {
+          "expected": "同一机械手应保持固定数量、彼此分离且关节连接合理的手指结构。",
+          "problem": "白臂黑手融合出多排重复机械指",
+          "timestamp": "2–3.7"
+        },
+        {
+          "expected": "交接过程中玉米数量应始终为一，物体不能无因复制或生成副本。",
+          "problem": "单根玉米无因复制成两根",
+          "timestamp": "4–4.5"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__wow_wan14b_f105_rewrite__task_0005__episode_0001__1__task_0005_episode_0001",
+      "dir_name": "0106_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_rewrite__task_0005__episode_0001__1__task_0005_episode_0001",
+      "video_id": "data__gr1_inlab__generated_data__wow_wan14b_f105_rewrite__task_0005__episode_0001__1__task_0005_episode_0001",
+      "source": "robojudge",
+      "generator": "wow_wan14b_f105_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0106_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_rewrite__task_0005__episode_0001__1__task_0005_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "质量太差",
+      "reviewed_at": "2026-11-02T03:15:07.700Z",
+      "issues_before_review": [
+        {
+          "expected": "这里的物体形变太过复炸，不建议收入物理问题",
+          "problem": "物体形变过于诡异",
+          "timestamp": "2.3–6.8"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__egodex_human__generated_data__wan26_flash_rewrite__task_0038__episode_0001__1__task_0038_episode_0001",
+      "dir_name": "0135_robojudge_test_data__egodex_human__generated_data__wan26_flash_rewrite__task_0038__episode_0001__1__task_0038_episode_0001",
+      "video_id": "data__egodex_human__generated_data__wan26_flash_rewrite__task_0038__episode_0001__1__task_0038_episode_0001",
+      "source": "robojudge",
+      "generator": "wan26_flash_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0135_robojudge_test_data__egodex_human__generated_data__wan26_flash_rewrite__task_0038__episode_0001__1__task_0038_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "这个视频没啥问题",
+      "reviewed_at": "2026-11-02T03:18:29.255Z",
+      "issues_before_review": [
+        {
+          "expected": "应先移除瓶盖并从开放瓶口倾倒，封闭瓶盖不应透液",
+          "problem": "液体穿过未移除的瓶盖流入杯中",
+          "timestamp": "2–3.8"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__open_x_embodiment__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0009__episode_0001__1__task_0009_episode_0001",
+      "dir_name": "0253_robojudge_test_data__open_x_embodiment__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0009__episode_0001__1__task_0009_episode_0001",
+      "video_id": "data__open_x_embodiment__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0009__episode_0001__1__task_0009_episode_0001",
+      "source": "robojudge",
+      "generator": "gigaworld_gr1_2b_f113_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0253_robojudge_test_data__open_x_embodiment__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0009__episode_0001__1__task_0009_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:02:12.796Z",
+      "issues_before_review": [
+        {
+          "expected": "全片始终只有一枚柠檬：夹爪应空手自顶部入画，下行连续接触并夹住盘中原有柠檬后再提起；不得在夹爪上预置第二枚柠檬，盘中柠檬也不得在未被夹住时消失。（夹爪事后是否重新取走柠檬属任务语义，不评判）",
+          "problem": "夹爪带一枚柠檬入画，与盘中静置的柠檬短暂同框（柠檬被复制），随后盘内柠檬消失、只剩爪中一枚",
+          "timestamp": "6–6.2"
+        },
+        {
+          "expected": "松爪后，柠檬在盘中应该处于静止状态\n",
+          "problem": "夹爪已经松开但是柠檬仍在动",
+          "timestamp": "2.93-4.04"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001",
+      "dir_name": "0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001",
+      "video_id": "data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001",
+      "source": "robojudge",
+      "generator": "cosmos3_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:00:54.593Z",
+      "issues_before_review": [
+        {
+          "expected": "夹爪应先夹住门的左侧自由边或把手并随拉开动作连续接触，再带动门绕铰链开启。",
+          "problem": "没有夹爪夹住冰箱门自由边或把手，冰箱门却自行绕铰链转开（接触缺失/隔空带动）",
+          "timestamp": "3–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001",
+      "dir_name": "0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001",
+      "video_id": "data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001",
+      "source": "robojudge",
+      "generator": "kling_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:42:05.296Z",
+      "issues_before_review": [
+        {
+          "expected": "机械夹爪应该对准这个视频杯子，才能夹起来",
+          "problem": "夹爪和杯子没有对准，但是还是夹起来了",
+          "timestamp": "0.49-1.52"
+        },
+        {
+          "expected": "夹爪释放时，物体应该是自由下落，而不是直接有水平速度落到其他地方。",
+          "problem": "物体不是自由下落",
+          "timestamp": "2.75-3.05"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001",
+      "dir_name": "0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001",
+      "video_id": "data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001",
+      "source": "robojudge",
+      "generator": "wan26_flash_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:14:13.940Z",
+      "issues_before_review": [
+        {
+          "expected": "夹爪应先闭合并在瓶体两侧形成承重接触后再抬升运输；若未夹住，瓶应受重力留在台面或下落。",
+          "problem": "橙色瓶未被夹持却随夹爪悬空移动",
+          "timestamp": "2.3–3.5"
+        },
+        {
+          "expected": "机械臂移动时应该保持中间臂的刚性，只旋转关节处",
+          "problem": "机械臂移动不受关节电机限制，机械臂根部被拉伸扭曲变形",
+          "timestamp": "0.0-5.0"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001",
+      "dir_name": "0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001",
+      "video_id": "data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001",
+      "source": "robojudge",
+      "generator": "wan26_flash_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:03:02.474Z",
+      "issues_before_review": [
+        {
+          "expected": "双指应从碗沿内外对夹、或弯钩指勾住碗沿形成可靠承托后，再抬起并水平搬运蓝碗。",
+          "problem": "蓝碗仅靠一根伸入碗内的直指单点接触即悬空水平搬运，对侧夹指全程悬空，无对夹或弯钩承托，碗应倾斜或坠落。",
+          "timestamp": "1.5–2.8"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001",
+      "dir_name": "0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001",
+      "video_id": "data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001",
+      "source": "robojudge",
+      "generator": "wow_wan14b_f105_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:43:37.677Z",
+      "issues_before_review": [
+        {
+          "expected": "机器人末端应始终保持机械夹爪结构，不应凭空生成人手或与人手融合。",
+          "problem": "机器人末端变为肤色人手并与矩形机械前臂融合（中段双手皆然）",
+          "timestamp": "0.3–6.8"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001",
+      "dir_name": "0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001",
+      "video_id": "data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001",
+      "source": "robojudge",
+      "generator": "wan22_ti2v5b_1280x704_f169_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:03:19.256Z",
+      "issues_before_review": [
+        {
+          "expected": "场景应保持初始两条机械臂，仅一条右臂连续完成抓布动作，不应生成第三条机械臂。",
+          "problem": "第0.67s起右侧凭空多出一条完整白色机械臂（白前臂+黑色夹爪，从画面上缘进入），与原有右下抓布白臂及左侧黑色机械手形成三臂同框；该复制臂结构完整、独立运动并持续存在至约7.0s片尾；其间下方白臂腕部外壳还伴随灰白斑驳的形态畸变。",
+          "timestamp": "0.7–7"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__egodex_human__generated_data__wan26_flash_prefix__task_0035__episode_0001__1__task_0035_episode_0001",
+      "dir_name": "0488_robojudge_test_data__egodex_human__generated_data__wan26_flash_prefix__task_0035__episode_0001__1__task_0035_episode_0001",
+      "video_id": "data__egodex_human__generated_data__wan26_flash_prefix__task_0035__episode_0001__1__task_0035_episode_0001",
+      "source": "robojudge",
+      "generator": "wan26_flash_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0488_robojudge_test_data__egodex_human__generated_data__wan26_flash_prefix__task_0035__episode_0001__1__task_0035_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:44:41.224Z",
+      "issues_before_review": [
+        {
+          "expected": "USB应在被手持和移向端口前连续存在，不能在相邻原生帧间无来源地生成。",
+          "problem": "双头USB在手指间凭空生成",
+          "timestamp": "0.0–0.3"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__abot_physworld_f113_rewrite__task_0129__episode_0001__1__task_0129_episode_0001",
+      "dir_name": "9169_robojudge_test_data__agibot_world__generated_data__abot_physworld_f113_rewrite__task_0129__episode_0001__1__task_0129_episode_0001",
+      "video_id": "data__agibot_world__generated_data__abot_physworld_f113_rewrite__task_0129__episode_0001__1__task_0129_episode_0001",
+      "source": "robojudge",
+      "generator": "abot_physworld_f113_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9169_robojudge_test_data__agibot_world__generated_data__abot_physworld_f113_rewrite__task_0129__episode_0001__1__task_0129_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:43:54.705Z",
+      "issues_before_review": [
+        {
+          "expected": "硬质杯被释放并落入袋中时应保持杯壁、杯口和整体刚体形状，仅姿态随下落改变。",
+          "problem": "橙杯释放时塌成扁平软团",
+          "timestamp": "4.8–5.2"
+        },
+        {
+          "expected": "杯子应该落在袋子的上方",
+          "problem": "杯子穿过袋子",
+          "timestamp": "4.83-5.16"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__epickitchens_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0040__episode_0001__1__task_0040_episode_0001",
+      "dir_name": "9206_robojudge_test_data__epickitchens_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0040__episode_0001__1__task_0040_episode_0001",
+      "video_id": "data__epickitchens_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0040__episode_0001__1__task_0040_episode_0001",
+      "source": "robojudge",
+      "generator": "wan22_ti2v5b_1280x704_f169_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9206_robojudge_test_data__epickitchens_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0040__episode_0001__1__task_0040_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:45:55.329Z",
+      "issues_before_review": [
+        {
+          "expected": "水龙头应仅在控制柄被操作后开始出水，并随控制动作连续变化。",
+          "problem": "控制柄无人动作，龙头自行出水并变粗",
+          "timestamp": "0.2–0.5"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__droid__generated_data__happyhorse_prefix__task_0030__episode_0001__1__task_0030_episode_0001",
+      "dir_name": "9235_robojudge_test_data__droid__generated_data__happyhorse_prefix__task_0030__episode_0001__1__task_0030_episode_0001",
+      "video_id": "data__droid__generated_data__happyhorse_prefix__task_0030__episode_0001__1__task_0030_episode_0001",
+      "source": "robojudge",
+      "generator": "happyhorse_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9235_robojudge_test_data__droid__generated_data__happyhorse_prefix__task_0030__episode_0001__1__task_0030_episode_0001.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:47:29.055Z",
+      "issues_before_review": [
+        {
+          "expected": "释放后的胶带应保持连续并留在台面，除非有可见切割或回收作用。",
+          "problem": "长胶带无接触突然缩短并消失",
+          "timestamp": "3.7–3.8"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__droid__generated_data__happyhorse_prefix__task_0165__episode_0001__1__task_0165_episode_0001",
+      "dir_name": "9242_robojudge_test_data__droid__generated_data__happyhorse_prefix__task_0165__episode_0001__1__task_0165_episode_0001",
+      "video_id": "data__droid__generated_data__happyhorse_prefix__task_0165__episode_0001__1__task_0165_episode_0001",
+      "source": "robojudge",
+      "generator": "happyhorse_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9242_robojudge_test_data__droid__generated_data__happyhorse_prefix__task_0165__episode_0001__1__task_0165_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:42:59.320Z",
+      "issues_before_review": [
+        {
+          "expected": "碗应保持静止，或仅在夹爪接触并施力后沿台面移动。",
+          "problem": "浅棕碗无接触自行滑过台面",
+          "timestamp": "1.7–2.5"
+        },
+        {
+          "expected": "夹爪应该闭合后夹取到面包，与面包接触",
+          "problem": "夹爪和面包未接触，面包凭空被夹取，夹爪未闭合",
+          "timestamp": "2.2-4.0"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__cosmos3_rewrite__task_0114__episode_0001__1__task_0114_episode_0001",
+      "dir_name": "9246_robojudge_test_data__gr1_inlab__generated_data__cosmos3_rewrite__task_0114__episode_0001__1__task_0114_episode_0001",
+      "video_id": "data__gr1_inlab__generated_data__cosmos3_rewrite__task_0114__episode_0001__1__task_0114_episode_0001",
+      "source": "robojudge",
+      "generator": "cosmos3_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9246_robojudge_test_data__gr1_inlab__generated_data__cosmos3_rewrite__task_0114__episode_0001__1__task_0114_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:46:07.288Z",
+      "issues_before_review": [
+        {
+          "expected": "交接过程中应始终只有一根形态稳定的玉米，由右手连续转移至左手。",
+          "problem": "单根玉米无因分裂为两块并异形",
+          "timestamp": "2.8–3.3"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0036__episode_0001__1__task_0036_episode_0001",
+      "dir_name": "9247_robojudge_test_data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0036__episode_0001__1__task_0036_episode_0001",
+      "video_id": "data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0036__episode_0001__1__task_0036_episode_0001",
+      "source": "robojudge",
+      "generator": "gigaworld_gr1_2b_f113_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9247_robojudge_test_data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0036__episode_0001__1__task_0036_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "整体太差",
+      "reviewed_at": "2026-11-02T03:13:12.035Z",
+      "issues_before_review": [
+        {
+          "expected": "白圆柱若被移走应随夹爪可见；未移走时应保持材质、形状与数量。",
+          "problem": "白托盘内白圆柱突变为米色丝瓜络",
+          "timestamp": "1.2–1.5"
+        },
+        {
+          "expected": "同一件被持续夹持的物体应保持其材质、颜色和基本形状，不应无因变成另一类物体。",
+          "problem": "右夹爪内丝瓜络渐变成白色袋状物",
+          "timestamp": "1–2"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0182__episode_0001__1__task_0182_episode_0001",
+      "dir_name": "9261_robojudge_test_data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0182__episode_0001__1__task_0182_episode_0001",
+      "video_id": "data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0182__episode_0001__1__task_0182_episode_0001",
+      "source": "robojudge",
+      "generator": "gigaworld_gr1_2b_f113_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9261_robojudge_test_data__agibot_world__generated_data__gigaworld_gr1_2b_f113_rewrite__task_0182__episode_0001__1__task_0182_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:46:22.396Z",
+      "issues_before_review": [
+        {
+          "expected": "白盒若始终被夹持，应在相邻原生帧中随腕部连续显露；若已放下，则须重新接触并抓取后再进入夹口。",
+          "problem": "小白盒在格子中消失 然后在左侧爪中突然重现",
+          "timestamp": "2–7"
+        },
+        {
+          "expected": "右侧格子保持空 ",
+          "problem": "右侧夹爪中凭空出现白色透明塑料袋",
+          "timestamp": "1.0-2.0"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__egodex_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0064__episode_0001__1__task_0064_episode_0001",
+      "dir_name": "9264_robojudge_test_data__egodex_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0064__episode_0001__1__task_0064_episode_0001",
+      "video_id": "data__egodex_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0064__episode_0001__1__task_0064_episode_0001",
+      "source": "robojudge",
+      "generator": "wan22_ti2v5b_1280x704_f169_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9264_robojudge_test_data__egodex_human__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0064__episode_0001__1__task_0064_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "质量太差",
+      "reviewed_at": "2026-11-02T03:18:03.972Z",
+      "issues_before_review": [
+        {
+          "expected": "硬币应被连续地捏取、移动与放下：若松手，应看到手指展开与硬币沿短轨迹落至床面；前后帧手臂位姿也应连续变化，不能在相邻帧重置。",
+          "problem": "第6.04s–6.13s（nf146→nf147）画面状态硬切重置：硬币从抬起的左手指背无释放、无下落轨迹地瞬移到床面",
+          "timestamp": "6–6.2"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__gigaworld_gr1_2b_f113_prefix__task_0153__episode_0001__1__task_0153_episode_0001",
+      "dir_name": "9267_robojudge_test_data__gr1_inlab__generated_data__gigaworld_gr1_2b_f113_prefix__task_0153__episode_0001__1__task_0153_episode_0001",
+      "video_id": "data__gr1_inlab__generated_data__gigaworld_gr1_2b_f113_prefix__task_0153__episode_0001__1__task_0153_episode_0001",
+      "source": "robojudge",
+      "generator": "gigaworld_gr1_2b_f113_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9267_robojudge_test_data__gr1_inlab__generated_data__gigaworld_gr1_2b_f113_prefix__task_0153__episode_0001__1__task_0153_episode_0001.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:43:21.223Z",
+      "issues_before_review": [
+        {
+          "expected": "夹爪松开后世界中应只有盘中那一根玉米，夹爪空手离开；不能在松爪处产生第二个跟随夹爪运动的同体副本。",
+          "problem": "唯一一根玉米在落盘松爪瞬间被复制：盘中留下一根，夹爪又带走一根并放回桌面，终态从一根变成两根",
+          "timestamp": "4.2–7"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__happyhorse_prefix__task_0192__episode_0001__1__task_0192_episode_0001",
+      "dir_name": "9268_robojudge_test_data__agibot_world__generated_data__happyhorse_prefix__task_0192__episode_0001__1__task_0192_episode_0001",
+      "video_id": "data__agibot_world__generated_data__happyhorse_prefix__task_0192__episode_0001__1__task_0192_episode_0001",
+      "source": "robojudge",
+      "generator": "happyhorse_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9268_robojudge_test_data__agibot_world__generated_data__happyhorse_prefix__task_0192__episode_0001__1__task_0192_episode_0001.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:42:43.870Z",
+      "issues_before_review": [
+        {
+          "expected": "夹指应由尺寸固定的刚性关节块组成，靠近冰箱门时只能随腕部平滑转动或平移，相邻帧结构、接缝与螺钉位置必须连续，不得单帧换形并永久保持。",
+          "problem": "右侧夹爪下指在一帧内熔接拉长为桨状刚体并持续保持",
+          "timestamp": "2.5–2.7"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__egoscaler_human__generated_data__wan26_flash_rewrite__task_0040__episode_0001__1__task_0040_episode_0001",
+      "dir_name": "9272_robojudge_test_data__egoscaler_human__generated_data__wan26_flash_rewrite__task_0040__episode_0001__1__task_0040_episode_0001",
+      "video_id": "data__egoscaler_human__generated_data__wan26_flash_rewrite__task_0040__episode_0001__1__task_0040_episode_0001",
+      "source": "robojudge",
+      "generator": "wan26_flash_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9272_robojudge_test_data__egoscaler_human__generated_data__wan26_flash_rewrite__task_0040__episode_0001__1__task_0040_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:44:17.605Z",
+      "issues_before_review": [
+        {
+          "expected": "束带要么沿葱茎连续滑动越过葱端脱出（应有可见的滑移轨迹），要么断开后环身作为碎片飞出；手拉开后束带应仍与葱束保持接触直到真正越过端部，不得一帧消失并留下悬空自由端。",
+          "problem": "绕葱束的上侧蓝色束带环在一帧内无滑脱路径地消失，手中蓝带变成悬空自由条",
+          "timestamp": "3.8–4"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__veo31_lite_rewrite__task_0009__episode_0001__1__task_0009_episode_0001",
+      "dir_name": "9306_robojudge_test_data__agibot_world__generated_data__veo31_lite_rewrite__task_0009__episode_0001__1__task_0009_episode_0001",
+      "video_id": "data__agibot_world__generated_data__veo31_lite_rewrite__task_0009__episode_0001__1__task_0009_episode_0001",
+      "source": "robojudge",
+      "generator": "veo31_lite_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9306_robojudge_test_data__agibot_world__generated_data__veo31_lite_rewrite__task_0009__episode_0001__1__task_0009_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:46:58.723Z",
+      "issues_before_review": [
+        {
+          "expected": "夹爪只搬运过一片面包，右槽应保持空置；第二片必须由夹爪从篮中实际抓取、连续搬运后放入。",
+          "problem": "第3.96s–4.04s（nf096→nf098），左槽单片下沉时，右空槽在夹爪未取放情况下凭空出现第二片面包",
+          "timestamp": "3.8–4"
+        },
+        {
+          "expected": "面包被夹走 篮子对应位置为空",
+          "problem": "左侧夹爪 抓取面包后 篮子的相同位置还有原来的面包",
+          "timestamp": "1.0-2.0"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0018__episode_0001__1__task_0018_episode_0001",
+      "dir_name": "9310_robojudge_test_data__agibot_world__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0018__episode_0001__1__task_0018_episode_0001",
+      "video_id": "data__agibot_world__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0018__episode_0001__1__task_0018_episode_0001",
+      "source": "robojudge",
+      "generator": "wan22_ti2v5b_1280x704_f169_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9310_robojudge_test_data__agibot_world__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0018__episode_0001__1__task_0018_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "整体质量太差",
+      "reviewed_at": "2026-11-02T02:03:53.224Z",
+      "issues_before_review": [
+        {
+          "expected": "湿巾包应在夹爪实际接触包体并施加推力/抓力后才开始倾立和滑动；接触前应在木桌表面保持静止。",
+          "problem": "第0.71s–0.96s（nf018→nf024），湿巾包在夹爪尚未接触时自行向镜头方向倾立并连续滑移旋转，夹爪迟至约nf024才触到包角",
+          "timestamp": "0.7–1"
+        },
+        {
+          "expected": "湿巾外包装图案应保持一致",
+          "problem": "湿巾包装图案突然切换",
+          "timestamp": "3.2-3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0128__episode_0001__1__task_0128_episode_0001",
+      "dir_name": "9329_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0128__episode_0001__1__task_0128_episode_0001",
+      "video_id": "data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0128__episode_0001__1__task_0128_episode_0001",
+      "source": "robojudge",
+      "generator": "wan22_ti2v5b_1280x704_f169_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9329_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0128__episode_0001__1__task_0128_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:47:23.345Z",
+      "issues_before_review": [
+        {
+          "expected": "画面中应始终只有左右两条机械臂；应由其中一条原臂（如右侧银色前臂的夹爪）独立完成伸向火龙果并抓取的动作，不应从画面顶部额外生成第三套大臂+夹爪。",
+          "problem": "1.17s-7.0s凭空多出第三条机械臂，与原有左右两臂同时存在并完成抓取",
+          "timestamp": "1.2–7"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__robotwin__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0007__episode_0001__1__task_0007_episode_0001",
+      "dir_name": "9334_robojudge_test_data__robotwin__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0007__episode_0001__1__task_0007_episode_0001",
+      "video_id": "data__robotwin__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0007__episode_0001__1__task_0007_episode_0001",
+      "source": "robojudge",
+      "generator": "wan22_ti2v5b_1280x704_f169_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9334_robojudge_test_data__robotwin__generated_data__wan22_ti2v5b_1280x704_f169_rewrite__task_0007__episode_0001__1__task_0007_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:41:51.798Z",
+      "issues_before_review": [
+        {
+          "expected": "全片物体数量应守恒：任务只要求移动桌面上原有的大青块、中青块和绿色小块并按大小排列；夹爪离开画面不应带回新的方块，需要移动时应从桌面上抓起现有方块（抓起处即空），桌面青块总数不应逐轮增加，也不应出现方块重叠/瞬移换位。",
+          "problem": "0.67-7.0s夹爪反复空手移出画面、再持凭空出现的大青块返回摆放，青色方块数量从3个单调复制到7个以上",
+          "timestamp": "0.7–7"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001",
+      "dir_name": "9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001",
+      "video_id": "data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001",
+      "source": "robojudge",
+      "generator": "wow_wan14b_f105_prefix",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "除了卡片里提到的问题，盘子本身也发生了形变",
+      "reviewed_at": "2026-11-02T03:14:49.284Z",
+      "issues_before_review": [
+        {
+          "expected": "蓝盘应由至少两根手指对捏夹住或由掌面托住重心，单点接触且重心在支点外时应立即倾翻掉落，不应粘附在指尖上随臂运动。",
+          "problem": "蓝盘仅靠单根指尖在盘沿一个点上粘连悬空搬运，无对捏/托举",
+          "timestamp": "3.5–6.8"
+        }
+      ]
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__wow_wan14b_f105_rewrite__task_0029__episode_0001__1__task_0029_episode_0001",
+      "dir_name": "9345_robojudge_test_data__agibot_world__generated_data__wow_wan14b_f105_rewrite__task_0029__episode_0001__1__task_0029_episode_0001",
+      "video_id": "data__agibot_world__generated_data__wow_wan14b_f105_rewrite__task_0029__episode_0001__1__task_0029_episode_0001",
+      "source": "robojudge",
+      "generator": "wow_wan14b_f105_rewrite",
+      "upstream_data_file": "data/physfixbench_robojudge115.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/9345_robojudge_test_data__agibot_world__generated_data__wow_wan14b_f105_rewrite__task_0029__episode_0001__1__task_0029_episode_0001.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "整体太差",
+      "reviewed_at": "2026-11-02T03:13:30.188Z",
+      "issues_before_review": [
+        {
+          "expected": "物体数量与位置应连续：右托盘和方盒不应整盘消失，蓝色盘应被夹爪连续搬运而非跳位，圆柱杯总数应保持4个且每个的来源可追溯，白方盒不应变成圆柱杯。",
+          "problem": "第2.83-4.0s一帧跳变：右侧整盘方盒消失、蓝盘瞬移到中央，并凭空多出第5个透明圆柱杯",
+          "timestamp": "2.8–4"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_1103_wan",
+      "dir_name": "0001_videophy2_test_vp2_1103_wan",
+      "video_id": "vp2_1103_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0001_videophy2_test_vp2_1103_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:07:51.376Z",
+      "issues_before_review": [
+        {
+          "expected": "水球应在撞击处破裂塌陷，水向外溅到砖墙上",
+          "problem": "水大量流出时水球仍鼓胀完整，不破裂不变形",
+          "timestamp": "0.5–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0896_cosmos",
+      "dir_name": "0003_videophy2_test_vp2_0896_cosmos",
+      "video_id": "vp2_0896_cosmos",
+      "source": "videophy2",
+      "generator": "Cosmos",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0003_videophy2_test_vp2_0896_cosmos.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:47:37.412Z",
+      "issues_before_review": [
+        {
+          "expected": "滚筒应保持单一圆柱连在支架上，滚过围栏刷漆",
+          "problem": "滚筒头分裂成多个绿色滚筒或团块",
+          "timestamp": "2.25–4.75"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_3087_cogvideo",
+      "dir_name": "0004_videophy2_test_vp2_3087_cogvideo",
+      "video_id": "vp2_3087_cogvideo",
+      "source": "videophy2",
+      "generator": "CogVideoX",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0004_videophy2_test_vp2_3087_cogvideo.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "第二张卡片不是很明显，我倾向于是觉得整个杯口+泡沫的形态有点奇怪",
+      "reviewed_at": "2026-11-02T03:25:21.008Z",
+      "issues_before_review": [
+        {
+          "expected": "小酒杯液面应随流入持续上升，啤酒杯余量相应减少",
+          "problem": "啤酒持续倒入小酒杯，杯中液面却不上升",
+          "timestamp": "0.75–6.0"
+        },
+        {
+          "expected": "酒应该从杯口中流出来，杯口应该再往后移动一点",
+          "problem": "酒从杯子中漏出来，而不是从杯口",
+          "timestamp": "0.68-6.13"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0617_ray2",
+      "dir_name": "0005_videophy2_test_vp2_0617_ray2",
+      "video_id": "vp2_0617_ray2",
+      "source": "videophy2",
+      "generator": "Ray2",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0005_videophy2_test_vp2_0617_ray2.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "这个可以补充一下，先是往桌子倒水然后玻璃瓶里却出现了啤酒，然后新的杯子才出现。最理想状态应该是直接把水壶往漏斗里倒，其次才是往桌子上倒然后啤酒流到桌子上",
+      "reviewed_at": "2026-11-02T03:21:57.612Z",
+      "issues_before_review": [
+        {
+          "expected": "透明杯应从开头就静置在倒流下方，并逐渐被装满",
+          "problem": "开始倒酒后接酒杯才凭空出现在台面上",
+          "timestamp": "2.0–2.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_2369_wan",
+      "dir_name": "0009_videophy2_test_vp2_2369_wan",
+      "video_id": "vp2_2369_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0009_videophy2_test_vp2_2369_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:07:27.174Z",
+      "issues_before_review": [
+        {
+          "expected": "吊钩应先挂住钢梁，钢梁仅随吊索拉力上升",
+          "problem": "吊钩未连接，钢梁却离开支座悬在空中",
+          "timestamp": "1.5–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_1260_cogvideo",
+      "dir_name": "0010_videophy2_test_vp2_1260_cogvideo",
+      "video_id": "vp2_1260_cogvideo",
+      "source": "videophy2",
+      "generator": "CogVideoX",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0010_videophy2_test_vp2_1260_cogvideo.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:26:57.744Z",
+      "issues_before_review": [
+        {
+          "expected": "物体应减速停住，部分嵌在坑中仍可见",
+          "problem": "物体完全钻入沙中消失不见",
+          "timestamp": "1.75–2.25"
+        },
+        {
+          "expected": "没有被物体落地波及的沙子应保持不动",
+          "problem": "地面上的部分沙子无故涌动",
+          "timestamp": "3.7-6.1"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_2356_wan",
+      "dir_name": "0011_videophy2_test_vp2_2356_wan",
+      "video_id": "vp2_2356_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0011_videophy2_test_vp2_2356_wan.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:47:48.841Z",
+      "issues_before_review": [
+        {
+          "expected": "横杆被撞处应断裂，碎片脱落散落且之后保持断开",
+          "problem": "撞击喷出大量木屑，横杆却完好无损",
+          "timestamp": "0.5–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_1139_wan",
+      "dir_name": "0020_videophy2_test_vp2_1139_wan",
+      "video_id": "vp2_1139_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0020_videophy2_test_vp2_1139_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "unsure",
+      "review_action": "unsure",
+      "review_note": "这个也不一定吧",
+      "reviewed_at": "2026-11-02T02:52:22.880Z",
+      "issues_before_review": [
+        {
+          "expected": "仅迸出少量碎屑并很快落到台面，石块边缘缺一小片",
+          "problem": "燧石长时间喷出大量飘浮碎片，石块却无缺损",
+          "timestamp": "0.5–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_1287_wan",
+      "dir_name": "0026_videophy2_test_vp2_1287_wan",
+      "video_id": "vp2_1287_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0026_videophy2_test_vp2_1287_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:19:53.306Z",
+      "issues_before_review": [
+        {
+          "expected": "飞盘应沿连续弧线飞向孩子，被接住后一直握在手中",
+          "problem": "飞盘轨迹断续，悬空变大后消失又出现在手中",
+          "timestamp": "0.0–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0489_cosmos",
+      "dir_name": "0030_videophy2_test_vp2_0489_cosmos",
+      "video_id": "vp2_0489_cosmos",
+      "source": "videophy2",
+      "generator": "Cosmos",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0030_videophy2_test_vp2_0489_cosmos.mp4",
+      "original_verdict": "reject",
+      "review_decision": "reject",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:47:32.280Z",
+      "issues_before_review": [
+        {
+          "expected": "下方硬币应留在桌面，上方硬币移开后露出",
+          "problem": "压在上方硬币下的第二枚硬币逐渐消失",
+          "timestamp": "1.5–4.75"
+        },
+        {
+          "expected": "硬币应受摩擦和重力摇晃减速，最终平躺停下",
+          "problem": "硬币无外力从斜躺变为陡立，并保持平衡",
+          "timestamp": "2.0–4.75"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0756_cosmos",
+      "dir_name": "0031_videophy2_test_vp2_0756_cosmos",
+      "video_id": "vp2_0756_cosmos",
+      "source": "videophy2",
+      "generator": "Cosmos",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0031_videophy2_test_vp2_0756_cosmos.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "这个主要问题是石头放上去之后不自然的形变吧，重量倒感觉不是大问题",
+      "reviewed_at": "2026-11-02T03:23:57.251Z",
+      "issues_before_review": [
+        {
+          "expected": "巨石应被推、滑、滚或撬动，靠地面支撑移上石堆",
+          "problem": "一人把极重的巨石举过头顶搬上石堆",
+          "timestamp": "0.25–2.0"
+        },
+        {
+          "expected": "不应出现石头出现形变破坏，而且在石头上应该会不稳定然后掉下来",
+          "problem": "石头在另一个石头上，上面的石头出现破裂散出小石块，并且在倾斜的石头上不掉落",
+          "timestamp": "2.78-5.04"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0281_ray2",
+      "dir_name": "0038_videophy2_test_vp2_0281_ray2",
+      "video_id": "vp2_0281_ray2",
+      "source": "videophy2",
+      "generator": "Ray2",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0038_videophy2_test_vp2_0281_ray2.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:22:12.392Z",
+      "issues_before_review": [
+        {
+          "expected": "沙子只应在球外表面撞击、附着或滑落弹开",
+          "problem": "沙粒穿过完好密封的玻璃球壁，在球内堆积",
+          "timestamp": "0.0–5.0"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_3148_ray2",
+      "dir_name": "0040_videophy2_test_vp2_3148_ray2",
+      "video_id": "vp2_3148_ray2",
+      "source": "videophy2",
+      "generator": "Ray2",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0040_videophy2_test_vp2_3148_ray2.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "这个视频主要的问题在于人应该大部分时间在摩托艇后端站稳，但实际上后半段经常处于悬浮状态",
+      "reviewed_at": "2026-11-02T02:07:00.766Z",
+      "issues_before_review": [
+        {
+          "expected": "摩托艇尾部应有绷紧的拖绳连到滑水者腰中",
+          "problem": "滑水者无拖绳连接，却一直跟在摩托艇后滑行",
+          "timestamp": "0.0–5.0"
+        },
+        {
+          "expected": "摩托艇座位上应有驾驶者操控油门和方向",
+          "problem": "摩托艇座位无人驾驶，却持续高速平稳行驶",
+          "timestamp": "0.0–5.0"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_3334_wan",
+      "dir_name": "0046_videophy2_test_vp2_3334_wan",
+      "video_id": "vp2_3334_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0046_videophy2_test_vp2_3334_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:55:49.538Z",
+      "issues_before_review": [
+        {
+          "expected": "葡萄应在指下压扁起皱、果皮破裂，汁液从破口渗出",
+          "problem": "手挤葡萄流出汁液，葡萄却圆润完好不变形",
+          "timestamp": "0.5–2.75"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_2609_wan",
+      "dir_name": "0049_videophy2_test_vp2_2609_wan",
+      "video_id": "vp2_2609_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0049_videophy2_test_vp2_2609_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "edit",
+      "review_action": "cards",
+      "review_note": "第一张卡的错误不明显",
+      "reviewed_at": "2026-11-02T02:53:22.487Z",
+      "issues_before_review": [
+        {
+          "expected": "轮胎应始终贴地，碰到路沿后上抬并滚过去",
+          "problem": "独轮车轮胎离地悬空越过路沿，车手无支撑",
+          "timestamp": "0.0–3.5"
+        },
+        {
+          "expected": "脚踏应随车轮转动，带动双腿上下交替运动",
+          "problem": "车轮前进时脚踏与双腿几乎不动",
+          "timestamp": "0.0–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0010_cogvideo",
+      "dir_name": "0056_videophy2_test_vp2_0010_cogvideo",
+      "video_id": "vp2_0010_cogvideo",
+      "source": "videophy2",
+      "generator": "CogVideoX",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0056_videophy2_test_vp2_0010_cogvideo.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:47:46.238Z",
+      "issues_before_review": [
+        {
+          "expected": "泡沫液面应上升，到达杯口后溢出沿杯壁流下",
+          "problem": "啤酒持续倒入满杯，液面不升也不溢出",
+          "timestamp": "0.0–6.0"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_2599_cosmos",
+      "dir_name": "0062_videophy2_test_vp2_2599_cosmos",
+      "video_id": "vp2_2599_cosmos",
+      "source": "videophy2",
+      "generator": "Cosmos",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0062_videophy2_test_vp2_2599_cosmos.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:44:46.489Z",
+      "issues_before_review": [
+        {
+          "expected": "黄袋应从上方或传送带末端沿连续轨迹进入画面，或不进入画面",
+          "problem": "黄色大袋在传送带远端凭空出现，附带数量较大的橘子从传送带漂移到地面上",
+          "timestamp": "3.25–3.75"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_2455_wan",
+      "dir_name": "0063_videophy2_test_vp2_2455_wan",
+      "video_id": "vp2_2455_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0063_videophy2_test_vp2_2455_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "质量太差",
+      "reviewed_at": "2026-11-02T03:25:53.425Z",
+      "issues_before_review": [
+        {
+          "expected": "起跳后应小幅上升，受重力加速下落并尽快落地。体操员身体不要异常变形",
+          "problem": "体操员腾空过高过久， 同时身体明显变形",
+          "timestamp": "0.25–2.75"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_2737_wan",
+      "dir_name": "0064_videophy2_test_vp2_2737_wan",
+      "video_id": "vp2_2737_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0064_videophy2_test_vp2_2737_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:54:44.482Z",
+      "issues_before_review": [
+        {
+          "expected": "独轮车应靠轮子与支腿稳定着地，或受重力倾倒",
+          "problem": "松手后独轮车以陡峭倾斜姿态立住，无支撑不倒",
+          "timestamp": "2.5–3.5"
+        },
+        {
+          "expected": "工人从旁边拿取工具后手中才有工具，且工具应在工人拿取前入画",
+          "problem": "工人手中无故出现一把工具",
+          "timestamp": "1.4-1.9"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_2492_wan",
+      "dir_name": "0066_videophy2_test_vp2_2492_wan",
+      "video_id": "vp2_2492_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0066_videophy2_test_vp2_2492_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:45:38.186Z",
+      "issues_before_review": [
+        {
+          "expected": "这个橙子应该在碰撞后改变轨迹继续下落而不是上升",
+          "problem": "左手橙子仅轻轻碰撞就上升",
+          "timestamp": "1.15-1.48"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0672_ray2",
+      "dir_name": "0067_videophy2_test_vp2_0672_ray2",
+      "video_id": "vp2_0672_ray2",
+      "source": "videophy2",
+      "generator": "Ray2",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0067_videophy2_test_vp2_0672_ray2.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-03T07:48:03.461Z",
+      "issues_before_review": [
+        {
+          "expected": "面粉袋应随面粉流出逐渐变瘪起皱，粉流渐细",
+          "problem": "大量面粉流出堆积，面粉袋却不瘪不塌依旧饱满",
+          "timestamp": "0.0–5.0"
+        },
+        {
+          "expected": "面粉应该有口袋或者裂口，面粉从里面漏出来",
+          "problem": "面粉袋没有裂口，但是面粉漏出来。",
+          "timestamp": "0-5.25"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0683_ray2",
+      "dir_name": "0072_videophy2_test_vp2_0683_ray2",
+      "video_id": "vp2_0683_ray2",
+      "source": "videophy2",
+      "generator": "Ray2",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0072_videophy2_test_vp2_0683_ray2.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T03:25:37.801Z",
+      "issues_before_review": [
+        {
+          "expected": "足球应在两次触球间沿抛物线下落，仅触脚后上升",
+          "problem": "足球颠球间悬停于恒定高度，未触脚却上升",
+          "timestamp": "0.75–4.75"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0926_wan",
+      "dir_name": "0074_videophy2_test_vp2_0926_wan",
+      "video_id": "vp2_0926_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0074_videophy2_test_vp2_0926_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:04:19.119Z",
+      "issues_before_review": [
+        {
+          "expected": "手中书本应始终保持棕褐色及原有尺寸形状",
+          "problem": "正在上架的书由棕褐色突变为酒红色",
+          "timestamp": "2.5–2.75"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_1993_wan",
+      "dir_name": "0076_videophy2_test_vp2_1993_wan",
+      "video_id": "vp2_1993_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0076_videophy2_test_vp2_1993_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "pass",
+      "review_action": "maintain",
+      "review_note": "",
+      "reviewed_at": "2026-11-02T02:52:43.609Z",
+      "issues_before_review": [
+        {
+          "expected": "纸板下坡时应加速，爬左侧上坡时明显减速",
+          "problem": "纸板沿弧形玻璃坡几乎匀速滑行，上下坡不变速",
+          "timestamp": "0.0–3.5"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0078_wan",
+      "dir_name": "0083_videophy2_test_vp2_0078_wan",
+      "video_id": "vp2_0078_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0083_videophy2_test_vp2_0078_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "整体质量差",
+      "reviewed_at": "2026-11-02T02:46:06.086Z",
+      "issues_before_review": [
+        {
+          "expected": "应平稳转体并受重力下落，双脚着垫屈膝缓冲，朝向应该保持连续变化，身体各个部位保持不穿透",
+          "problem": "松杠后体操员漂浮侧移、转体停滞，滑行着地，朝向突然反向，双腿从躯干穿过",
+          "timestamp": "0.5–3.0"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_0918_hunyuan",
+      "dir_name": "0089_videophy2_test_vp2_0918_hunyuan",
+      "video_id": "vp2_0918_hunyuan",
+      "source": "videophy2",
+      "generator": "HunyuanVideo",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0089_videophy2_test_vp2_0918_hunyuan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "感觉整体上问题不大",
+      "reviewed_at": "2026-11-02T03:19:39.321Z",
+      "issues_before_review": [
+        {
+          "expected": "击中处应局部凹陷起涟漪，沙袋的摆动应与击打相对应，停止击打后沙袋的摆动应该渐止",
+          "problem": "击打物压入沙袋，沙袋的摇摆是不自然的，沙袋上没有相应的凹陷，停止击打后摆动也没有渐止",
+          "timestamp": "0.75–2.25"
+        }
+      ]
+    },
+    {
+      "record_id": "videophy2::test::vp2_3015_wan",
+      "dir_name": "0092_videophy2_test_vp2_3015_wan",
+      "video_id": "vp2_3015_wan",
+      "source": "videophy2",
+      "generator": "Wan",
+      "upstream_data_file": "data/physfixbench_videophy2.jsonl",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/main/videos/0092_videophy2_test_vp2_3015_wan.mp4",
+      "original_verdict": "pass",
+      "review_decision": "reject",
+      "review_action": "reject",
+      "review_note": "这个整体没啥问题",
+      "reviewed_at": "2026-11-02T03:22:49.070Z",
+      "issues_before_review": [
+        {
+          "expected": "铲板应为同一刚性部件，始终连在机械臂末端平滑移动",
+          "problem": "铲雪附件忽大忽小、变形，时而脱离机械臂或瞬移",
+          "timestamp": "0.0–2.5"
+        }
+      ]
+    }
+  ]
+}
