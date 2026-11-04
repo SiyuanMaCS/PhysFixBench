@@ -1,0 +1,41 @@
+{
+  "batch": "batch2",
+  "snapshot_date": "2026-11-05",
+  "candidates": 217,
+  "reviewable_videos": 306,
+  "supplementary": 89,
+  "source_counts": {
+    "physion_eval": {
+      "videos": 124,
+      "fixable": 124
+    },
+    "physicsiq": {
+      "videos": 154,
+      "fixable": 82,
+      "reject_no_clear_issue": 72
+    },
+    "mme_cof": {
+      "videos": 23,
+      "fixable": 8,
+      "reject_no_clear_issue": 15
+    },
+    "videophy2_seedance": {
+      "videos": 5,
+      "fixable": 3,
+      "reject_no_clear_issue": 2
+    }
+  },
+  "physion_unpublished_review_counts": {
+    "missing_fix_preannotation": 417,
+    "reject_no_clear_issue": 194,
+    "fixable": 124,
+    "reject_poor_quality": 25
+  },
+  "excludes": [
+    "batch1 published Physion-300",
+    "VideoPhy2 original 753-video pool"
+  ],
+  "scope": "Existing preannotations only; no new visual reviews launched",
+  "human_confirmed": false,
+  "warnings": []
+}

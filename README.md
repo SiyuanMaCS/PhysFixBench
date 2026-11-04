@@ -29,6 +29,10 @@
 
 > ⚠️ 除 Physion-300 已经逐帧复核确认外，其余三个来源均为 **agent draft**，保留了 `confidence` / `needs_human_frame_step_confirmation` 字段供人工抽审（pass / edit / reject）。
 
+## batch2 · 人工审核
+
+**[打开 batch2 人工审核页](batch2.html)**：217 条新增预标注候选（Physion-Eval 124、Physics-IQ 82、MME-COF 8、VideoPhy2 Seedance 3），均待人工确认。另外保留 89 条未推荐视频供人工补捞。视频在 HF，支持直接修改问题、正确表现并导出结果。详见 [交付说明](docs/batch2_human_review.md)。
+
 ## ⏳ 即将发布（独立数据集，未并入 batch1）
 
 | 数据集 | 条数 | 状态 | 说明 |
