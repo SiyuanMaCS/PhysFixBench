@@ -1,4 +1,4 @@
-# PhysFixBench
+# PhyFixBench
 
 <p align="center">
 <b>物理视频修复（Physics Video Correction）基准</b><br/>
@@ -78,7 +78,7 @@ video_url = f"https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolv
 ## 📂 仓库结构
 
 ```
-PhysFixBench/
+PhyFixBench/
 ├── README.md                  # 本文件
 ├── datasets.html              # 数据集导航（Physion-300 / PhysicsIQ-154）
 ├── index.html                 # Physion-300 人工审核页（视频走 HF 公开 URL）
@@ -126,8 +126,8 @@ JSONL 为权威格式；CSV（UTF-8 BOM，Excel 可直接打开）额外附带 `
 
 - 仅限非商业研究与评测用途。
 - **batch1 视频版权**遵循各来源数据集许可（Physion-Eval Custom Research Use、RoboJudge / PhyGround / VideoPhy2 各自许可）。
-- **PhysicsIQ-154 源材料**遵循 Physics-IQ 上游许可：代码 Apache License 2.0（<https://www.apache.org/licenses/LICENSE-2.0>），其他材料 CC BY 4.0（<https://creativecommons.org/licenses/by/4.0/legalcode>），Copyright 2025 Google LLC（"This is not an official Google product."）。本仓库派生的 I2V 视频与中文修复标注的再分发须同时满足上述源许可与 PhysFixBench 项目约定；**不声明全部内容可自由再分发**，本 release 自身尚未选定 LICENSE。
-- **结构化中文修复标注**（fixing prompts）为 PhysFixBench 项目所有，研究用途。
+- **PhysicsIQ-154 源材料**遵循 Physics-IQ 上游许可：代码 Apache License 2.0（<https://www.apache.org/licenses/LICENSE-2.0>），其他材料 CC BY 4.0（<https://creativecommons.org/licenses/by/4.0/legalcode>），Copyright 2025 Google LLC（"This is not an official Google product."）。本仓库派生的 I2V 视频与中文修复标注的再分发须同时满足上述源许可与 PhyFixBench 项目约定；**不声明全部内容可自由再分发**，本 release 自身尚未选定 LICENSE。
+- **结构化中文修复标注**（fixing prompts）为 PhyFixBench 项目所有，研究用途。
 - 详见 [标注协议文档](docs/annotation_protocol.md#license--使用限制)。
 
 ## 📝 NOTICE

@@ -27,7 +27,7 @@ batch1 中只有 Physion-300 已完成逐帧复核；RoboJudge-115 / PhyGround-9
 
 - 每条选择 **通过 / 需修改 / 驳回**，可在框内直接修改文字并填备注；
 - 结论自动暂存在浏览器（基于 record_id / dir_name），关页不丢；
-- 点右上角「导出审核结果 JSON」回收结果，回传 PhysFixBench 维护方；
+- 点右上角「导出审核结果 JSON」回收结果，回传 PhyFixBench 维护方；
 - 也可以直接在 CSV 的 `审核结论(pass/edit/reject)`、`修改后内容`、`备注` 三列填写后回传。
 
 ## 特殊情况处理

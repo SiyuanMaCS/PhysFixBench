@@ -1,4 +1,4 @@
-# PhysFixBench batch2 · 人工审核包
+# PhyFixBench batch2 · 人工审核包
 
 共 217 条带 fixing prompt 的候选；另保留 89 条 agent 未推荐样本供人工补捞，合计 306 段视频。所有记录均为预标注，待人工确认。
 

@@ -81,4 +81,4 @@ RoboJudge 原始结论来自 judge model 的 PA（physical adherence）reasoning
   - **Physion-Eval**：Custom Research Use Only License，仅限非商业研究与评测用途；不得违反适用法律或第三方权利再分发；
   - **RoboJudge / PhyGround / VideoPhy2**：遵循各自数据集许可。
 - 本仓库不主张视频版权，仅用于学术研究。
-- 结构化中文标注（fixing prompts）为 PhysFixBench 项目所有，研究用途。
+- 结构化中文标注（fixing prompts）为 PhyFixBench 项目所有，研究用途。
