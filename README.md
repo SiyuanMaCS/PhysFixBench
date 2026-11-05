@@ -29,6 +29,16 @@
 
 > ⚠️ 除 Physion-300 已经逐帧复核确认外，其余三个来源均为 **agent draft**，保留了 `confidence` / `needs_human_frame_step_confirmation` 字段供人工抽审（pass / edit / reject）。
 
+## ✅ Benchmark Eval · 172
+
+**[打开 172 个 fixing task 的三 prompt 可视化页](fixing_tasks.html)**：最终确认通过的 batch1 评测子集，包含 172 个异常视频输入和三种提示条件：
+
+1. `self_fixing`：不给问题描述，也不给正确表现；
+2. `problem_only`：只给第几秒出现什么问题；
+3. `problem_expected`：给问题和应修改为的正确表现。
+
+对应 HF 数据位于 [`data/reviewed_batch1/`](https://huggingface.co/datasets/HuggingFriends/PhysFixBench/tree/main/data/reviewed_batch1)。
+
 ## batch2 · 人工审核
 
 **[打开 batch2 人工审核页](batch2.html)**：217 条新增预标注候选（Physion-Eval 124、Physics-IQ 82、MME-COF 8、VideoPhy2 Seedance 3），均待人工确认。另外保留 89 条未推荐视频供人工补捞。视频在 HF，支持直接修改问题、正确表现并导出结果。详见 [交付说明](docs/batch2_human_review.md)。
@@ -101,6 +111,7 @@ JSONL 为权威格式；CSV（UTF-8 BOM，Excel 可直接打开）额外附带 `
 ## 📖 文档
 
 - [数据集导航](datasets.html) — Physion-300 人工审核页 ↔ PhysicsIQ-154 候选浏览页
+- [172 Fixing Tasks · 三种 Prompt](fixing_tasks.html) — benchmark eval 输入视频与三种 prompt 条件
 - [标注构造流程与逐帧复核协议](docs/annotation_protocol.md) — 各来源数据如何产生、误报如何剔除、分布统计
 - [数据字段与修复指令格式](docs/data_schema.md) — batch1 的 18 个字段 + PhysicsIQ-154 字段
 - [人工审核说明](docs/human_review.md) — 审核页面使用与结论回收
