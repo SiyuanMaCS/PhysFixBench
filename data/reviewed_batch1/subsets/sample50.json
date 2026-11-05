@@ -2248,5 +2248,7 @@
       },
       "review_status": "accepted"
     }
-  ]
+  ],
+  "prompt_variants": "data/reviewed_batch1/subsets/sample50_fixing_prompts_3way.jsonl",
+  "prompt_style": "v2: shared video-editing premise; self_fixing has no issue/target leak; problem_only has issue descriptions only; problem_expected has issue descriptions plus expected behavior."
 }

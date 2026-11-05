@@ -31,37 +31,38 @@ def norm(text: str) -> str:
 
 def self_fixing_prompt() -> str:
     return (
-        "【任务】\n"
-        "请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。\n"
-        "【保持不变】\n"
-        "除需要修正的物理问题外，请保持视频其余内容不变。"
+        "请基于输入视频重新生成一个物理一致的版本。"
+        "保持原视频的场景、主体、动作意图、镜头、时长和视觉风格不变；"
+        "只修正视频中不符合物理规律的部分。"
     )
 
 
 def problem_only_prompt(record: dict) -> str:
-    lines = ["【存在的问题】"]
+    lines = [
+        "请基于输入视频重新生成一个物理一致的版本。"
+        "保持原视频的场景、主体、动作意图、镜头、时长和视觉风格不变；"
+        "只修正以下物理问题：",
+        "",
+        "【存在的问题】",
+    ]
     for i, issue in enumerate(record["issues"], 1):
         lines.append(f'{i}. 第{issue["timestamp"]}秒：{norm(issue["problem"])}')
-    lines += [
-        "【任务】",
-        "请修正上述物理问题并重新生成视频。",
-        "【保持不变】",
-        "除上述物理问题外，请保持视频其余内容不变。",
-    ]
     return "\n".join(lines)
 
 
 def problem_expected_prompt(record: dict) -> str:
-    lines = ["【存在的问题】"]
+    lines = [
+        "请基于输入视频重新生成一个物理一致的版本。"
+        "保持原视频的场景、主体、动作意图、镜头、时长和视觉风格不变；"
+        "只修正以下物理问题：",
+        "",
+        "【存在的问题】",
+    ]
     for i, issue in enumerate(record["issues"], 1):
         lines.append(f'{i}. 第{issue["timestamp"]}秒：{norm(issue["problem"])}')
     lines.append("【应修改为】")
     for i, issue in enumerate(record["issues"], 1):
         lines.append(f'{i}. {norm(issue["expected"])}')
-    lines += [
-        "【保持不变】",
-        "除上述物理问题外，请保持视频其余内容不变。",
-    ]
     return "\n".join(lines)
 
 
@@ -117,7 +118,7 @@ This file defines three aligned prompt conditions for the reviewed batch1 benchm
 2. `problem_only_prompt_zh`: gives only the time-localized problem description. It does not state the correct target behavior.
 3. `problem_expected_prompt_zh`: gives both the time-localized problem description and the expected physically correct behavior.
 
-All three variants use the same ending policy: keep the rest of the video unchanged instead of enumerating protected objects. The benchmark record itself remains `annotations.jsonl`.
+All three variants share the same editing premise: regenerate a physically consistent version of the input video while preserving the original scene, subject, intended action, camera, duration, and visual style. The benchmark record itself remains `annotations.jsonl`.
 """,
         encoding="utf-8",
     )

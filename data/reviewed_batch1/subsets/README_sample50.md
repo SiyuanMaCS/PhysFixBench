@@ -19,5 +19,6 @@ Files:
 - `sample50.csv`: compact table for spreadsheets.
 - `sample50_manifest.jsonl`: video URLs and SHA256.
 - `sample50.json`: same records in a JSON envelope with selection metadata.
+- `sample50_generation_tasks.md`: execution guide for Seedance and other video-editing models.
 
 All videos are referenced by the public `video_url` field; no videos are duplicated in this subset folder.
