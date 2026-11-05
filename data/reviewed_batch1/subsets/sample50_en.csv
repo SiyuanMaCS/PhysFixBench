@@ -1,0 +1,582 @@
+﻿record_id,source,generator,issue_count,video_url,self_fixing_prompt_en,problem_only_prompt_en,problem_expected_prompt_en
+phyground::cosmos-predict2.5-14b::HaWe0Af_0hg_6_0to222,phyground,Cosmos-Predict2.5 14B,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-14b__HaWe0Af_0hg_6_0to222.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.25-5.5s: The funnel keeps draining into the beaker, but the funnel level drops far less than the amount flowing out
+2. 1.25-5.5s: The falling liquid stream suddenly becomes a thick stream bending sideways for no reason","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.25-5.5s: The funnel keeps draining into the beaker, but the funnel level drops far less than the amount flowing out
+2. 1.25-5.5s: The falling liquid stream suddenly becomes a thick stream bending sideways for no reason
+
+Expected behavior:
+1. The amount in the funnel should decrease to match what flows into the beaker, with the level continuously dropping
+2. The flow should continuously exit the valve into the beaker; it should not abruptly change path or thickness without a corresponding cause"
+phyground::cosmos-predict2.5-14b::mechanics_286,phyground,Cosmos-Predict2.5 14B,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-14b__mechanics_286.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-2.3s: After hammering the upper wall and debris starts falling, a large empty gap suddenly appears in the still-connected lower wall with no continuous material falling off","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-2.3s: After hammering the upper wall and debris starts falling, a large empty gap suddenly appears in the still-connected lower wall with no continuous material falling off
+
+Expected behavior:
+1. The gap should form gradually via visible cracking and material breaking away; any missing material should be seen falling as continuous debris"
+phyground::cosmos-predict2.5-2b::0191_perspective-center_trimmed-weight-on-paper,phyground,Cosmos-Predict2.5 2B,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__0191_perspective-center_trimmed-weight-on-paper.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 4.0-5.5s: The foam cup crushed by the kettlebell springs back into an almost intact cup by itself
+2. 1.06-2.6s: The deformation is incorrect","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 4.0-5.5s: The foam cup crushed by the kettlebell springs back into an almost intact cup by itself
+2. 1.06-2.6s: The deformation is incorrect
+
+Expected behavior:
+1. The foam cup should keep the crushed, wrinkled permanent deformation
+2. The cup should deform starting at the contact point downward, then the remaining part should spread out to both sides"
+phyground::cosmos-predict2.5-2b::mechanics_182,phyground,Cosmos-Predict2.5 2B,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__mechanics_182.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-4.25s: The toy hammer head passes into and merges with the blue eggshell, and extra red fragments appear","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-4.25s: The toy hammer head passes into and merges with the blue eggshell, and extra red fragments appear
+
+Expected behavior:
+1. The hammer should strike the outside of the shell and crack it outward; the red cap should stay attached to the hammer"
+phyground::cosmos-predict2.5-2b::mechanics_293,phyground,Cosmos-Predict2.5 2B,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__mechanics_293.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 4-5.5s: The basketball hits the rim but clips through for a made shot","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 4-5.5s: The basketball hits the rim but clips through for a made shot
+
+Expected behavior:
+1. The basketball should be bounced away by the rim"
+phyground::ltx-2-19b-dev-1stage::mechanics_438,phyground,LTX-2 19B,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/ltx-2-19b-dev-1stage__mechanics_438.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.5-1.5s: The two skaters’ skates and legs pass through each other, and the person in red is suddenly flung flat","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.5-1.5s: The two skaters’ skates and legs pass through each other, and the person in red is suddenly flung flat
+
+Expected behavior:
+1. The skates should collide and snag physically, and both people should show corresponding loss-of-balance reactions"
+phyground::ltx-2.3-22b-dev-1stage::mechanics_402,phyground,LTX-2.3 22B,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/ltx-2.3-22b-dev-1stage__mechanics_402.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.0-3.75s: After being struck, the wooden stake bends smoothly like rubber and stays bent
+2. 0-3s: The hammer handle and head keep twisting/deforming","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.0-3.75s: After being struck, the wooden stake bends smoothly like rubber and stays bent
+2. 0-3s: The hammer handle and head keep twisting/deforming
+
+Expected behavior:
+1. The stake should crack/splinter locally; broken pieces should snap off and fall
+2. The hammer handle and head should stay rigid with consistent shape"
+phyground::veo-3.1::b91QyJ0TRAI_000000_000010,phyground,Veo 3.1,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/veo-3.1__b91QyJ0TRAI_000000_000010.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 5.0-6.75s: On landing, the sandpit erupts in a delayed huge blast; the person sinks deep and the sand churns like a fluid
+2. 2.90-3.64s: White lines clip through the person and the sand","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 5.0-6.75s: On landing, the sandpit erupts in a delayed huge blast; the person sinks deep and the sand churns like a fluid
+2. 2.90-3.64s: White lines clip through the person and the sand
+
+Expected behavior:
+1. Landing should form a local impression and splash only a small amount of sand
+2. Since the person is above the sand, they should occlude the white lines on the ground"
+phyground::wan2.2-i2v-a14b::0188_perspective-center_trimmed-weight-on-ceramic,phyground,Wan 2.2 I2V-A14B,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/wan2.2-i2v-a14b__0188_perspective-center_trimmed-weight-on-ceramic.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.75-4.5s: The ceramic cup squashes and wrinkles like a soft object under the kettlebell before breaking","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.75-4.5s: The ceramic cup squashes and wrinkles like a soft object under the kettlebell before breaking
+
+Expected behavior:
+1. The cup should stay rigid and then abruptly shatter into ceramic fragments when overloaded"
+physion_eval::full::6fc886e0-f1da-5c3b-bcdb-86fb46537dfa,physion_eval,Hailuo 2.3,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/6fc886e0-f1da-5c3b-bcdb-86fb46537dfa.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-0.2s: The glass deforms and passes through the fingers
+2. 1.1-5.3s: Fingers repeatedly pass through the glass wall","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-0.2s: The glass deforms and passes through the fingers
+2. 1.1-5.3s: Fingers repeatedly pass through the glass wall
+
+Expected behavior:
+1. When picked up, the glass should stay rigid and be properly held by the hand
+2. Fingers and the cup wall should keep correct occlusion and solid boundaries"
+physion_eval::full::T1_00755,physion_eval,Hailuo 2.3,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_00755.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-5.5s: The fire on the grass never spreads","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-5.5s: The fire on the grass never spreads
+
+Expected behavior:
+1. The flames should gradually ignite nearby grass and expand the scorch area"
+physion_eval::full::T1_01190,physion_eval,Hailuo 2.3,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01190.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.2-3.5s: The desk lamp bends and rotates its head by itself without being touched
+2. 0.3-2.7s: The book on the table slides by itself with no visible contact or push","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.2-3.5s: The desk lamp bends and rotates its head by itself without being touched
+2. 0.3-2.7s: The book on the table slides by itself with no visible contact or push
+
+Expected behavior:
+1. With no external force, the lamp neck and head should keep their original pose
+2. The book should stay put; if it moves, there should be continuous visible contact and pushing"
+physion_eval::full::T1_02632,physion_eval,Hailuo 2.3,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02632.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8s: A large amount of dust appears above the pumpkin out of nowhere","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8s: A large amount of dust appears above the pumpkin out of nowhere
+
+Expected behavior:
+1. Dust should be emitted continuously from a visible source and disperse"
+physion_eval::full::T1_06665,physion_eval,Hailuo 2.3,3,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06665.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.2s: Grass near the campfire turns white without contacting the flames
+2. 1.2-5.5s: The white area keeps spreading outward beyond the flame region
+3. 1.2-5.5s: Unburned grass changes directly from green to gray-white","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.2s: Grass near the campfire turns white without contacting the flames
+2. 1.2-5.5s: The white area keeps spreading outward beyond the flame region
+3. 1.2-5.5s: Unburned grass changes directly from green to gray-white
+
+Expected behavior:
+1. Grass not affected by fire should stay green
+2. Only the actually burning area should gradually char and turn to ash
+3. The grass should first burn and char black before becoming ash"
+physion_eval::full::T1_07362,physion_eval,Hailuo 2.3,3,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07362.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-3.3s: The sausage goes from raw to burnt-cooked in about two seconds
+2. 2.5-2.7s: A fourth sausage appears out of nowhere in the pan
+3. 3.7-3.8s: A fifth sausage appears out of nowhere in the pan","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-3.3s: The sausage goes from raw to burnt-cooked in about two seconds
+2. 2.5-2.7s: A fourth sausage appears out of nowhere in the pan
+3. 3.7-3.8s: A fifth sausage appears out of nowhere in the pan
+
+Expected behavior:
+1. The sausage should cook gradually and evenly as it heats
+2. Keep only the original three sausages in the pan
+3. Keep only the original three sausages in the pan"
+physion_eval::full::T1_07945,physion_eval,Hailuo 2.3,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07945.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.7-1.2s: Firework-like light spots appear out of nowhere on the right building’s exterior wall","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.7-1.2s: Firework-like light spots appear out of nowhere on the right building’s exterior wall
+
+Expected behavior:
+1. With no glass, the exterior should show only diffuse light and a few window lights"
+physion_eval::full::T1_00178,physion_eval,Kling 2.5,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_00178.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.8-2.2s: A single white brush head in the hand suddenly becomes two items: a fork and a spoon
+2. 4.2-4.5s: The white brush in the right hand suddenly turns into a metal spoon","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.8-2.2s: A single white brush head in the hand suddenly becomes two items: a fork and a spoon
+2. 4.2-4.5s: The white brush in the right hand suddenly turns into a metal spoon
+
+Expected behavior:
+1. The white brush head should keep its original identity
+2. The right-hand brush should keep its original form throughout"
+physion_eval::full::T1_02956,physion_eval,Kling 2.5,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02956.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.3-0.7s: A bullet appears out of nowhere in the eye area before the gun fires
+2. 1.2-4.8s: The bullet drifts horizontally for seconds with no drop at all","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.3-0.7s: A bullet appears out of nowhere in the eye area before the gun fires
+2. 1.2-4.8s: The bullet drifts horizontally for seconds with no drop at all
+
+Expected behavior:
+1. After the shot, the bullet should leave the barrel and, along a visible path, hit the head model
+2. After leaving the head model, the bullet should fall along a gravity-driven trajectory"
+physion_eval::full::T1_04058,physion_eval,Kling 2.5,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_04058.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8-1.3s: The second tomato passes through and overlaps the first tomato","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8-1.3s: The second tomato passes through and overlaps the first tomato
+
+Expected behavior:
+1. When the two tomatoes touch, they should collide, deform, or bounce apart"
+physion_eval::full::T1_06914,physion_eval,Kling 2.5,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06914.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8-2.5s: The first shot shows an extra second projectile
+2. 3.0-4.7s: On the second shot, no bullet exits the barrel but two projectiles appear","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8-2.5s: The first shot shows an extra second projectile
+2. 3.0-4.7s: On the second shot, no bullet exits the barrel but two projectiles appear
+
+Expected behavior:
+1. On the first shot, only one projectile should exit the muzzle
+2. On the second shot, only one projectile should exit the muzzle"
+physion_eval::full::T1_07560,physion_eval,Kling 2.5,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07560.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.0-2.8s: The green block interpenetrates the solid area of the yellow barrier
+2. 3.9s: The same green block in the gripper suddenly turns red","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.0-2.8s: The green block interpenetrates the solid area of the yellow barrier
+2. 3.9s: The same green block in the gripper suddenly turns red
+
+Expected behavior:
+1. When the block touches the barrier it should be blocked or deform the barrier accordingly, not pass straight through
+2. The same block should stay green throughout gripping and transport"
+physion_eval::full::T1_09189,physion_eval,Kling 2.5,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_09189.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3.69-4.29s: The hand holds the right cabinet door, but both doors open together; the right door opens the wrong way and vanishes into the left door","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3.69-4.29s: The hand holds the right cabinet door, but both doors open together; the right door opens the wrong way and vanishes into the left door
+
+Expected behavior:
+1. Holding the right door should only rotate the right door, and its shape should stay stable while opening"
+physion_eval::full::T1_01290,physion_eval,Sora 2,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01290.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-7.7s: The fingers barely rotate, but the opal spins a lot","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-7.7s: The fingers barely rotate, but the opal spins a lot
+
+Expected behavior:
+1. The opal should rotate in sync with the gripping fingers and remain held"
+physion_eval::full::T1_06093,physion_eval,Sora 2,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06093.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 5.2-7.6s: The bread returns to its original shape after being run over by a wheel","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 5.2-7.6s: The bread returns to its original shape after being run over by a wheel
+
+Expected behavior:
+1. After being crushed, the bread should stay flattened and wrinkled"
+physion_eval::full::T1_06114,physion_eval,Sora 2,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06114.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.6-7.7s: Needle-like crystals pass through the petri dish glass wall and extend outside","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.6-7.7s: Needle-like crystals pass through the petri dish glass wall and extend outside
+
+Expected behavior:
+1. Once reaching the inner wall, the crystals should stop and not penetrate the glass or extend outside the dish"
+physion_eval::full::T1_01405,physion_eval,Veo 3.1 Fast,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01405.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-6.6s: In both shots, the water stream passes straight through an intact plastic container wall into the inside","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-6.6s: In both shots, the water stream passes straight through an intact plastic container wall into the inside
+
+Expected behavior:
+1. Water should enter through a visible opening or run down the outside, not pass through a solid wall"
+physion_eval::full::T1_06574,physion_eval,Veo 3.1 Fast,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06574.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.8s: The crushed noodles suddenly turn into gray-white small stones","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.8s: The crushed noodles suddenly turn into gray-white small stones
+
+Expected behavior:
+1. After crushing, the remains should still be noodle fragments and crumbs, not a different material"
+physion_eval::full::T1_09986,physion_eval,Veo 3.1 Fast,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_09986.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3.4-3.8s: The butter block lifts upward off the pan with no visible support or force
+2. 1.5-3.3s: Melted liquid around the butter increases a lot, but the solid piece does not shrink accordingly","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3.4-3.8s: The butter block lifts upward off the pan with no visible support or force
+2. 1.5-3.3s: Melted liquid around the butter increases a lot, but the solid piece does not shrink accordingly
+
+Expected behavior:
+1. The butter should be supported by the pan surface or a clear contact support; if it moves, show continuous visible contact and forces
+2. As butter melts into liquid, the solid volume should decrease accordingly; the solid–liquid change should be roughly conserved"
+physion_eval::full::T1_01358,physion_eval,Wan 2.2,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01358.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.7s: The rolling green ball suddenly disappears
+2. 3.1-3.5s: The red and yellow balls jump onto the upper track without any external force","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.7s: The rolling green ball suddenly disappears
+2. 3.1-3.5s: The red and yellow balls jump onto the upper track without any external force
+
+Expected behavior:
+1. The green ball should remain visible and roll along a continuous path
+2. The red and yellow balls should move under forces along connected tracks"
+physion_eval::full::T1_02968,physion_eval,Wan 2.2,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02968.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-4.7s: After the ground explosion, the grass and blast point show no damage","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-4.7s: After the ground explosion, the grass and blast point show no damage
+
+Expected behavior:
+1. The blast point should leave scorch marks, flattened grass, and scattered debris"
+physion_eval::full::T1_04499,physion_eval,Wan 2.2,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_04499.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8-4.0s: After moving almost horizontally, the sun reverses and sinks downward","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.8-4.0s: After moving almost horizontally, the sun reverses and sinks downward
+
+Expected behavior:
+1. The sun should move along a smooth rising arc"
+physion_eval::full::T1_05408,physion_eval,Wan 2.2,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_05408.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-4.8s: After the brown liquid pours into the cup, it does not spread and stays as a tight column falling straight down","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-4.8s: After the brown liquid pours into the cup, it does not spread and stays as a tight column falling straight down
+
+Expected behavior:
+1. As the liquid enters the cup it should disturb the surface and the incoming liquid should naturally disperse"
+physion_eval::full::T1_06912,physion_eval,Wan 2.2,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06912.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.6s: The fired bullet’s in-air pose/orientation and speed look unnatural and don’t fully match the muzzle flash/smoke
+2. 1.7-2.0s: Two bullets pop into existence from the muzzle flash","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.6s: The fired bullet’s in-air pose/orientation and speed look unnatural and don’t fully match the muzzle flash/smoke
+2. 1.7-2.0s: Two bullets pop into existence from the muzzle flash
+
+Expected behavior:
+1. After leaving the muzzle, the bullet should travel on a continuous trajectory and exit the frame
+2. Both bullets should be fired continuously from the muzzle"
+physion_eval::full::T1_08086,physion_eval,Wan 2.2,4,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_08086.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.9-1.5s: The wooden stick in the left hand ignites without any fire source
+2. 2.7-3.5s: The wooden stick in the right hand burns away quickly with no ash left
+3. 0.0-4.7s: The two wooden sticks in the fire never get scorched
+4. 3.3-4.5s: The kindling in the left hand looks like it gets launched into the fire with no external force","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.9-1.5s: The wooden stick in the left hand ignites without any fire source
+2. 2.7-3.5s: The wooden stick in the right hand burns away quickly with no ash left
+3. 0.0-4.7s: The two wooden sticks in the fire never get scorched
+4. 3.3-4.5s: The kindling in the left hand looks like it gets launched into the fire with no external force
+
+Expected behavior:
+1. The left-hand stick should only light after contacting the fire source
+2. The right-hand stick should char gradually and leave ash
+3. Sticks in the fire should gradually blacken and be consumed as they burn
+4. The kindling should be slowly moved by the hand or be thrown into the fire"
+robojudge::test::data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001,robojudge,cogvideo_i2v_f113_rewrite,3,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9188_robojudge_test_data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.3-1.3s: The bottle tilts and spins in midair without being touched
+2. 2.2-7s: A second spout/neck suddenly appears on the right end of the sealed bottle and tea keeps pouring out
+3. 6-7s: The hand deforms and doesn’t match five fingers","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.3-1.3s: The bottle tilts and spins in midair without being touched
+2. 2.2-7s: A second spout/neck suddenly appears on the right end of the sealed bottle and tea keeps pouring out
+3. 6-7s: The hand deforms and doesn’t match five fingers
+
+Expected behavior:
+1. Before the fingers form an enclosing grasp and apply force, the bottle should stay still or only roll on the tabletop; any lift of the base off the table must be caused by visible gripping or support
+2. The bottle should remain a single rigid container: after opening the original cap, tea can only pour from the original mouth; with the cap sealing the other end, no second outlet should appear
+3. A normal hand with five fingers"
+robojudge::test::data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001,robojudge,cosmos3_prefix,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3-3.5s: Without the gripper holding the fridge door’s free edge or handle, the door opens around the hinge by itself (missing contact / remote actuation)","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3-3.5s: Without the gripper holding the fridge door’s free edge or handle, the door opens around the hinge by itself (missing contact / remote actuation)
+
+Expected behavior:
+1. The gripper should first clamp the door’s left free edge or handle and maintain continuous contact while pulling, then drive the door to open about the hinge"
+robojudge::test::data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001,robojudge,cosmos3_prefix,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9177_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-2.2s: The oven door opens by itself when the gripper is not touching it","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-2.2s: The oven door opens by itself when the gripper is not touching it
+
+Expected behavior:
+1. The gripper should first grasp or pull the handle, then open the door about the hinge with continuous contact"
+robojudge::test::data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001,robojudge,gigaworld_gr1_2b_f113_prefix,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9259_robojudge_test_data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.7-3.5s: The box is lifted and translated while only the top is pressed by an upper fingertip, leaving it hanging unsupported","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.7-3.5s: The box is lifted and translated while only the top is pressed by an upper fingertip, leaving it hanging unsupported
+
+Expected behavior:
+1. To lift the box off the table, it should be pinched and grasped by two fingers (top and bottom) with clear contact"
+robojudge::test::data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001,robojudge,kling_rewrite,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.49-1.52s: The gripper isn’t aligned with the cup, but it still picks it up
+2. 2.75-3.05s: The object does not free-fall","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.49-1.52s: The gripper isn’t aligned with the cup, but it still picks it up
+2. 2.75-3.05s: The object does not free-fall
+
+Expected behavior:
+1. The robot gripper should align with the cup in the video before lifting it
+2. When the gripper releases it, the object should free-fall, not instantly gain horizontal velocity and land somewhere else"
+robojudge::test::data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001,robojudge,wan22_ti2v5b_1280x704_f169_prefix,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.7-7s: From 0.67 s, an extra complete white robotic arm (white forearm + black gripper) appears from the top edge on the right; together with the original lower-right cloth-grabbing white arm and the left black robotic hand, three arms are on screen. The duplicate arm moves independently and persists until ~7.0 s; meanwhile the lower white arm’s wrist casing also warps into gray-white blotchy distortions","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.7-7s: From 0.67 s, an extra complete white robotic arm (white forearm + black gripper) appears from the top edge on the right; together with the original lower-right cloth-grabbing white arm and the left black robotic hand, three arms are on screen. The duplicate arm moves independently and persists until ~7.0 s; meanwhile the lower white arm’s wrist casing also warps into gray-white blotchy distortions
+
+Expected behavior:
+1. Keep the initial two robotic arms; only one right arm should continuously perform the cloth-grab action, and a third arm must not be generated"
+robojudge::test::data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001,robojudge,wan26_flash_prefix,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.3-3.5s: The orange bottle moves suspended with the gripper even though it isn’t being held
+2. 0.0-5.0s: The robot arm moves without joint-motor limits; the arm base stretches, twists, and deforms","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.3-3.5s: The orange bottle moves suspended with the gripper even though it isn’t being held
+2. 0.0-5.0s: The robot arm moves without joint-motor limits; the arm base stretches, twists, and deforms
+
+Expected behavior:
+1. The gripper should close and make load-bearing contact on both sides of the bottle before lifting and carrying it; if not grasped, the bottle should stay on the tabletop or fall under gravity
+2. During motion, the arm links should stay rigid and only rotate at the joints"
+robojudge::test::data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001,robojudge,wan26_flash_prefix,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-2.8s: The blue bowl is carried level while suspended by only a single straight finger touching at one point inside the bowl; the opposing finger stays in midair with no pinch or hooked support, so the bowl should tilt or fall","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.5-2.8s: The blue bowl is carried level while suspended by only a single straight finger touching at one point inside the bowl; the opposing finger stays in midair with no pinch or hooked support, so the bowl should tilt or fall
+
+Expected behavior:
+1. Use two fingers to pinch the bowl at the rim from inside/outside, or hook a finger under the rim to form reliable support, then lift and carry the blue bowl level"
+robojudge::test::data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001,robojudge,wow_wan14b_f105_prefix,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3.5-6.8s: The blue plate is carried while floating with no continuous, valid grasp or support contact
+2. 3.5-6.8s: While being carried, the blue plate’s rim and surface deform unnaturally and do not keep a single rigid plate outline across frames","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 3.5-6.8s: The blue plate is carried while floating with no continuous, valid grasp or support contact
+2. 3.5-6.8s: While being carried, the blue plate’s rim and surface deform unnaturally and do not keep a single rigid plate outline across frames
+
+Expected behavior:
+1. When the plate moves with the hand, it must have continuous, valid gripping or support; if support is lost, it should move according to the actual forces
+2. The plate should keep a stable surface, rim, and thickness; carrying should only change pose, not stretch or reshape it"
+robojudge::test::data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001,robojudge,wow_wan14b_f105_rewrite,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.3-6.8s: The robot end-effector turns into flesh-colored human hands and merges with the rectangular robotic forearm (both hands do this mid-clip)","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.3-6.8s: The robot end-effector turns into flesh-colored human hands and merges with the rectangular robotic forearm (both hands do this mid-clip)
+
+Expected behavior:
+1. The robot end-effector should remain a mechanical gripper at all times; no human hands should appear or merge with it"
+videophy2::test::vp2_0010_cogvideo,videophy2,CogVideoX,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0010_cogvideo.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-6.0s: Beer keeps pouring into an already full glass, but the level neither rises nor overflows","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-6.0s: Beer keeps pouring into an already full glass, but the level neither rises nor overflows
+
+Expected behavior:
+1. The foamy liquid level should rise, then overflow at the rim and run down the outside of the glass"
+videophy2::test::vp2_2144_cosmos,videophy2,Cosmos,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2144_cosmos.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.75-3.0s: An empty soda can gets lightly pushed and instantly crushes into a melted foil-like lump","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 1.75-3.0s: An empty soda can gets lightly pushed and instantly crushes into a melted foil-like lump
+
+Expected behavior:
+1. The can should keep its cylindrical shape, at most dent slightly, then tip over and roll away"
+videophy2::test::vp2_2414_hunyuan,videophy2,HunyuanVideo,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2414_hunyuan.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-3.75s: Orange juice keeps pouring into the glass, but the liquid level barely rises","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-3.75s: Orange juice keeps pouring into the glass, but the liquid level barely rises
+
+Expected behavior:
+1. The liquid level should steadily rise as it’s poured, with ripples or splashes at the impact point"
+videophy2::test::vp2_0281_ray2,videophy2,Ray2,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0281_ray2.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-5.0s: Sand grains pass through an intact sealed glass sphere wall and pile up inside","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-5.0s: Sand grains pass through an intact sealed glass sphere wall and pile up inside
+
+Expected behavior:
+1. Sand should only hit the outside surface of the sphere, stick, slide, or bounce off"
+videophy2::test::vp2_0672_ray2,videophy2,Ray2,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0672_ray2.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-5.0s: A large amount of flour pours out and piles up, but the flour bag never deflates or collapses and stays full
+2. 0-5.25s: The flour bag has no opening or tear, but flour leaks out","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 0.0-5.0s: A large amount of flour pours out and piles up, but the flour bag never deflates or collapses and stays full
+2. 0-5.25s: The flour bag has no opening or tear, but flour leaks out
+
+Expected behavior:
+1. As flour flows out, the bag should gradually deflate and wrinkle, and the flow should thin
+2. There should be a bag opening or a tear, and the flour should leak out from inside through it"
+videophy2::test::vp2_2737_wan,videophy2,Wan,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2737_wan.mp4,"Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the parts that violate physical laws.","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.5-3.5s: After letting go, the unicycle stands at a steep tilt and doesn’t fall without support
+2. 1.4-1.9s: A tool appears in the worker’s hand for no reason","Regenerate a physically consistent version of the input video. Preserve the original scene, subjects, intended action, camera, duration, and visual style. Only correct the following physical issues:
+
+Problems:
+1. 2.5-3.5s: After letting go, the unicycle stands at a steep tilt and doesn’t fall without support
+2. 1.4-1.9s: A tool appears in the worker’s hand for no reason
+
+Expected behavior:
+1. The unicycle should be stable only with the wheel and stand on the ground, or it should tip over under gravity
+2. The worker should pick up the tool from the side before it appears in hand, and it should be in frame before being picked up"

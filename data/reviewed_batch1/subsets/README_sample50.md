@@ -15,8 +15,10 @@ Selection rule: source-proportional stratification from the 194 accepted tasks, 
 Files:
 
 - `sample50_annotations.jsonl`: final benchmark records for the 50 videos.
-- `sample50_fixing_prompts_3way.jsonl`: self-fixing / problem-only / problem+expected prompt variants.
-- `sample50.csv`: compact table for spreadsheets.
+- `sample50_fixing_prompts_3way_en.jsonl`: English self-fixing / problem-only / problem+expected prompt variants for generation.
+- `sample50_fixing_prompts_3way.jsonl`: Chinese prompt variants retained for reference.
+- `sample50_en.csv`: compact English prompt table for spreadsheets.
+- `sample50.csv`: compact Chinese reference table for spreadsheets.
 - `sample50_manifest.jsonl`: video URLs and SHA256.
 - `sample50.json`: same records in a JSON envelope with selection metadata.
 - `sample50_generation_tasks.md`: execution guide for Seedance and other video-editing models.

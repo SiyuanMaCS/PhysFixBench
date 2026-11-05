@@ -41,7 +41,7 @@ def main():
         hf_hub_download(
             repo_id=REPO,
             repo_type="dataset",
-            filename="data/reviewed_batch1/fixing_prompts_3way.jsonl",
+            filename="data/reviewed_batch1/fixing_prompts_3way_en.jsonl",
             revision=REVISION,
             token=token,
         )
@@ -77,16 +77,17 @@ def main():
                 "fix_keep": ann["fix_keep"],
                 "video_url": ann["video_url"],
                 "prompts": {
-                    "self_fixing": prompt["self_fixing_prompt_zh"],
-                    "problem_only": prompt["problem_only_prompt_zh"],
-                    "problem_expected": prompt["problem_expected_prompt_zh"],
+                    "self_fixing": prompt["self_fixing_prompt_en"],
+                    "problem_only": prompt["problem_only_prompt_en"],
+                    "problem_expected": prompt["problem_expected_prompt_en"],
                 },
             }
         )
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
     assert len(rows) == summary["count"]
     assert all("【应修改为】" not in row["prompts"]["problem_only"] for row in rows)
-    assert all("【应修改为】" in row["prompts"]["problem_expected"] for row in rows)
+    assert all("Expected behavior:" in row["prompts"]["problem_expected"] for row in rows)
+    assert all("Expected behavior:" not in row["prompts"]["problem_only"] for row in rows)
     html = build_html(rows, summary)
     (ROOT / "fixing_tasks.html").write_text(html, encoding="utf-8")
     print("wrote", ROOT / "fixing_tasks.html", len(rows))
@@ -174,7 +175,7 @@ summary {{ cursor:pointer; font-weight:700; }}
 <header>
   <div class="wrap">
     <div class="eyebrow">PHYFIXBENCH / FIXING TASK INPUTS</div>
-    <h1>{summary["count"]} 个最终评测视频 · 三种 Fixing Prompt</h1>
+    <h1>{summary["count"]} Final Evaluation Videos · Three Prompt Conditions</h1>
     <div id="stats" class="stats"></div>
     <div class="toolbar">
       <select id="source"><option value="">全部来源</option></select>

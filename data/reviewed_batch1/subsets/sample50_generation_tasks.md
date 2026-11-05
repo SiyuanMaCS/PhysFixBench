@@ -12,7 +12,7 @@ Required files:
 
 - `sample50_manifest.jsonl`: one row per input video, with `record_id`, `video_url`, SHA256, source, and generator metadata.
 - `sample50_annotations.jsonl`: final reviewed benchmark annotations for the 50 videos.
-- `sample50_fixing_prompts_3way.jsonl`: the three prompt conditions for each video.
+- `sample50_fixing_prompts_3way_en.jsonl`: the English three-prompt conditions for each video. The Chinese file `sample50_fixing_prompts_3way.jsonl` is retained for reference.
 - `sample50.csv`: spreadsheet-friendly version for manual tracking.
 
 The corresponding input videos are referenced by `video_url` and are not duplicated in this folder.
@@ -23,19 +23,19 @@ Each video must be generated under three prompt conditions. Do not add extra inf
 
 ### 1. `self_fixing`
 
-Use `self_fixing_prompt_zh`.
+Use `self_fixing_prompt_en`.
 
 This condition gives no localized issue description and no expected behavior. The model must infer the physical problem from the input video.
 
 ### 2. `problem_only`
 
-Use `problem_only_prompt_zh`.
+Use `problem_only_prompt_en`.
 
 This condition gives only the time-localized physical problem description. It must not include the target/correct behavior.
 
 ### 3. `problem_expected`
 
-Use `problem_expected_prompt_zh`.
+Use `problem_expected_prompt_en`.
 
 This condition gives both the time-localized physical problem and the expected physically correct behavior.
 
@@ -88,7 +88,7 @@ Required metadata fields:
   "model": "seedance",
   "prompt_variant": "self_fixing | problem_only | problem_expected",
   "input_video_url": "...",
-  "prompt_zh": "...",
+  "prompt_en": "...",
   "output_video": "outputs/seedance/<prompt_variant>/<safe_record_id>.mp4",
   "status": "success | failed | unsupported",
   "error": "",
@@ -129,7 +129,7 @@ The three conditions are intentionally different. Do not enrich weaker condition
 - `problem_only`: problem text is allowed; expected behavior is not allowed.
 - `problem_expected`: both problem and expected behavior are allowed.
 
-Use exactly the prompt text from `sample50_fixing_prompts_3way.jsonl` for each condition unless the generation API requires trivial wrapper fields such as JSON escaping.
+Use exactly the English prompt text from `sample50_fixing_prompts_3way_en.jsonl` for each condition unless the generation API requires trivial wrapper fields such as JSON escaping.
 
 ## Completeness checklist
 
@@ -152,13 +152,13 @@ def safe_id(record_id: str) -> str:
     return re.sub(r"[^A-Za-z0-9._-]+", "_", record_id)
 
 tasks = []
-with open("sample50_fixing_prompts_3way.jsonl", encoding="utf-8") as f:
+with open("sample50_fixing_prompts_3way_en.jsonl", encoding="utf-8") as f:
     for line in f:
         row = json.loads(line)
         for variant, key in [
-            ("self_fixing", "self_fixing_prompt_zh"),
-            ("problem_only", "problem_only_prompt_zh"),
-            ("problem_expected", "problem_expected_prompt_zh"),
+            ("self_fixing", "self_fixing_prompt_en"),
+            ("problem_only", "problem_only_prompt_en"),
+            ("problem_expected", "problem_expected_prompt_en"),
         ]:
             tasks.append({
                 "record_id": row["record_id"],
