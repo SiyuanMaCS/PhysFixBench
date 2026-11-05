@@ -84,7 +84,7 @@ def main():
             }
         )
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
-    assert len(rows) == summary["count"] == 172
+    assert len(rows) == summary["count"]
     assert all("【应修改为】" not in row["prompts"]["problem_only"] for row in rows)
     assert all("【应修改为】" in row["prompts"]["problem_expected"] for row in rows)
     html = build_html(rows, summary)
@@ -99,7 +99,7 @@ def build_html(rows, summary):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PhyFixBench · 172 Fixing Tasks</title>
+<title>PhyFixBench · Fixing Tasks</title>
 <style>
 :root {{
   --bg:#f5f7fa; --panel:#ffffff; --ink:#1b2637; --muted:#66758a; --line:#d9e1ea;
@@ -174,7 +174,7 @@ summary {{ cursor:pointer; font-weight:700; }}
 <header>
   <div class="wrap">
     <div class="eyebrow">PHYFIXBENCH / FIXING TASK INPUTS</div>
-    <h1>172 个最终评测视频 · 三种 Fixing Prompt</h1>
+    <h1>{summary["count"]} 个最终评测视频 · 三种 Fixing Prompt</h1>
     <div id="stats" class="stats"></div>
     <div class="toolbar">
       <select id="source"><option value="">全部来源</option></select>
