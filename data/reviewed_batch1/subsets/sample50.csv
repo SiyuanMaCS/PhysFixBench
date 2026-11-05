@@ -1,0 +1,782 @@
+﻿record_id,source,generator,error_family,issue_count,video_url,self_fixing_prompt_zh,problem_only_prompt_zh,problem_expected_prompt_zh
+phyground::cosmos-predict2.5-14b::HaWe0Af_0hg_6_0to222,phyground,Cosmos-Predict2.5 14B,material_state,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-14b__HaWe0Af_0hg_6_0to222.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.25–5.5秒：漏斗持续向烧杯放液，漏斗液位虽有下降，但减少量明显小于流出的液体量
+2. 第1.25–5.5秒：下落液柱无故变成向侧弯曲的粗液柱
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.25–5.5秒：漏斗持续向烧杯放液，漏斗液位虽有下降，但减少量明显小于流出的液体量
+2. 第1.25–5.5秒：下落液柱无故变成向侧弯曲的粗液柱
+【应修改为】
+1. 漏斗内液体减少量应与流入烧杯的液体量相匹配，液位随放液连续下降
+2. 液流应从阀门出口连续流入烧杯，不应在缺少对应作用时突然改变流路或截面
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::cosmos-predict2.5-14b::mechanics_286,phyground,Cosmos-Predict2.5 14B,motion_force,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-14b__mechanics_286.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–2.3秒：锤击墙体上部、碎块开始下落时，下部仍连成一体的墙面突然出现大面积空缺，未见对应材料连续脱落
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–2.3秒：锤击墙体上部、碎块开始下落时，下部仍连成一体的墙面突然出现大面积空缺，未见对应材料连续脱落
+【应修改为】
+1. 墙体缺口应由可见的断裂和材料脱落逐步形成，消失的材料应有连续的碎块下落过程
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::cosmos-predict2.5-2b::0191_perspective-center_trimmed-weight-on-paper,phyground,Cosmos-Predict2.5 2B,material_state,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__0191_perspective-center_trimmed-weight-on-paper.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第4.0–5.5秒：被壶铃压扁的泡沫杯自行回弹成近乎完整的杯子
+2. 第1.06-2.6秒：变形不恰当
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第4.0–5.5秒：被壶铃压扁的泡沫杯自行回弹成近乎完整的杯子
+2. 第1.06-2.6秒：变形不恰当
+【应修改为】
+1. 泡沫杯应保持压扁起皱的永久变形
+2. 水杯变形应该从接触点开始往下，然后剩余部分向两侧延展
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::cosmos-predict2.5-2b::mechanics_182,phyground,Cosmos-Predict2.5 2B,geometry_structure,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__mechanics_182.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–4.25秒：玩具锤头穿入并融进蓝色蛋壳，还出现多余红色碎块
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–4.25秒：玩具锤头穿入并融进蓝色蛋壳，还出现多余红色碎块
+【应修改为】
+1. 锤子应击打蛋壳外侧使其裂开外散，红帽始终连在锤上
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::cosmos-predict2.5-2b::mechanics_293,phyground,Cosmos-Predict2.5 2B,contact_interaction,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__mechanics_293.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第4–5.5秒：篮球击中篮筐却穿模进球
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第4–5.5秒：篮球击中篮筐却穿模进球
+【应修改为】
+1. 篮球被篮筐弹开
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::ltx-2-19b-dev-1stage::mechanics_438,phyground,LTX-2 19B,geometry_structure,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/ltx-2-19b-dev-1stage__mechanics_438.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.5–1.5秒：两人冰鞋和腿相互穿透，红衣者被突然甩平
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.5–1.5秒：两人冰鞋和腿相互穿透，红衣者被突然甩平
+【应修改为】
+1. 冰鞋应实体碰撞勾绊，两人都有相应的失衡反应
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::ltx-2.3-22b-dev-1stage::mechanics_402,phyground,LTX-2.3 22B,material_state,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/ltx-2.3-22b-dev-1stage__mechanics_402.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.0–3.75秒：木桩受锤击后像橡胶般平滑弯曲并保持弯折
+2. 第0-3秒：锤柄锤头持续扭曲变形
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.0–3.75秒：木桩受锤击后像橡胶般平滑弯曲并保持弯折
+2. 第0-3秒：锤柄锤头持续扭曲变形
+【应修改为】
+1. 木桩应局部开裂碎裂，断板脱落下坠
+2. 锤柄锤头应该保持一致，维持刚性
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::veo-3.1::b91QyJ0TRAI_000000_000010,phyground,Veo 3.1,material_state,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/veo-3.1__b91QyJ0TRAI_000000_000010.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第5.0–6.75秒：落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌
+2. 第2.90-3.64秒：人体和沙子上的白线穿模
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第5.0–6.75秒：落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌
+2. 第2.90-3.64秒：人体和沙子上的白线穿模
+【应修改为】
+1. 落地应压出局部沙坑，只溅起少量沙粒
+2. 因为人在沙地上方，所以应当遮挡地上的白线
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+phyground::wan2.2-i2v-a14b::0188_perspective-center_trimmed-weight-on-ceramic,phyground,Wan 2.2 I2V-A14B,material_state,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/wan2.2-i2v-a14b__0188_perspective-center_trimmed-weight-on-ceramic.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.75–4.5秒：陶瓷杯在壶铃下像软物一样压扁起皱后才碎
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.75–4.5秒：陶瓷杯在壶铃下像软物一样压扁起皱后才碎
+【应修改为】
+1. 杯子应保持刚性，超载后骤然碎成陶瓷碎片
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::6fc886e0-f1da-5c3b-bcdb-86fb46537dfa,physion_eval,Hailuo 2.3,contact_interaction,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/6fc886e0-f1da-5c3b-bcdb-86fb46537dfa.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–0.2秒：玻璃杯变形并穿过手指
+2. 第1.1–5.3秒：手指反复穿过玻璃杯壁
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–0.2秒：玻璃杯变形并穿过手指
+2. 第1.1–5.3秒：手指反复穿过玻璃杯壁
+【应修改为】
+1. 玻璃杯被拿起时应保持刚性并受手握持
+2. 手指与杯壁应保持正确遮挡和实体边界
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_00755,physion_eval,Hailuo 2.3,contact_interaction,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_00755.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–5.5秒：草地火焰燃烧范围始终不扩散
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–5.5秒：草地火焰燃烧范围始终不扩散
+【应修改为】
+1. 火焰逐渐引燃邻近草叶并扩大焦痕
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_01190,physion_eval,Hailuo 2.3,motion_force,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01190.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.2–3.5秒：台灯在无人接触时自行弯曲并转动灯头
+2. 第0.3–2.7秒：桌上的书在没有可见接触或推动时自行滑移
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.2–3.5秒：台灯在无人接触时自行弯曲并转动灯头
+2. 第0.3–2.7秒：桌上的书在没有可见接触或推动时自行滑移
+【应修改为】
+1. 无外力时台灯的颈部和灯头应保持原有姿态
+2. 书的整体位置应保持稳定；若被移动，应有连续可见的接触和推动过程
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_02632,physion_eval,Hailuo 2.3,persistence_identity,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02632.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8秒：南瓜上方大量粉尘凭空出现
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8秒：南瓜上方大量粉尘凭空出现
+【应修改为】
+1. 粉尘应从可见源头连续喷出并扩散
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_06665,physion_eval,Hailuo 2.3,material_state,3,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06665.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.2秒：篝火旁草地未接触火焰便开始变白
+2. 第1.2–5.5秒：白色区域脱离火焰范围持续向外扩散
+3. 第1.2–5.5秒：草地未燃烧却由绿色直接变成灰白
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.2秒：篝火旁草地未接触火焰便开始变白
+2. 第1.2–5.5秒：白色区域脱离火焰范围持续向外扩散
+3. 第1.2–5.5秒：草地未燃烧却由绿色直接变成灰白
+【应修改为】
+1. 未受火草地保持绿色
+2. 仅实际燃烧区域逐步焦黑成灰
+3. 草地先受火燃烧焦黑后再形成灰烬
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_07362,physion_eval,Hailuo 2.3,persistence_identity,3,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07362.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–3.3秒：香肠约两秒内由生变为焦熟
+2. 第2.5–2.7秒：第四根香肠在锅内凭空出现
+3. 第3.7–3.8秒：第五根香肠在锅内凭空出现
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–3.3秒：香肠约两秒内由生变为焦熟
+2. 第2.5–2.7秒：第四根香肠在锅内凭空出现
+3. 第3.7–3.8秒：第五根香肠在锅内凭空出现
+【应修改为】
+1. 香肠应随受热逐渐均匀变熟
+2. 锅内应保持原有三根香肠
+3. 锅内应保持原有三根香肠
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_07945,physion_eval,Hailuo 2.3,other,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07945.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.7–1.2秒：右侧楼体外墙凭空出现烟花形光斑
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.7–1.2秒：右侧楼体外墙凭空出现烟花形光斑
+【应修改为】
+1. 无玻璃外墙仅呈漫射光和零星窗光
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_00178,physion_eval,Kling 2.5,temporal_causal,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_00178.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.8–2.2秒：手中单个白色刷头突变为叉勺两件
+2. 第4.2–4.5秒：右手白色刷子突然变成金属勺
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.8–2.2秒：手中单个白色刷头突变为叉勺两件
+2. 第4.2–4.5秒：右手白色刷子突然变成金属勺
+【应修改为】
+1. 白色刷头保持原有物体身份
+2. 右手刷子全程保持原有形态
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_02956,physion_eval,Kling 2.5,motion_force,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02956.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.3–0.7秒：枪未开火前眼部凭空出现子弹
+2. 第1.2–4.8秒：子弹水平漂移数秒且完全不下落
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.3–0.7秒：枪未开火前眼部凭空出现子弹
+2. 第1.2–4.8秒：子弹水平漂移数秒且完全不下落
+【应修改为】
+1. 子弹在开火后离开枪筒，沿可见轨迹击中头模
+2. 子弹离开头模后沿重力轨迹下坠
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_04058,physion_eval,Kling 2.5,geometry_structure,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_04058.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8–1.3秒：第二个番茄穿过并重叠第一个番茄
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8–1.3秒：第二个番茄穿过并重叠第一个番茄
+【应修改为】
+1. 两个番茄接触后碰撞、变形或反弹
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_06914,physion_eval,Kling 2.5,persistence_identity,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06914.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8–2.5秒：首次开火出现多余第二枚弹体
+2. 第3.0–4.7秒：二次开火无出膛弹却出现两枚弹体
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8–2.5秒：首次开火出现多余第二枚弹体
+2. 第3.0–4.7秒：二次开火无出膛弹却出现两枚弹体
+【应修改为】
+1. 首次开火仅有一枚弹体从枪口射出
+2. 二次开火仅有一枚弹体从枪口射出
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_07560,physion_eval,Kling 2.5,geometry_structure,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07560.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.0–2.8秒：绿色方块与黄色挡板的实体区域相互穿透
+2. 第3.9秒：夹爪中的同一绿色方块突然变成红色
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.0–2.8秒：绿色方块与黄色挡板的实体区域相互穿透
+2. 第3.9秒：夹爪中的同一绿色方块突然变成红色
+【应修改为】
+1. 方块接触挡板时应被阻挡或使挡板发生相应形变，不应直接穿过挡板
+2. 同一方块在夹持和搬运过程中应保持原有绿色
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_09189,physion_eval,Kling 2.5,temporal_causal,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_09189.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3.69-4.29秒：手握右侧柜门，但左侧柜门和右侧柜门连在一起打开，右侧柜门打开方向不正确且消失在左侧柜门中
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3.69-4.29秒：手握右侧柜门，但左侧柜门和右侧柜门连在一起打开，右侧柜门打开方向不正确且消失在左侧柜门中
+【应修改为】
+1. 手握右侧柜门就只能右侧柜门旋转，且打开时形态应保持稳定
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_01290,physion_eval,Sora 2,motion_force,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01290.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–7.7秒：手指几乎不转而欧泊大幅自转
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–7.7秒：手指几乎不转而欧泊大幅自转
+【应修改为】
+1. 欧泊应与夹持手指同步转动并保持夹持
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_06093,physion_eval,Sora 2,contact_interaction,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06093.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第5.2–7.6秒：面包被车轮碾压后恢复原状
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第5.2–7.6秒：面包被车轮碾压后恢复原状
+【应修改为】
+1. 面包被碾压后应保持压扁和褶皱状态
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_06114,physion_eval,Sora 2,geometry_structure,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06114.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.6–7.7秒：针状晶体穿过培养皿玻璃壁伸到皿外
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.6–7.7秒：针状晶体穿过培养皿玻璃壁伸到皿外
+【应修改为】
+1. 晶体到达内壁后停止，不穿透玻璃或伸出皿外
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_01405,physion_eval,Veo 3.1 Fast,geometry_structure,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01405.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–6.6秒：前后两个取景阶段，水流都直接穿过连续的塑料容器壁进入内部
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–6.6秒：前后两个取景阶段，水流都直接穿过连续的塑料容器壁进入内部
+【应修改为】
+1. 水流应经可见开口进入容器，或沿外壁流下，不应穿过完整实体壁面
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_06574,physion_eval,Veo 3.1 Fast,material_state,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06574.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.8秒：受压碎裂的面条突然变成灰白色小石块
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.8秒：受压碎裂的面条突然变成灰白色小石块
+【应修改为】
+1. 压碎后的残留物应继续是原有面条的碎段和碎屑，不应改变为其他材料
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_09986,physion_eval,Veo 3.1 Fast,motion_force,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_09986.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3.4–3.8秒：黄油块在没有可见支撑或施力的情况下离开锅面向上升起
+2. 第1.5–3.3秒：黄油周围融液明显增加，但固体主体没有呈现相匹配的体积减少
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3.4–3.8秒：黄油块在没有可见支撑或施力的情况下离开锅面向上升起
+2. 第1.5–3.3秒：黄油周围融液明显增加，但固体主体没有呈现相匹配的体积减少
+【应修改为】
+1. 黄油块应由锅面或明确的接触支撑承托；若发生移动，应有连续、可见的受力与接触过程
+2. 黄油熔化产生液体时，固体体积应相应减小，固液变化应大致守恒
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_01358,physion_eval,Wan 2.2,motion_force,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01358.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.7秒：滚动中的绿球突然消失
+2. 第3.1–3.5秒：红黄两球无外力跃上上层轨道
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.7秒：滚动中的绿球突然消失
+2. 第3.1–3.5秒：红黄两球无外力跃上上层轨道
+【应修改为】
+1. 绿球应保持存在并沿连续轨迹滚动
+2. 红黄两球应沿相连轨道受力运动
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_02968,physion_eval,Wan 2.2,contact_interaction,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02968.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–4.7秒：地面爆炸后草地与爆点毫无受损痕迹
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–4.7秒：地面爆炸后草地与爆点毫无受损痕迹
+【应修改为】
+1. 爆点保留焦痕、压倒草丛与散落碎屑
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_04499,physion_eval,Wan 2.2,motion_force,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_04499.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8–4.0秒：太阳近乎水平移动后反向下沉
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.8–4.0秒：太阳近乎水平移动后反向下沉
+【应修改为】
+1. 太阳应沿平滑上升弧线移动
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_05408,physion_eval,Wan 2.2,material_state,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_05408.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–4.8秒：棕色色液流入杯后不扩散保持束状下落
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–4.8秒：棕色色液流入杯后不扩散保持束状下落
+【应修改为】
+1. 液流入杯后在液体表面引起波动，流入部分自然扩散
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_06912,physion_eval,Wan 2.2,persistence_identity,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06912.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.6秒：射出的子弹在空中运送姿态、朝向和速度不自然，和火、烟也未完全对应
+2. 第1.7–2.0秒：两枚子弹从火光中凭空出现
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.6秒：射出的子弹在空中运送姿态、朝向和速度不自然，和火、烟也未完全对应
+2. 第1.7–2.0秒：两枚子弹从火光中凭空出现
+【应修改为】
+1. 子弹从枪口射出后沿连续轨迹离开画面
+2. 两枚子弹应从枪口连续射出
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+physion_eval::full::T1_08086,physion_eval,Wan 2.2,contact_interaction,4,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_08086.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.9–1.5秒：左手木棍无火源自行燃烧
+2. 第2.7–3.5秒：右手木棍迅速烧失且无灰烬
+3. 第0.0–4.7秒：火中两根木棍始终未被灼烧
+4. 第3.3-4.5秒：左手柴火像是被无外力弹射到火堆中
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.9–1.5秒：左手木棍无火源自行燃烧
+2. 第2.7–3.5秒：右手木棍迅速烧失且无灰烬
+3. 第0.0–4.7秒：火中两根木棍始终未被灼烧
+4. 第3.3-4.5秒：左手柴火像是被无外力弹射到火堆中
+【应修改为】
+1. 左手木棍应接触火源后才点燃
+2. 右手木棍应逐渐炭化并留下灰烬
+3. 火中木棍应随燃烧逐渐焦黑和消耗
+4. 柴火应该缓慢由人手移动或被投掷入火堆中
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001,robojudge,cogvideo_i2v_f113_rewrite,contact_interaction+object_scene_consistency,3,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9188_robojudge_test_data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.3–1.3秒：瓶子未被接触却自行倾斜、悬空转动
+2. 第2.2–7秒：封闭瓶体右端突生副颈并持续流出茶水
+3. 第6-7秒：手变形, 不符合五个手指头
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.3–1.3秒：瓶子未被接触却自行倾斜、悬空转动
+2. 第2.2–7秒：封闭瓶体右端突生副颈并持续流出茶水
+3. 第6-7秒：手变形, 不符合五个手指头
+【应修改为】
+1. 瓶子在手指形成包络抓握并施力前应保持静置或仅在桌面上滚动，瓶底离桌必须由可见的抓握或支撑造成
+2. 瓶子应保持单一刚体容器：拧开原瓶盖后茶水只能从原瓶口流出；瓶盖封闭在另一端时不应出现第二个出液口
+3. 五个手指头, 正常手
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001,robojudge,cosmos3_prefix,contact_interaction,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3–3.5秒：没有夹爪夹住冰箱门自由边或把手，冰箱门却自行绕铰链转开（接触缺失/隔空带动）
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3–3.5秒：没有夹爪夹住冰箱门自由边或把手，冰箱门却自行绕铰链转开（接触缺失/隔空带动）
+【应修改为】
+1. 夹爪应先夹住门的左侧自由边或把手并随拉开动作连续接触，再带动门绕铰链开启
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001,robojudge,cosmos3_prefix,motion_force,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9177_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–2.2秒：烤箱门在夹爪未接触时自行打开
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–2.2秒：烤箱门在夹爪未接触时自行打开
+【应修改为】
+1. 夹爪应先夹住或拉住把手，再以持续接触带动门绕铰链开启
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001,robojudge,gigaworld_gr1_2b_f113_prefix,contact_interaction,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9259_robojudge_test_data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.7–3.5秒：方盒仅被上指尖压住顶面却悬空抬升平移
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.7–3.5秒：方盒仅被上指尖压住顶面却悬空抬升平移
+【应修改为】
+1. 方盒离桌抬升应由上下两指对夹抓起 确认接触
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001,robojudge,kling_rewrite,agent_integrity+object_scene_consistency,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.49-1.52秒：夹爪和杯子没有对准，但是还是夹起来了
+2. 第2.75-3.05秒：物体不是自由下落
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.49-1.52秒：夹爪和杯子没有对准，但是还是夹起来了
+2. 第2.75-3.05秒：物体不是自由下落
+【应修改为】
+1. 机械夹爪应该对准这个视频杯子，才能夹起来
+2. 夹爪释放时，物体应该是自由下落，而不是直接有水平速度落到其他地方
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001,robojudge,wan22_ti2v5b_1280x704_f169_prefix,agent_integrity,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.7–7秒：第0.67s起右侧凭空多出一条完整白色机械臂（白前臂+黑色夹爪，从画面上缘进入），与原有右下抓布白臂及左侧黑色机械手形成三臂同框；该复制臂结构完整、独立运动并持续存在至约7.0s片尾；其间下方白臂腕部外壳还伴随灰白斑驳的形态畸变
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.7–7秒：第0.67s起右侧凭空多出一条完整白色机械臂（白前臂+黑色夹爪，从画面上缘进入），与原有右下抓布白臂及左侧黑色机械手形成三臂同框；该复制臂结构完整、独立运动并持续存在至约7.0s片尾；其间下方白臂腕部外壳还伴随灰白斑驳的形态畸变
+【应修改为】
+1. 场景应保持初始两条机械臂，仅一条右臂连续完成抓布动作，不应生成第三条机械臂
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001,robojudge,wan26_flash_prefix,contact_interaction,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.3–3.5秒：橙色瓶未被夹持却随夹爪悬空移动
+2. 第0.0-5.0秒：机械臂移动不受关节电机限制，机械臂根部被拉伸扭曲变形
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.3–3.5秒：橙色瓶未被夹持却随夹爪悬空移动
+2. 第0.0-5.0秒：机械臂移动不受关节电机限制，机械臂根部被拉伸扭曲变形
+【应修改为】
+1. 夹爪应先闭合并在瓶体两侧形成承重接触后再抬升运输；若未夹住，瓶应受重力留在台面或下落
+2. 机械臂移动时应该保持中间臂的刚性，只旋转关节处
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001,robojudge,wan26_flash_prefix,contact_interaction,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–2.8秒：蓝碗仅靠一根伸入碗内的直指单点接触即悬空水平搬运，对侧夹指全程悬空，无对夹或弯钩承托，碗应倾斜或坠落
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.5–2.8秒：蓝碗仅靠一根伸入碗内的直指单点接触即悬空水平搬运，对侧夹指全程悬空，无对夹或弯钩承托，碗应倾斜或坠落
+【应修改为】
+1. 双指应从碗沿内外对夹、或弯钩指勾住碗沿形成可靠承托后，再抬起并水平搬运蓝碗
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001,robojudge,wow_wan14b_f105_prefix,contact_interaction,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3.5–6.8秒：蓝盘缺少连续有效的夹持或承托接触，却仍悬空随手部搬运
+2. 第3.5–6.8秒：蓝盘在搬运中盘沿和盘面发生不自然形变，前后无法保持同一刚性盘体轮廓
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第3.5–6.8秒：蓝盘缺少连续有效的夹持或承托接触，却仍悬空随手部搬运
+2. 第3.5–6.8秒：蓝盘在搬运中盘沿和盘面发生不自然形变，前后无法保持同一刚性盘体轮廓
+【应修改为】
+1. 蓝盘随手移动时应保持连续有效的夹持或承托；失去支撑后应按实际受力运动
+2. 盘子应保持稳定的盘面、盘沿和厚度，搬运只改变姿态，不应无因拉伸或重塑
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+robojudge::test::data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001,robojudge,wow_wan14b_f105_rewrite,agent_integrity,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.3–6.8秒：机器人末端变为肤色人手并与矩形机械前臂融合（中段双手皆然）
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.3–6.8秒：机器人末端变为肤色人手并与矩形机械前臂融合（中段双手皆然）
+【应修改为】
+1. 机器人末端应始终保持机械夹爪结构，不应凭空生成人手或与人手融合
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+videophy2::test::vp2_0010_cogvideo,videophy2,CogVideoX,material_state,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0010_cogvideo.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–6.0秒：啤酒持续倒入满杯，液面不升也不溢出
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–6.0秒：啤酒持续倒入满杯，液面不升也不溢出
+【应修改为】
+1. 泡沫液面应上升，到达杯口后溢出沿杯壁流下
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+videophy2::test::vp2_2144_cosmos,videophy2,Cosmos,material_state,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2144_cosmos.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.75–3.0秒：空易拉罐被轻推就压扁熔成锡箔状团块
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第1.75–3.0秒：空易拉罐被轻推就压扁熔成锡箔状团块
+【应修改为】
+1. 易拉罐应保持各自圆柱形，至多轻微凹陷后倒下滚落
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+videophy2::test::vp2_2414_hunyuan,videophy2,HunyuanVideo,material_state,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2414_hunyuan.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–3.75秒：橙汁持续倒入玻璃杯，液面却几乎不上升
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–3.75秒：橙汁持续倒入玻璃杯，液面却几乎不上升
+【应修改为】
+1. 杯中液面应随倒入稳步上升，落点处有涟漪或水花
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+videophy2::test::vp2_0281_ray2,videophy2,Ray2,geometry_structure,1,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0281_ray2.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–5.0秒：沙粒穿过完好密封的玻璃球壁，在球内堆积
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–5.0秒：沙粒穿过完好密封的玻璃球壁，在球内堆积
+【应修改为】
+1. 沙子只应在球外表面撞击、附着或滑落弹开
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+videophy2::test::vp2_0672_ray2,videophy2,Ray2,material_state,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0672_ray2.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–5.0秒：大量面粉流出堆积，面粉袋却不瘪不塌依旧饱满
+2. 第0-5.25秒：面粉袋没有裂口，但是面粉漏出来
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第0.0–5.0秒：大量面粉流出堆积，面粉袋却不瘪不塌依旧饱满
+2. 第0-5.25秒：面粉袋没有裂口，但是面粉漏出来
+【应修改为】
+1. 面粉袋应随面粉流出逐渐变瘪起皱，粉流渐细
+2. 面粉应该有口袋或者裂口，面粉从里面漏出来
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"
+videophy2::test::vp2_2737_wan,videophy2,Wan,contact_interaction,2,https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2737_wan.mp4,"【任务】
+请观察输入视频，自行识别并修正其中不符合物理规律的内容，重新生成视频。
+【保持不变】
+除需要修正的物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.5–3.5秒：松手后独轮车以陡峭倾斜姿态立住，无支撑不倒
+2. 第1.4-1.9秒：工人手中无故出现一把工具
+【任务】
+请修正上述物理问题并重新生成视频。
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。","【存在的问题】
+1. 第2.5–3.5秒：松手后独轮车以陡峭倾斜姿态立住，无支撑不倒
+2. 第1.4-1.9秒：工人手中无故出现一把工具
+【应修改为】
+1. 独轮车应靠轮子与支腿稳定着地，或受重力倾倒
+2. 工人从旁边拿取工具后手中才有工具，且工具应在工人拿取前入画
+【保持不变】
+除上述物理问题外，请保持视频其余内容不变。"

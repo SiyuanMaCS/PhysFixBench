@@ -1,0 +1,2252 @@
+{
+  "schema": "phyfixbench-reviewed-batch1-sample50-v1",
+  "selection": "stratified by source, then diverse by error_family/generator/issue_count",
+  "count": 50,
+  "source_targets": {
+    "physion_eval": 25,
+    "robojudge": 10,
+    "phyground": 9,
+    "videophy2": 6
+  },
+  "records": [
+    {
+      "record_id": "phyground::cosmos-predict2.5-14b::HaWe0Af_0hg_6_0to222",
+      "dir_name": "0039_phyground_cosmos-predict2.5-14b_HaWe0Af_0hg_6_0to222",
+      "generator": "Cosmos-Predict2.5 14B",
+      "error_family": "material_state",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "HaWe0Af_0hg_6_0to222",
+      "video_path": "videos/0039_phyground_cosmos-predict2.5-14b_HaWe0Af_0hg_6_0to222.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-14b__HaWe0Af_0hg_6_0to222.mp4",
+      "video_sha256": "201594dda5aaad9e50356a52f187a0eba53a5cd835f33dc768e42b81ecd64062",
+      "video_bytes": 301533,
+      "duration_seconds": 5.8125,
+      "fps": 16.0,
+      "width": 1280,
+      "height": 704,
+      "issues": [
+        {
+          "timestamp": "0.25–5.5",
+          "problem": "漏斗持续向烧杯放液，漏斗液位虽有下降，但减少量明显小于流出的液体量。",
+          "expected": "漏斗内液体减少量应与流入烧杯的液体量相匹配，液位随放液连续下降。"
+        },
+        {
+          "timestamp": "1.25–5.5",
+          "problem": "下落液柱无故变成向侧弯曲的粗液柱。",
+          "expected": "液流应从阀门出口连续流入烧杯，不应在缺少对应作用时突然改变流路或截面。"
+        }
+      ],
+      "fix_problems": [
+        "漏斗持续向烧杯放液，漏斗液位虽有下降，但减少量明显小于流出的液体量。",
+        "下落液柱无故变成向侧弯曲的粗液柱。"
+      ],
+      "fix_expected": [
+        "漏斗内液体减少量应与流入烧杯的液体量相匹配，液位随放液连续下降。",
+        "液流应从阀门出口连续流入烧杯，不应在缺少对应作用时突然改变流路或截面。"
+      ],
+      "fix_keep": "实验场景、机位、玻璃分液漏斗、蓝钮阀门、黄琥珀分层液体、烧杯位置与持续注液",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.25–5.5秒：漏斗持续向烧杯放液，漏斗液位虽有下降，但减少量明显小于流出的液体量。\n2. 第1.25–5.5秒：下落液柱无故变成向侧弯曲的粗液柱。\n【应修改为】\n1. 漏斗内液体减少量应与流入烧杯的液体量相匹配，液位随放液连续下降。\n2. 液流应从阀门出口连续流入烧杯，不应在缺少对应作用时突然改变流路或截面。\n请在保持实验场景、机位、玻璃分液漏斗、蓝钮阀门、黄琥珀分层液体、烧杯位置与持续注液不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/cosmos-predict2.5-14b__HaWe0Af_0hg_6_0to222.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-14b::mechanics_286",
+      "dir_name": "0059_phyground_cosmos-predict2.5-14b_mechanics_286",
+      "generator": "Cosmos-Predict2.5 14B",
+      "error_family": "motion_force",
+      "scenario_domain": "tool_machine_operation",
+      "interaction_primitive": "collision_impact",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "mechanics_286",
+      "video_path": "videos/0059_phyground_cosmos-predict2.5-14b_mechanics_286.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-14b__mechanics_286.mp4",
+      "video_sha256": "48825c6036009f7538c50bd2f6f2afd6d5db6fc90c27adec17c507fc8ae078b6",
+      "video_bytes": 936147,
+      "duration_seconds": 5.8125,
+      "fps": 16.0,
+      "width": 1280,
+      "height": 704,
+      "issues": [
+        {
+          "timestamp": "1.5–2.3",
+          "problem": "锤击墙体上部、碎块开始下落时，下部仍连成一体的墙面突然出现大面积空缺，未见对应材料连续脱落。",
+          "expected": "墙体缺口应由可见的断裂和材料脱落逐步形成，消失的材料应有连续的碎块下落过程。"
+        }
+      ],
+      "fix_problems": [
+        "锤击墙体上部、碎块开始下落时，下部仍连成一体的墙面突然出现大面积空缺，未见对应材料连续脱落。"
+      ],
+      "fix_expected": [
+        "墙体缺口应由可见的断裂和材料脱落逐步形成，消失的材料应有连续的碎块下落过程。"
+      ],
+      "fix_keep": "涂鸦混凝土墙、戴兜帽的人、锤击动作、机位、光照与正常下落的尘土碎屑",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.5–2.3秒：锤击墙体上部、碎块开始下落时，下部仍连成一体的墙面突然出现大面积空缺，未见对应材料连续脱落。\n【应修改为】\n1. 墙体缺口应由可见的断裂和材料脱落逐步形成，消失的材料应有连续的碎块下落过程。\n请在保持涂鸦混凝土墙、戴兜帽的人、锤击动作、机位、光照与正常下落的尘土碎屑不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/cosmos-predict2.5-14b__mechanics_286.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::0191_perspective-center_trimmed-weight-on-paper",
+      "dir_name": "0004_phyground_cosmos-predict2.5-2b_0191_perspective-center_trimmed-weight-on-paper",
+      "generator": "Cosmos-Predict2.5 2B",
+      "error_family": "material_state",
+      "scenario_domain": "deformable_materials",
+      "interaction_primitive": "deformation_state_change",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "0191_perspective-center_trimmed-weight-on-paper",
+      "video_path": "videos/0004_phyground_cosmos-predict2.5-2b_0191_perspective-center_trimmed-weight-on-paper.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__0191_perspective-center_trimmed-weight-on-paper.mp4",
+      "video_sha256": "abd53b11905f8ba1e6bd7480dd134d6d55d6c6c4d760215c5326c7ddbc40c38b",
+      "video_bytes": 478163,
+      "duration_seconds": 5.8125,
+      "fps": 16.0,
+      "width": 1280,
+      "height": 704,
+      "issues": [
+        {
+          "expected": "泡沫杯应保持压扁起皱的永久变形",
+          "problem": "被壶铃压扁的泡沫杯自行回弹成近乎完整的杯子",
+          "timestamp": "4.0–5.5"
+        },
+        {
+          "expected": "水杯变形应该从接触点开始往下，然后剩余部分向两侧延展",
+          "problem": "变形不恰当",
+          "timestamp": "1.06-2.6"
+        }
+      ],
+      "fix_problems": [
+        "被壶铃压扁的泡沫杯自行回弹成近乎完整的杯子",
+        "变形不恰当"
+      ],
+      "fix_expected": [
+        "泡沫杯应保持压扁起皱的永久变形",
+        "水杯变形应该从接触点开始往下，然后剩余部分向两侧延展"
+      ],
+      "fix_keep": "固定镜头、木桌、灰色背景、黑色壶铃、侧放白杯、光照与壶铃位置时序",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第4.0–5.5秒：被壶铃压扁的泡沫杯自行回弹成近乎完整的杯子\n2. 第1.06-2.6秒：变形不恰当\n【应修改为】\n1. 泡沫杯应保持压扁起皱的永久变形\n2. 水杯变形应该从接触点开始往下，然后剩余部分向两侧延展\n请在保持固定镜头、木桌、灰色背景、黑色壶铃、侧放白杯、光照与壶铃位置时序不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/cosmos-predict2.5-2b__0191_perspective-center_trimmed-weight-on-paper.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::mechanics_182",
+      "dir_name": "0055_phyground_cosmos-predict2.5-2b_mechanics_182",
+      "generator": "Cosmos-Predict2.5 2B",
+      "error_family": "geometry_structure",
+      "scenario_domain": "tool_machine_operation",
+      "interaction_primitive": "collision_impact",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "mechanics_182",
+      "video_path": "videos/0055_phyground_cosmos-predict2.5-2b_mechanics_182.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__mechanics_182.mp4",
+      "video_sha256": "9912afe68113887feb5076bc5757e19de06cd1aa17dee3127903bced298f8196",
+      "video_bytes": 1115220,
+      "duration_seconds": 5.8125,
+      "fps": 16.0,
+      "width": 1280,
+      "height": 704,
+      "issues": [
+        {
+          "expected": "锤子应击打蛋壳外侧使其裂开外散，红帽始终连在锤上",
+          "problem": "玩具锤头穿入并融进蓝色蛋壳，还出现多余红色碎块",
+          "timestamp": "1.5–4.25"
+        }
+      ],
+      "fix_problems": [
+        "玩具锤头穿入并融进蓝色蛋壳，还出现多余红色碎块"
+      ],
+      "fix_expected": [
+        "锤子应击打蛋壳外侧使其裂开外散，红帽始终连在锤上"
+      ],
+      "fix_keep": "玩具特写场景、蓝色塑料蛋、左侧孩子的手和头、黄柄灰锤与红帽、机位、光照与砸蛋动作",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.5–4.25秒：玩具锤头穿入并融进蓝色蛋壳，还出现多余红色碎块\n【应修改为】\n1. 锤子应击打蛋壳外侧使其裂开外散，红帽始终连在锤上\n请在保持玩具特写场景、蓝色塑料蛋、左侧孩子的手和头、黄柄灰锤与红帽、机位、光照与砸蛋动作不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/cosmos-predict2.5-2b__mechanics_182.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "phyground::cosmos-predict2.5-2b::mechanics_293",
+      "dir_name": "0091_phyground_cosmos-predict2.5-2b_mechanics_293",
+      "generator": "Cosmos-Predict2.5 2B",
+      "error_family": "contact_interaction",
+      "scenario_domain": "rigid_object_dynamics",
+      "interaction_primitive": "throw_projectile",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "mechanics_293",
+      "video_path": "videos/0091_phyground_cosmos-predict2.5-2b_mechanics_293.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/cosmos-predict2.5-2b__mechanics_293.mp4",
+      "video_sha256": "edae7ea0c83928db7d8f7e1494890ae9b98f3a21df4fceec09df95ac4583a33a",
+      "video_bytes": 625353,
+      "duration_seconds": 5.8125,
+      "fps": 16.0,
+      "width": 1280,
+      "height": 704,
+      "issues": [
+        {
+          "expected": "篮球被篮筐弹开",
+          "problem": "篮球击中篮筐却穿模进球",
+          "timestamp": "4–5.5"
+        }
+      ],
+      "fix_problems": [
+        "篮球击中篮筐却穿模进球"
+      ],
+      "fix_expected": [
+        "篮球被篮筐弹开"
+      ],
+      "fix_keep": "球场、机位、球员外观与姿态、篮筐与篮板、入框前的投篮弧线",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第4–5.5秒：篮球击中篮筐却穿模进球\n【应修改为】\n1. 篮球被篮筐弹开\n请在保持球场、机位、球员外观与姿态、篮筐与篮板、入框前的投篮弧线不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/cosmos-predict2.5-2b__mechanics_293.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "phyground::ltx-2-19b-dev-1stage::mechanics_438",
+      "dir_name": "0045_phyground_ltx-2-19b-dev-1stage_mechanics_438",
+      "generator": "LTX-2 19B",
+      "error_family": "geometry_structure",
+      "scenario_domain": "human_animal_body_motion",
+      "interaction_primitive": "body_motion",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "mechanics_438",
+      "video_path": "videos/0045_phyground_ltx-2-19b-dev-1stage_mechanics_438.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/ltx-2-19b-dev-1stage__mechanics_438.mp4",
+      "video_sha256": "da4814cfee4d1c6ba1f0e43cd17ff38231d22551e47d6af859f7eb16df05474e",
+      "video_bytes": 465923,
+      "duration_seconds": 3.88,
+      "fps": 25.0,
+      "width": 800,
+      "height": 448,
+      "issues": [
+        {
+          "expected": "冰鞋应实体碰撞勾绊，两人都有相应的失衡反应",
+          "problem": "两人冰鞋和腿相互穿透，红衣者被突然甩平",
+          "timestamp": "0.5–1.5"
+        }
+      ],
+      "fix_problems": [
+        "两人冰鞋和腿相互穿透，红衣者被突然甩平"
+      ],
+      "fix_expected": [
+        "冰鞋应实体碰撞勾绊，两人都有相应的失衡反应"
+      ],
+      "fix_keep": "冰场、机位、红蓝两名滑冰者、服装、滑行方向与冰鞋勾绊后分开的过程",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.5–1.5秒：两人冰鞋和腿相互穿透，红衣者被突然甩平\n【应修改为】\n1. 冰鞋应实体碰撞勾绊，两人都有相应的失衡反应\n请在保持冰场、机位、红蓝两名滑冰者、服装、滑行方向与冰鞋勾绊后分开的过程不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/ltx-2-19b-dev-1stage__mechanics_438.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "phyground::ltx-2.3-22b-dev-1stage::mechanics_402",
+      "dir_name": "0021_phyground_ltx-2.3-22b-dev-1stage_mechanics_402",
+      "generator": "LTX-2.3 22B",
+      "error_family": "material_state",
+      "scenario_domain": "rigid_object_dynamics",
+      "interaction_primitive": "collision_impact",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "mechanics_402",
+      "video_path": "videos/0021_phyground_ltx-2.3-22b-dev-1stage_mechanics_402.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/ltx-2.3-22b-dev-1stage__mechanics_402.mp4",
+      "video_sha256": "58c5396f1049387854287e4090c77cd064efbac152a8aebc2ed25c6d6cfcf4c2",
+      "video_bytes": 460606,
+      "duration_seconds": 3.88,
+      "fps": 25.0,
+      "width": 800,
+      "height": 448,
+      "issues": [
+        {
+          "expected": "木桩应局部开裂碎裂，断板脱落下坠",
+          "problem": "木桩受锤击后像橡胶般平滑弯曲并保持弯折",
+          "timestamp": "1.0–3.75"
+        },
+        {
+          "expected": "锤柄锤头应该保持一致，维持刚性",
+          "problem": "锤柄锤头持续扭曲变形",
+          "timestamp": "0-3"
+        }
+      ],
+      "fix_problems": [
+        "木桩受锤击后像橡胶般平滑弯曲并保持弯折",
+        "锤柄锤头持续扭曲变形"
+      ],
+      "fix_expected": [
+        "木桩应局部开裂碎裂，断板脱落下坠",
+        "锤柄锤头应该保持一致，维持刚性"
+      ],
+      "fix_keep": "户外围栏、红帽厚衣人物、黄柄大锤、机位、光照与击中前的挥锤动作",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.0–3.75秒：木桩受锤击后像橡胶般平滑弯曲并保持弯折\n2. 第0-3秒：锤柄锤头持续扭曲变形\n【应修改为】\n1. 木桩应局部开裂碎裂，断板脱落下坠\n2. 锤柄锤头应该保持一致，维持刚性\n请在保持户外围栏、红帽厚衣人物、黄柄大锤、机位、光照与击中前的挥锤动作不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/ltx-2.3-22b-dev-1stage__mechanics_402.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "phyground::veo-3.1::b91QyJ0TRAI_000000_000010",
+      "dir_name": "0034_phyground_veo-3.1_b91QyJ0TRAI_000000_000010",
+      "generator": "Veo 3.1",
+      "error_family": "material_state",
+      "scenario_domain": "human_animal_body_motion",
+      "interaction_primitive": "body_motion",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "b91QyJ0TRAI_000000_000010",
+      "video_path": "videos/0034_phyground_veo-3.1_b91QyJ0TRAI_000000_000010.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/veo-3.1__b91QyJ0TRAI_000000_000010.mp4",
+      "video_sha256": "07dcc6d213637a48102faa67d96223cf3dd02e3940b7bf17f104b524c4b1e383",
+      "video_bytes": 5239558,
+      "duration_seconds": 8.0,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "落地应压出局部沙坑，只溅起少量沙粒",
+          "problem": "落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌",
+          "timestamp": "5.0–6.75"
+        },
+        {
+          "expected": "因为人在沙地上方，所以应当遮挡地上的白线",
+          "problem": "人体和沙子上的白线穿模",
+          "timestamp": "2.90-3.64"
+        }
+      ],
+      "fix_problems": [
+        "落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌",
+        "人体和沙子上的白线穿模"
+      ],
+      "fix_expected": [
+        "落地应压出局部沙坑，只溅起少量沙粒",
+        "因为人在沙地上方，所以应当遮挡地上的白线"
+      ],
+      "fix_keep": "田径场、运镜、运动员外观与助跑、腾空轨迹、沙坑边界、背景建筑、草地与最终坐姿",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第5.0–6.75秒：落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌\n2. 第2.90-3.64秒：人体和沙子上的白线穿模\n【应修改为】\n1. 落地应压出局部沙坑，只溅起少量沙粒\n2. 因为人在沙地上方，所以应当遮挡地上的白线\n请在保持田径场、运镜、运动员外观与助跑、腾空轨迹、沙坑边界、背景建筑、草地与最终坐姿不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/veo-3.1__b91QyJ0TRAI_000000_000010.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "phyground::wan2.2-i2v-a14b::0188_perspective-center_trimmed-weight-on-ceramic",
+      "dir_name": "0002_phyground_wan2.2-i2v-a14b_0188_perspective-center_trimmed-weight-on-ceramic",
+      "generator": "Wan 2.2 I2V-A14B",
+      "error_family": "material_state",
+      "scenario_domain": "rigid_object_dynamics",
+      "interaction_primitive": "deformation_state_change",
+      "batch": "batch1-reviewed-194",
+      "source": "phyground",
+      "video_id": "0188_perspective-center_trimmed-weight-on-ceramic",
+      "video_path": "videos/0002_phyground_wan2.2-i2v-a14b_0188_perspective-center_trimmed-weight-on-ceramic.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/wan2.2-i2v-a14b__0188_perspective-center_trimmed-weight-on-ceramic.mp4",
+      "video_sha256": "6be4b87dd560728f16aef470fb9901dec6d4a50b6cce6aacf36b329945b0297e",
+      "video_bytes": 145105,
+      "duration_seconds": 5.0625,
+      "fps": 16.0,
+      "width": 832,
+      "height": 464,
+      "issues": [
+        {
+          "expected": "杯子应保持刚性，超载后骤然碎成陶瓷碎片",
+          "problem": "陶瓷杯在壶铃下像软物一样压扁起皱后才碎",
+          "timestamp": "0.75–4.5"
+        }
+      ],
+      "fix_problems": [
+        "陶瓷杯在壶铃下像软物一样压扁起皱后才碎"
+      ],
+      "fix_expected": [
+        "杯子应保持刚性，超载后骤然碎成陶瓷碎片"
+      ],
+      "fix_keep": "固定镜头、木桌、灰色背景、黑色壶铃、黄杯颜色与把手、持铃手与缓慢下压",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.75–4.5秒：陶瓷杯在壶铃下像软物一样压扁起皱后才碎\n【应修改为】\n1. 杯子应保持刚性，超载后骤然碎成陶瓷碎片\n请在保持固定镜头、木桌、灰色背景、黑色壶铃、黄杯颜色与把手、持铃手与缓慢下压不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/wan2.2-i2v-a14b__0188_perspective-center_trimmed-weight-on-ceramic.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::6fc886e0-f1da-5c3b-bcdb-86fb46537dfa",
+      "dir_name": "0315_physion_eval_full_6fc886e0-f1da-5c3b-bcdb-86fb46537dfa",
+      "generator": "Hailuo 2.3",
+      "error_family": "contact_interaction",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "6fc886e0-f1da-5c3b-bcdb-86fb46537dfa",
+      "video_path": "videos/0315_physion_eval_full_6fc886e0-f1da-5c3b-bcdb-86fb46537dfa.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/6fc886e0-f1da-5c3b-bcdb-86fb46537dfa.mp4",
+      "video_sha256": "0c96f410d1a9aa2d20463c5cf6bd68b939728ca3fde649dd78d5660b238538d5",
+      "video_bytes": 1474939,
+      "duration_seconds": 5.666666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "玻璃杯被拿起时应保持刚性并受手握持",
+          "problem": "玻璃杯变形并穿过手指",
+          "timestamp": "0.0–0.2"
+        },
+        {
+          "expected": "手指与杯壁应保持正确遮挡和实体边界",
+          "problem": "手指反复穿过玻璃杯壁",
+          "timestamp": "1.1–5.3"
+        }
+      ],
+      "fix_problems": [
+        "玻璃杯变形并穿过手指",
+        "手指反复穿过玻璃杯壁"
+      ],
+      "fix_expected": [
+        "玻璃杯被拿起时应保持刚性并受手握持",
+        "手指与杯壁应保持正确遮挡和实体边界"
+      ],
+      "fix_keep": "双手洗杯、透明杯、喷水龙头、水槽餐具、花盘及暖光俯视构图",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–0.2秒：玻璃杯变形并穿过手指\n2. 第1.1–5.3秒：手指反复穿过玻璃杯壁\n【应修改为】\n1. 玻璃杯被拿起时应保持刚性并受手握持\n2. 手指与杯壁应保持正确遮挡和实体边界\n请在保持双手洗杯、透明杯、喷水龙头、水槽餐具、花盘及暖光俯视构图不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/6fc886e0-f1da-5c3b-bcdb-86fb46537dfa.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_00755",
+      "dir_name": "0480_physion_eval_full_T1_00755",
+      "generator": "Hailuo 2.3",
+      "error_family": "contact_interaction",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "body_motion",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_00755",
+      "video_path": "videos/0480_physion_eval_full_T1_00755.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_00755.mp4",
+      "video_sha256": "3f9308e30d610b2af6b469eb6bd57042766b61f666f5f3551e47953c8f41be48",
+      "video_bytes": 8244705,
+      "duration_seconds": 5.666666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "火焰逐渐引燃邻近草叶并扩大焦痕",
+          "problem": "草地火焰燃烧范围始终不扩散",
+          "timestamp": "0.0–5.5"
+        }
+      ],
+      "fix_problems": [
+        "草地火焰燃烧范围始终不扩散"
+      ],
+      "fix_expected": [
+        "火焰逐渐引燃邻近草叶并扩大焦痕"
+      ],
+      "fix_keep": "林地固定低机位、中央火堆、自然火焰闪动、周边松针落叶、时长色调",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–5.5秒：草地火焰燃烧范围始终不扩散\n【应修改为】\n1. 火焰逐渐引燃邻近草叶并扩大焦痕\n请在保持林地固定低机位、中央火堆、自然火焰闪动、周边松针落叶、时长色调不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_00755.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_01190",
+      "dir_name": "0585_physion_eval_full_T1_01190",
+      "generator": "Hailuo 2.3",
+      "error_family": "motion_force",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_01190",
+      "video_path": "videos/0585_physion_eval_full_T1_01190.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01190.mp4",
+      "video_sha256": "47d6f2db1e9e56b0cac4e7bdf94743a3e312f014d253416eceaba9b36036961a",
+      "video_bytes": 833741,
+      "duration_seconds": 5.666666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "timestamp": "0.2–3.5",
+          "problem": "台灯在无人接触时自行弯曲并转动灯头。",
+          "expected": "无外力时台灯的颈部和灯头应保持原有姿态。"
+        },
+        {
+          "timestamp": "0.3–2.7",
+          "problem": "桌上的书在没有可见接触或推动时自行滑移。",
+          "expected": "书的整体位置应保持稳定；若被移动，应有连续可见的接触和推动过程。"
+        }
+      ],
+      "fix_problems": [
+        "台灯在无人接触时自行弯曲并转动灯头。",
+        "桌上的书在没有可见接触或推动时自行滑移。"
+      ],
+      "fix_expected": [
+        "无外力时台灯的颈部和灯头应保持原有姿态。",
+        "书的整体位置应保持稳定；若被移动，应有连续可见的接触和推动过程。"
+      ],
+      "fix_keep": "夜间桌面、白色台灯造型与照明、书本电脑线缆、镜头时长",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.2–3.5秒：台灯在无人接触时自行弯曲并转动灯头。\n2. 第0.3–2.7秒：桌上的书在没有可见接触或推动时自行滑移。\n【应修改为】\n1. 无外力时台灯的颈部和灯头应保持原有姿态。\n2. 书的整体位置应保持稳定；若被移动，应有连续可见的接触和推动过程。\n请在保持夜间桌面、白色台灯造型与照明、书本电脑线缆、镜头时长不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_01190.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "physion_eval::full::T1_02632",
+      "dir_name": "0640_physion_eval_full_T1_02632",
+      "generator": "Hailuo 2.3",
+      "error_family": "persistence_identity",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_02632",
+      "video_path": "videos/0640_physion_eval_full_T1_02632.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02632.mp4",
+      "video_sha256": "572e8cdfbb06bf125c5cce30adb76257e61e0b323d3217c92a25b516ca2cfe24",
+      "video_bytes": 4315906,
+      "duration_seconds": 5.666666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "粉尘应从可见源头连续喷出并扩散",
+          "problem": "南瓜上方大量粉尘凭空出现",
+          "timestamp": "0.8"
+        }
+      ],
+      "fix_problems": [
+        "南瓜上方大量粉尘凭空出现"
+      ],
+      "fix_expected": [
+        "粉尘应从可见源头连续喷出并扩散"
+      ],
+      "fix_keep": "田野定镜、南瓜外观、支架与桶、桶内粉料、粉尘扩散消散、时长与南瓜终态",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.8秒：南瓜上方大量粉尘凭空出现\n【应修改为】\n1. 粉尘应从可见源头连续喷出并扩散\n请在保持田野定镜、南瓜外观、支架与桶、桶内粉料、粉尘扩散消散、时长与南瓜终态不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_02632.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_06665",
+      "dir_name": "0215_physion_eval_full_T1_06665",
+      "generator": "Hailuo 2.3",
+      "error_family": "material_state",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_06665",
+      "video_path": "videos/0215_physion_eval_full_T1_06665.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06665.mp4",
+      "video_sha256": "e46a22208581595cc1e4317da49ca8dabc4e9042da74174701dfbbfaa8884928",
+      "video_bytes": 13637551,
+      "duration_seconds": 5.666666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "未受火草地保持绿色",
+          "problem": "篝火旁草地未接触火焰便开始变白",
+          "timestamp": "1.2"
+        },
+        {
+          "expected": "仅实际燃烧区域逐步焦黑成灰",
+          "problem": "白色区域脱离火焰范围持续向外扩散",
+          "timestamp": "1.2–5.5"
+        },
+        {
+          "expected": "草地先受火燃烧焦黑后再形成灰烬",
+          "problem": "草地未燃烧却由绿色直接变成灰白",
+          "timestamp": "1.2–5.5"
+        }
+      ],
+      "fix_problems": [
+        "篝火旁草地未接触火焰便开始变白",
+        "白色区域脱离火焰范围持续向外扩散",
+        "草地未燃烧却由绿色直接变成灰白"
+      ],
+      "fix_expected": [
+        "未受火草地保持绿色",
+        "仅实际燃烧区域逐步焦黑成灰",
+        "草地先受火燃烧焦黑后再形成灰烬"
+      ],
+      "fix_keep": "篝火木柴余烬、烟柱、绿草落叶、背景树木枯草蓝天、静态日光镜头",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.2秒：篝火旁草地未接触火焰便开始变白\n2. 第1.2–5.5秒：白色区域脱离火焰范围持续向外扩散\n3. 第1.2–5.5秒：草地未燃烧却由绿色直接变成灰白\n【应修改为】\n1. 未受火草地保持绿色\n2. 仅实际燃烧区域逐步焦黑成灰\n3. 草地先受火燃烧焦黑后再形成灰烬\n请在保持篝火木柴余烬、烟柱、绿草落叶、背景树木枯草蓝天、静态日光镜头不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_06665.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_07362",
+      "dir_name": "0582_physion_eval_full_T1_07362",
+      "generator": "Hailuo 2.3",
+      "error_family": "persistence_identity",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_07362",
+      "video_path": "videos/0582_physion_eval_full_T1_07362.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07362.mp4",
+      "video_sha256": "dcc49ef6aadfc768524f3fee3916d67c61bab87a1b8106c6368cbdaeec1ab3df",
+      "video_bytes": 1945176,
+      "duration_seconds": 5.666666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "香肠应随受热逐渐均匀变熟",
+          "problem": "香肠约两秒内由生变为焦熟",
+          "timestamp": "1.5–3.3"
+        },
+        {
+          "expected": "锅内应保持原有三根香肠",
+          "problem": "第四根香肠在锅内凭空出现",
+          "timestamp": "2.5–2.7"
+        },
+        {
+          "expected": "锅内应保持原有三根香肠",
+          "problem": "第五根香肠在锅内凭空出现",
+          "timestamp": "3.7–3.8"
+        }
+      ],
+      "fix_problems": [
+        "香肠约两秒内由生变为焦熟",
+        "第四根香肠在锅内凭空出现",
+        "第五根香肠在锅内凭空出现"
+      ],
+      "fix_expected": [
+        "香肠应随受热逐渐均匀变熟",
+        "锅内应保持原有三根香肠",
+        "锅内应保持原有三根香肠"
+      ],
+      "fix_keep": "厨房近景煎锅、双手搅拌、原三根香肠轨迹、油泡、白衣玻璃碗橱柜、镜头时长",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.5–3.3秒：香肠约两秒内由生变为焦熟\n2. 第2.5–2.7秒：第四根香肠在锅内凭空出现\n3. 第3.7–3.8秒：第五根香肠在锅内凭空出现\n【应修改为】\n1. 香肠应随受热逐渐均匀变熟\n2. 锅内应保持原有三根香肠\n3. 锅内应保持原有三根香肠\n请在保持厨房近景煎锅、双手搅拌、原三根香肠轨迹、油泡、白衣玻璃碗橱柜、镜头时长不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_07362.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_07945",
+      "dir_name": "0109_physion_eval_full_T1_07945",
+      "generator": "Hailuo 2.3",
+      "error_family": "other",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "other_multistep",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_07945",
+      "video_path": "videos/0109_physion_eval_full_T1_07945.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07945.mp4",
+      "video_sha256": "056d2a0ea821405cb89cebaeec8d7ffac678f37ac2430a8c203a6a1c3db43947",
+      "video_bytes": 3835809,
+      "duration_seconds": 5.666666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "无玻璃外墙仅呈漫射光和零星窗光",
+          "problem": "右侧楼体外墙凭空出现烟花形光斑",
+          "timestamp": "0.7–1.2"
+        }
+      ],
+      "fix_problems": [
+        "右侧楼体外墙凭空出现烟花形光斑"
+      ],
+      "fix_expected": [
+        "无玻璃外墙仅呈漫射光和零星窗光"
+      ],
+      "fix_keep": "夜景天际线、烟花烟雾、持手机人群、广场屏幕及远处高塔",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.7–1.2秒：右侧楼体外墙凭空出现烟花形光斑\n【应修改为】\n1. 无玻璃外墙仅呈漫射光和零星窗光\n请在保持夜景天际线、烟花烟雾、持手机人群、广场屏幕及远处高塔不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_07945.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_00178",
+      "dir_name": "0156_physion_eval_full_T1_00178",
+      "generator": "Kling 2.5",
+      "error_family": "temporal_causal",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_00178",
+      "video_path": "videos/0156_physion_eval_full_T1_00178.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_00178.mp4",
+      "video_sha256": "6fe5ecd368824743a250b49c289a03cffdc7ea1953a6e1d4145c8a49fda5e061",
+      "video_bytes": 2445382,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "白色刷头保持原有物体身份",
+          "problem": "手中单个白色刷头突变为叉勺两件",
+          "timestamp": "1.8–2.2"
+        },
+        {
+          "expected": "右手刷子全程保持原有形态",
+          "problem": "右手白色刷子突然变成金属勺",
+          "timestamp": "4.2–4.5"
+        }
+      ],
+      "fix_problems": [
+        "手中单个白色刷头突变为叉勺两件",
+        "右手白色刷子突然变成金属勺"
+      ],
+      "fix_expected": [
+        "白色刷头保持原有物体身份",
+        "右手刷子全程保持原有形态"
+      ],
+      "fix_keep": "俯拍水槽黑锅与电路板、灰衣双手动作、原有厨具、周边器物光照",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.8–2.2秒：手中单个白色刷头突变为叉勺两件\n2. 第4.2–4.5秒：右手白色刷子突然变成金属勺\n【应修改为】\n1. 白色刷头保持原有物体身份\n2. 右手刷子全程保持原有形态\n请在保持俯拍水槽黑锅与电路板、灰衣双手动作、原有厨具、周边器物光照不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_00178.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_02956",
+      "dir_name": "0336_physion_eval_full_T1_02956",
+      "generator": "Kling 2.5",
+      "error_family": "motion_force",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_02956",
+      "video_path": "videos/0336_physion_eval_full_T1_02956.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02956.mp4",
+      "video_sha256": "d483beebc79ffe72e346a3d364fd54632b5f74502b40c16a23696d3db41f5f73",
+      "video_bytes": 2763790,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "子弹在开火后离开枪筒，沿可见轨迹击中头模",
+          "problem": "枪未开火前眼部凭空出现子弹",
+          "timestamp": "0.3–0.7"
+        },
+        {
+          "expected": "子弹离开头模后沿重力轨迹下坠",
+          "problem": "子弹水平漂移数秒且完全不下落",
+          "timestamp": "1.2–4.8"
+        }
+      ],
+      "fix_problems": [
+        "枪未开火前眼部凭空出现子弹",
+        "子弹水平漂移数秒且完全不下落"
+      ],
+      "fix_expected": [
+        "子弹在开火后离开枪筒，沿可见轨迹击中头模",
+        "子弹离开头模后沿重力轨迹下坠"
+      ],
+      "fix_keep": "左侧手枪与构图、支架凝胶头模、鼻梁原有短镖、枪口火光碎裂时序与日光",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.3–0.7秒：枪未开火前眼部凭空出现子弹\n2. 第1.2–4.8秒：子弹水平漂移数秒且完全不下落\n【应修改为】\n1. 子弹在开火后离开枪筒，沿可见轨迹击中头模\n2. 子弹离开头模后沿重力轨迹下坠\n请在保持左侧手枪与构图、支架凝胶头模、鼻梁原有短镖、枪口火光碎裂时序与日光不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_02956.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_04058",
+      "dir_name": "0628_physion_eval_full_T1_04058",
+      "generator": "Kling 2.5",
+      "error_family": "geometry_structure",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_04058",
+      "video_path": "videos/0628_physion_eval_full_T1_04058.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_04058.mp4",
+      "video_sha256": "4c7e3ffba83105166c59ad3f4fc016e976172004dee21b52f937e4ecf3551d7d",
+      "video_bytes": 2913223,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "两个番茄接触后碰撞、变形或反弹",
+          "problem": "第二个番茄穿过并重叠第一个番茄",
+          "timestamp": "0.8–1.3"
+        }
+      ],
+      "fix_problems": [
+        "第二个番茄穿过并重叠第一个番茄"
+      ],
+      "fix_expected": [
+        "两个番茄接触后碰撞、变形或反弹"
+      ],
+      "fix_keep": "俯视碗具、番茄外观与终位、水面水花、首颗入水、灯光镜头与时长",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.8–1.3秒：第二个番茄穿过并重叠第一个番茄\n【应修改为】\n1. 两个番茄接触后碰撞、变形或反弹\n请在保持俯视碗具、番茄外观与终位、水面水花、首颗入水、灯光镜头与时长不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_04058.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_06914",
+      "dir_name": "0692_physion_eval_full_T1_06914",
+      "generator": "Kling 2.5",
+      "error_family": "persistence_identity",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_06914",
+      "video_path": "videos/0692_physion_eval_full_T1_06914.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06914.mp4",
+      "video_sha256": "eb2ae409a652503bd688597cc17badd64a2ab765acde250ddab676355eec81e0",
+      "video_bytes": 2241812,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "首次开火仅有一枚弹体从枪口射出",
+          "problem": "首次开火出现多余第二枚弹体",
+          "timestamp": "0.8–2.5"
+        },
+        {
+          "expected": "二次开火仅有一枚弹体从枪口射出",
+          "problem": "二次开火无出膛弹却出现两枚弹体",
+          "timestamp": "3.0–4.7"
+        }
+      ],
+      "fix_problems": [
+        "首次开火出现多余第二枚弹体",
+        "二次开火无出膛弹却出现两枚弹体"
+      ],
+      "fix_expected": [
+        "首次开火仅有一枚弹体从枪口射出",
+        "二次开火仅有一枚弹体从枪口射出"
+      ],
+      "fix_keep": "枪管特写、两次开火、枪管准星、慢镜时长、其余弹丸运动与烟雾",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.8–2.5秒：首次开火出现多余第二枚弹体\n2. 第3.0–4.7秒：二次开火无出膛弹却出现两枚弹体\n【应修改为】\n1. 首次开火仅有一枚弹体从枪口射出\n2. 二次开火仅有一枚弹体从枪口射出\n请在保持枪管特写、两次开火、枪管准星、慢镜时长、其余弹丸运动与烟雾不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_06914.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_07560",
+      "dir_name": "0101_physion_eval_full_T1_07560",
+      "generator": "Kling 2.5",
+      "error_family": "geometry_structure",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_07560",
+      "video_path": "videos/0101_physion_eval_full_T1_07560.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_07560.mp4",
+      "video_sha256": "d08c700d06ec0ca4c63b6b3dbab0dc4ef709679f71b49ffb06a1530a70eddad3",
+      "video_bytes": 2278559,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "timestamp": "2.0–2.8",
+          "problem": "绿色方块与黄色挡板的实体区域相互穿透。",
+          "expected": "方块接触挡板时应被阻挡或使挡板发生相应形变，不应直接穿过挡板。"
+        },
+        {
+          "timestamp": "3.9",
+          "problem": "夹爪中的同一绿色方块突然变成红色。",
+          "expected": "同一方块在夹持和搬运过程中应保持原有绿色。"
+        }
+      ],
+      "fix_problems": [
+        "绿色方块与黄色挡板的实体区域相互穿透。",
+        "夹爪中的同一绿色方块突然变成红色。"
+      ],
+      "fix_expected": [
+        "方块接触挡板时应被阻挡或使挡板发生相应形变，不应直接穿过挡板。",
+        "同一方块在夹持和搬运过程中应保持原有绿色。"
+      ],
+      "fix_keep": "传送带与滚轮、机械臂夹爪、黄色软挡片、其余方块运动、桌面相机及背景设备",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第2.0–2.8秒：绿色方块与黄色挡板的实体区域相互穿透。\n2. 第3.9秒：夹爪中的同一绿色方块突然变成红色。\n【应修改为】\n1. 方块接触挡板时应被阻挡或使挡板发生相应形变，不应直接穿过挡板。\n2. 同一方块在夹持和搬运过程中应保持原有绿色。\n请在保持传送带与滚轮、机械臂夹爪、黄色软挡片、其余方块运动、桌面相机及背景设备不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_07560.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "physion_eval::full::T1_09189",
+      "dir_name": "0363_physion_eval_full_T1_09189",
+      "generator": "Kling 2.5",
+      "error_family": "temporal_causal",
+      "scenario_domain": "human_animal_body_motion",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_09189",
+      "video_path": "videos/0363_physion_eval_full_T1_09189.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_09189.mp4",
+      "video_sha256": "4cac9fdad00dacd09578e1b111499d18ba7e13e952927b7c24e713cff4658b1f",
+      "video_bytes": 3733340,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "手握右侧柜门就只能右侧柜门旋转，且打开时形态应保持稳定",
+          "problem": "手握右侧柜门，但左侧柜门和右侧柜门连在一起打开，右侧柜门打开方向不正确且消失在左侧柜门中",
+          "timestamp": "3.69-4.29"
+        }
+      ],
+      "fix_problems": [
+        "手握右侧柜门，但左侧柜门和右侧柜门连在一起打开，右侧柜门打开方向不正确且消失在左侧柜门中"
+      ],
+      "fix_expected": [
+        "手握右侧柜门就只能右侧柜门旋转，且打开时形态应保持稳定"
+      ],
+      "fix_keep": "厨房镜头、灶台水槽、固定物品、橱柜、切板与烹饪布置",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第3.69-4.29秒：手握右侧柜门，但左侧柜门和右侧柜门连在一起打开，右侧柜门打开方向不正确且消失在左侧柜门中\n【应修改为】\n1. 手握右侧柜门就只能右侧柜门旋转，且打开时形态应保持稳定\n请在保持厨房镜头、灶台水槽、固定物品、橱柜、切板与烹饪布置不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_09189.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_01290",
+      "dir_name": "0649_physion_eval_full_T1_01290",
+      "generator": "Sora 2",
+      "error_family": "motion_force",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_01290",
+      "video_path": "videos/0649_physion_eval_full_T1_01290.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01290.mp4",
+      "video_sha256": "01d1ca2e97c530aefd1a64b643e3e6df4e22009e3d891a73a0336ff3976f2eaf",
+      "video_bytes": 1492149,
+      "duration_seconds": 7.833333333333333,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "欧泊应与夹持手指同步转动并保持夹持",
+          "problem": "手指几乎不转而欧泊大幅自转",
+          "timestamp": "0.0–7.7"
+        }
+      ],
+      "fix_problems": [
+        "手指几乎不转而欧泊大幅自转"
+      ],
+      "fix_expected": [
+        "欧泊应与夹持手指同步转动并保持夹持"
+      ],
+      "fix_keep": "欧泊微距、欧泊色彩切面、指尖纹理夹持、镜头灯光时长、轻柔把玩动作",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–7.7秒：手指几乎不转而欧泊大幅自转\n【应修改为】\n1. 欧泊应与夹持手指同步转动并保持夹持\n请在保持欧泊微距、欧泊色彩切面、指尖纹理夹持、镜头灯光时长、轻柔把玩动作不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_01290.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_06093",
+      "dir_name": "0055_physion_eval_full_T1_06093",
+      "generator": "Sora 2",
+      "error_family": "contact_interaction",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_06093",
+      "video_path": "videos/0055_physion_eval_full_T1_06093.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06093.mp4",
+      "video_sha256": "05ee7081a9bd34735fe2557dcb1397d34653c593cebfab1f26938b5134f6a64a",
+      "video_bytes": 5143413,
+      "duration_seconds": 7.833333333333333,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "面包被碾压后应保持压扁和褶皱状态",
+          "problem": "面包被车轮碾压后恢复原状",
+          "timestamp": "5.2–7.6"
+        }
+      ],
+      "fix_problems": [
+        "面包被车轮碾压后恢复原状"
+      ],
+      "fix_expected": [
+        "面包被碾压后应保持压扁和褶皱状态"
+      ],
+      "fix_keep": "视频其余内容",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第5.2–7.6秒：面包被车轮碾压后恢复原状\n【应修改为】\n1. 面包被碾压后应保持压扁和褶皱状态\n请在保持视频其余内容不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_06093.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_06114",
+      "dir_name": "0177_physion_eval_full_T1_06114",
+      "generator": "Sora 2",
+      "error_family": "geometry_structure",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_06114",
+      "video_path": "videos/0177_physion_eval_full_T1_06114.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06114.mp4",
+      "video_sha256": "57fbbb17525e94c186547bd01d43dc8669f99a0fcba5b2a1edc785e694c37399",
+      "video_bytes": 1863547,
+      "duration_seconds": 7.833333333333333,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "晶体到达内壁后停止，不穿透玻璃或伸出皿外",
+          "problem": "针状晶体穿过培养皿玻璃壁伸到皿外",
+          "timestamp": "1.6–7.7"
+        }
+      ],
+      "fix_problems": [
+        "针状晶体穿过培养皿玻璃壁伸到皿外"
+      ],
+      "fix_expected": [
+        "晶体到达内壁后停止，不穿透玻璃或伸出皿外"
+      ],
+      "fix_keep": "培养皿结构、透明液体与划痕、成核晶体网络、俯视背景及生长运动",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.6–7.7秒：针状晶体穿过培养皿玻璃壁伸到皿外\n【应修改为】\n1. 晶体到达内壁后停止，不穿透玻璃或伸出皿外\n请在保持培养皿结构、透明液体与划痕、成核晶体网络、俯视背景及生长运动不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_06114.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_01405",
+      "dir_name": "0313_physion_eval_full_T1_01405",
+      "generator": "Veo 3.1 Fast",
+      "error_family": "geometry_structure",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_01405",
+      "video_path": "videos/0313_physion_eval_full_T1_01405.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01405.mp4",
+      "video_sha256": "8b3036d8941671fd3a5f3db734c8f56e98da373bd5498b381f28f14251fafefb",
+      "video_bytes": 4687101,
+      "duration_seconds": 7.791666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "timestamp": "0.0–6.6",
+          "problem": "前后两个取景阶段，水流都直接穿过连续的塑料容器壁进入内部。",
+          "expected": "水流应经可见开口进入容器，或沿外壁流下，不应穿过完整实体壁面。"
+        }
+      ],
+      "fix_problems": [
+        "前后两个取景阶段，水流都直接穿过连续的塑料容器壁进入内部。"
+      ],
+      "fix_expected": [
+        "水流应经可见开口进入容器，或沿外壁流下，不应穿过完整实体壁面。"
+      ],
+      "fix_keep": "壶肩白瓶颈微距、重构图后的蓝口壶、水流水滴与气泡、水位上升及背景",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–6.6秒：前后两个取景阶段，水流都直接穿过连续的塑料容器壁进入内部。\n【应修改为】\n1. 水流应经可见开口进入容器，或沿外壁流下，不应穿过完整实体壁面。\n请在保持壶肩白瓶颈微距、重构图后的蓝口壶、水流水滴与气泡、水位上升及背景不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_01405.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "physion_eval::full::T1_06574",
+      "dir_name": "0690_physion_eval_full_T1_06574",
+      "generator": "Veo 3.1 Fast",
+      "error_family": "material_state",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_06574",
+      "video_path": "videos/0690_physion_eval_full_T1_06574.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06574.mp4",
+      "video_sha256": "1b6af8993af39e270bd701bdace8c2dd0d2485fbf951f9deda66536b98366100",
+      "video_bytes": 4369187,
+      "duration_seconds": 7.791666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "timestamp": "2.8",
+          "problem": "受压碎裂的面条突然变成灰白色小石块。",
+          "expected": "压碎后的残留物应继续是原有面条的碎段和碎屑，不应改变为其他材料。"
+        }
+      ],
+      "fix_problems": [
+        "受压碎裂的面条突然变成灰白色小石块。"
+      ],
+      "fix_expected": [
+        "压碎后的残留物应继续是原有面条的碎段和碎屑，不应改变为其他材料。"
+      ],
+      "fix_keep": "低位户外构图、木支架、车轮滚动、初始面条桥与背景",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第2.8秒：受压碎裂的面条突然变成灰白色小石块。\n【应修改为】\n1. 压碎后的残留物应继续是原有面条的碎段和碎屑，不应改变为其他材料。\n请在保持低位户外构图、木支架、车轮滚动、初始面条桥与背景不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_06574.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "physion_eval::full::T1_09986",
+      "dir_name": "0021_physion_eval_full_T1_09986",
+      "generator": "Veo 3.1 Fast",
+      "error_family": "motion_force",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_09986",
+      "video_path": "videos/0021_physion_eval_full_T1_09986.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_09986.mp4",
+      "video_sha256": "96172fefb279dd2fb42da3f5b533d0f9161b1b49fc52441cf10791817083197f",
+      "video_bytes": 3091302,
+      "duration_seconds": 7.791666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "timestamp": "3.4–3.8",
+          "problem": "黄油块在没有可见支撑或施力的情况下离开锅面向上升起。",
+          "expected": "黄油块应由锅面或明确的接触支撑承托；若发生移动，应有连续、可见的受力与接触过程。"
+        },
+        {
+          "timestamp": "1.5–3.3",
+          "problem": "黄油周围融液明显增加，但固体主体没有呈现相匹配的体积减少。",
+          "expected": "黄油熔化产生液体时，固体体积应相应减小，固液变化应大致守恒。"
+        }
+      ],
+      "fix_problems": [
+        "黄油块在没有可见支撑或施力的情况下离开锅面向上升起。",
+        "黄油周围融液明显增加，但固体主体没有呈现相匹配的体积减少。"
+      ],
+      "fix_expected": [
+        "黄油块应由锅面或明确的接触支撑承托；若发生移动，应有连续、可见的受力与接触过程。",
+        "黄油熔化产生液体时，固体体积应相应减小，固液变化应大致守恒。"
+      ],
+      "fix_keep": "煎锅灶台、融化黄油及气泡、镜头焦点、暖色调",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第3.4–3.8秒：黄油块在没有可见支撑或施力的情况下离开锅面向上升起。\n2. 第1.5–3.3秒：黄油周围融液明显增加，但固体主体没有呈现相匹配的体积减少。\n【应修改为】\n1. 黄油块应由锅面或明确的接触支撑承托；若发生移动，应有连续、可见的受力与接触过程。\n2. 黄油熔化产生液体时，固体体积应相应减小，固液变化应大致守恒。\n请在保持煎锅灶台、融化黄油及气泡、镜头焦点、暖色调不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_09986.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "physion_eval::full::T1_01358",
+      "dir_name": "0497_physion_eval_full_T1_01358",
+      "generator": "Wan 2.2",
+      "error_family": "motion_force",
+      "scenario_domain": "rigid_object_dynamics",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_01358",
+      "video_path": "videos/0497_physion_eval_full_T1_01358.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_01358.mp4",
+      "video_sha256": "709bbc8b23e56665d1dfffdbb1be5b261e5aa942b22a7b988e8f8c1ddccfc498",
+      "video_bytes": 3224102,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "绿球应保持存在并沿连续轨迹滚动",
+          "problem": "滚动中的绿球突然消失",
+          "timestamp": "1.7"
+        },
+        {
+          "expected": "红黄两球应沿相连轨道受力运动",
+          "problem": "红黄两球无外力跃上上层轨道",
+          "timestamp": "3.1–3.5"
+        }
+      ],
+      "fix_problems": [
+        "滚动中的绿球突然消失",
+        "红黄两球无外力跃上上层轨道"
+      ],
+      "fix_expected": [
+        "绿球应保持存在并沿连续轨迹滚动",
+        "红黄两球应沿相连轨道受力运动"
+      ],
+      "fix_keep": "纸板轨道机位、三球外观、红黄球正常运动、草堆球堆、光照时长",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.7秒：滚动中的绿球突然消失\n2. 第3.1–3.5秒：红黄两球无外力跃上上层轨道\n【应修改为】\n1. 绿球应保持存在并沿连续轨迹滚动\n2. 红黄两球应沿相连轨道受力运动\n请在保持纸板轨道机位、三球外观、红黄球正常运动、草堆球堆、光照时长不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_01358.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_02968",
+      "dir_name": "0341_physion_eval_full_T1_02968",
+      "generator": "Wan 2.2",
+      "error_family": "contact_interaction",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "deformation_state_change",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_02968",
+      "video_path": "videos/0341_physion_eval_full_T1_02968.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_02968.mp4",
+      "video_sha256": "d4274e7094cb730d74f8e23c421127c8aae2fe1ac4b18107ddab2ecc39f69e5d",
+      "video_bytes": 1744125,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "爆点保留焦痕、压倒草丛与散落碎屑",
+          "problem": "地面爆炸后草地与爆点毫无受损痕迹",
+          "timestamp": "0.0–4.7"
+        }
+      ],
+      "fix_problems": [
+        "地面爆炸后草地与爆点毫无受损痕迹"
+      ],
+      "fix_expected": [
+        "爆点保留焦痕、压倒草丛与散落碎屑"
+      ],
+      "fix_keep": "固定镜头与林地背景、草地和车辙布局、白烟升起漂散时序、色彩光照与时长",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–4.7秒：地面爆炸后草地与爆点毫无受损痕迹\n【应修改为】\n1. 爆点保留焦痕、压倒草丛与散落碎屑\n请在保持固定镜头与林地背景、草地和车辙布局、白烟升起漂散时序、色彩光照与时长不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_02968.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_04499",
+      "dir_name": "0017_physion_eval_full_T1_04499",
+      "generator": "Wan 2.2",
+      "error_family": "motion_force",
+      "scenario_domain": "deformable_materials",
+      "interaction_primitive": "other_multistep",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_04499",
+      "video_path": "videos/0017_physion_eval_full_T1_04499.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_04499.mp4",
+      "video_sha256": "46a22d2d92c9ba654e7191e6b10f9d83c328d2fe5cfbe7ccec70d63a77503c12",
+      "video_bytes": 1043850,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "太阳应沿平滑上升弧线移动",
+          "problem": "太阳近乎水平移动后反向下沉",
+          "timestamp": "0.8–4.0"
+        }
+      ],
+      "fix_problems": [
+        "太阳近乎水平移动后反向下沉"
+      ],
+      "fix_expected": [
+        "太阳应沿平滑上升弧线移动"
+      ],
+      "fix_keep": "城市天际线、教堂尖顶、云层纹理、镜头构图、黎明色调",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.8–4.0秒：太阳近乎水平移动后反向下沉\n【应修改为】\n1. 太阳应沿平滑上升弧线移动\n请在保持城市天际线、教堂尖顶、云层纹理、镜头构图、黎明色调不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_04499.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_05408",
+      "dir_name": "0521_physion_eval_full_T1_05408",
+      "generator": "Wan 2.2",
+      "error_family": "material_state",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_05408",
+      "video_path": "videos/0521_physion_eval_full_T1_05408.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_05408.mp4",
+      "video_sha256": "6e0934ea172d55d491391849fc0afc7421ce6c4c8114b195e9211507a82229ea",
+      "video_bytes": 1122075,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "液流入杯后在液体表面引起波动，流入部分自然扩散",
+          "problem": "棕色色液流入杯后不扩散保持束状下落",
+          "timestamp": "0.0–4.8"
+        }
+      ],
+      "fix_problems": [
+        "棕色色液流入杯后不扩散保持束状下落"
+      ],
+      "fix_expected": [
+        "液流入杯后在液体表面引起波动，流入部分自然扩散"
+      ],
+      "fix_keep": "固定杯体近景、杯体背景光影、顶部注液及来液颜色、片长帧率",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–4.8秒：棕色色液流入杯后不扩散保持束状下落\n【应修改为】\n1. 液流入杯后在液体表面引起波动，流入部分自然扩散\n请在保持固定杯体近景、杯体背景光影、顶部注液及来液颜色、片长帧率不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_05408.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_06912",
+      "dir_name": "0052_physion_eval_full_T1_06912",
+      "generator": "Wan 2.2",
+      "error_family": "persistence_identity",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "articulation_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_06912",
+      "video_path": "videos/0052_physion_eval_full_T1_06912.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_06912.mp4",
+      "video_sha256": "f3b612a85fc458cf48c86a9dcf5d3d300f20d07386361fb46e876793787b9e2c",
+      "video_bytes": 1000818,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "子弹从枪口射出后沿连续轨迹离开画面",
+          "problem": "射出的子弹在空中运送姿态、朝向和速度不自然，和火、烟也未完全对应",
+          "timestamp": "0.6"
+        },
+        {
+          "expected": "两枚子弹应从枪口连续射出",
+          "problem": "两枚子弹从火光中凭空出现",
+          "timestamp": "1.7–2.0"
+        }
+      ],
+      "fix_problems": [
+        "射出的子弹在空中运送姿态、朝向和速度不自然，和火、烟也未完全对应",
+        "两枚子弹从火光中凭空出现"
+      ],
+      "fix_expected": [
+        "子弹从枪口射出后沿连续轨迹离开画面",
+        "两枚子弹应从枪口连续射出"
+      ],
+      "fix_keep": "视频其余内容",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.6秒：射出的子弹在空中运送姿态、朝向和速度不自然，和火、烟也未完全对应\n2. 第1.7–2.0秒：两枚子弹从火光中凭空出现\n【应修改为】\n1. 子弹从枪口射出后沿连续轨迹离开画面\n2. 两枚子弹应从枪口连续射出\n请在保持视频其余内容不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_06912.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "physion_eval::full::T1_08086",
+      "dir_name": "0440_physion_eval_full_T1_08086",
+      "generator": "Wan 2.2",
+      "error_family": "contact_interaction",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "physion_eval",
+      "video_id": "T1_08086",
+      "video_path": "videos/0440_physion_eval_full_T1_08086.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/T1_08086.mp4",
+      "video_sha256": "ae7a254df45eeb53797560627212c8b3ed900ab9ae9a223fd452095e94677b57",
+      "video_bytes": 1820820,
+      "duration_seconds": 4.833333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "左手木棍应接触火源后才点燃",
+          "problem": "左手木棍无火源自行燃烧",
+          "timestamp": "0.9–1.5"
+        },
+        {
+          "expected": "右手木棍应逐渐炭化并留下灰烬",
+          "problem": "右手木棍迅速烧失且无灰烬",
+          "timestamp": "2.7–3.5"
+        },
+        {
+          "expected": "火中木棍应随燃烧逐渐焦黑和消耗",
+          "problem": "火中两根木棍始终未被灼烧",
+          "timestamp": "0.0–4.7"
+        },
+        {
+          "expected": "柴火应该缓慢由人手移动或被投掷入火堆中",
+          "problem": "左手柴火像是被无外力弹射到火堆中",
+          "timestamp": "3.3-4.5"
+        }
+      ],
+      "fix_problems": [
+        "左手木棍无火源自行燃烧",
+        "右手木棍迅速烧失且无灰烬",
+        "火中两根木棍始终未被灼烧",
+        "左手柴火像是被无外力弹射到火堆中"
+      ],
+      "fix_expected": [
+        "左手木棍应接触火源后才点燃",
+        "右手木棍应逐渐炭化并留下灰烬",
+        "火中木棍应随燃烧逐渐焦黑和消耗",
+        "柴火应该缓慢由人手移动或被投掷入火堆中"
+      ],
+      "fix_keep": "户外机位、人物衣着动作、篝火木柴、末段手推木棍、色彩时长",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.9–1.5秒：左手木棍无火源自行燃烧\n2. 第2.7–3.5秒：右手木棍迅速烧失且无灰烬\n3. 第0.0–4.7秒：火中两根木棍始终未被灼烧\n4. 第3.3-4.5秒：左手柴火像是被无外力弹射到火堆中\n【应修改为】\n1. 左手木棍应接触火源后才点燃\n2. 右手木棍应逐渐炭化并留下灰烬\n3. 火中木棍应随燃烧逐渐焦黑和消耗\n4. 柴火应该缓慢由人手移动或被投掷入火堆中\n请在保持户外机位、人物衣着动作、篝火木柴、末段手推木棍、色彩时长不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/T1_08086.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001",
+      "dir_name": "9188_robojudge_test_data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001",
+      "generator": "cogvideo_i2v_f113_rewrite",
+      "error_family": "contact_interaction+object_scene_consistency",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "pouring",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001",
+      "video_path": "videos/9188_robojudge_test_data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9188_robojudge_test_data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001.mp4",
+      "video_sha256": "791ebbaae6b0ed61ff578d298c63552f464ddf811cf99f1cbde220708fc39dcd",
+      "video_bytes": 692163,
+      "duration_seconds": 7.0625,
+      "fps": 16.0,
+      "width": 1360,
+      "height": 768,
+      "issues": [
+        {
+          "expected": "瓶子在手指形成包络抓握并施力前应保持静置或仅在桌面上滚动，瓶底离桌必须由可见的抓握或支撑造成。",
+          "problem": "瓶子未被接触却自行倾斜、悬空转动",
+          "timestamp": "0.3–1.3"
+        },
+        {
+          "expected": "瓶子应保持单一刚体容器：拧开原瓶盖后茶水只能从原瓶口流出；瓶盖封闭在另一端时不应出现第二个出液口。",
+          "problem": "封闭瓶体右端突生副颈并持续流出茶水",
+          "timestamp": "2.2–7"
+        },
+        {
+          "expected": "五个手指头, 正常手",
+          "problem": "手变形, 不符合五个手指头",
+          "timestamp": "6-7"
+        }
+      ],
+      "fix_problems": [
+        "瓶子未被接触却自行倾斜、悬空转动",
+        "封闭瓶体右端突生副颈并持续流出茶水",
+        "手变形, 不符合五个手指头"
+      ],
+      "fix_expected": [
+        "瓶子在手指形成包络抓握并施力前应保持静置或仅在桌面上滚动，瓶底离桌必须由可见的抓握或支撑造成。",
+        "瓶子应保持单一刚体容器：拧开原瓶盖后茶水只能从原瓶口流出；瓶盖封闭在另一端时不应出现第二个出液口。",
+        "五个手指头, 正常手"
+      ],
+      "fix_keep": "灰色杯、绿色桌布、棕色背景与室内光照、双手外观、第一人称构图及液体流入杯中的主体动作",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.3–1.3秒：瓶子未被接触却自行倾斜、悬空转动\n2. 第2.2–7秒：封闭瓶体右端突生副颈并持续流出茶水\n3. 第6-7秒：手变形, 不符合五个手指头\n【应修改为】\n1. 瓶子在手指形成包络抓握并施力前应保持静置或仅在桌面上滚动，瓶底离桌必须由可见的抓握或支撑造成。\n2. 瓶子应保持单一刚体容器：拧开原瓶盖后茶水只能从原瓶口流出；瓶盖封闭在另一端时不应出现第二个出液口。\n3. 五个手指头, 正常手\n请在保持灰色杯、绿色桌布、棕色背景与室内光照、双手外观、第一人称构图及液体流入杯中的主体动作不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__9188_robojudge_test_data__egodex_human__generated_data__cogvideo_i2v_f113_rewrite__task_0040__episode_0001__1__task_0040_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001",
+      "dir_name": "0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001",
+      "generator": "cosmos3_prefix",
+      "error_family": "contact_interaction",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "articulated_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001",
+      "video_path": "videos/0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001.mp4",
+      "video_sha256": "ac50116fdab8b806e80bde9ee3ad14ff32cb9d939a3e03a14dc728ff96ce20e3",
+      "video_bytes": 328097,
+      "duration_seconds": 5.041666666666667,
+      "fps": 24.0,
+      "width": 832,
+      "height": 480,
+      "issues": [
+        {
+          "expected": "夹爪应先夹住门的左侧自由边或把手并随拉开动作连续接触，再带动门绕铰链开启。",
+          "problem": "没有夹爪夹住冰箱门自由边或把手，冰箱门却自行绕铰链转开（接触缺失/隔空带动）",
+          "timestamp": "3–3.5"
+        }
+      ],
+      "fix_problems": [
+        "没有夹爪夹住冰箱门自由边或把手，冰箱门却自行绕铰链转开（接触缺失/隔空带动）"
+      ],
+      "fix_expected": [
+        "夹爪应先夹住门的左侧自由边或把手并随拉开动作连续接触，再带动门绕铰链开启。"
+      ],
+      "fix_keep": "左右两只机械夹爪及其完整关节结构、银色冰箱、门内物品与厨房场景、门绕右侧铰链向外开启的整体轨迹、第一人称镜头构图与光照",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第3–3.5秒：没有夹爪夹住冰箱门自由边或把手，冰箱门却自行绕铰链转开（接触缺失/隔空带动）\n【应修改为】\n1. 夹爪应先夹住门的左侧自由边或把手并随拉开动作连续接触，再带动门绕铰链开启。\n请在保持左右两只机械夹爪及其完整关节结构、银色冰箱、门内物品与厨房场景、门绕右侧铰链向外开启的整体轨迹、第一人称镜头构图与光照不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__0265_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0051__episode_0001__1__task_0051_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001",
+      "dir_name": "9177_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001",
+      "generator": "cosmos3_prefix",
+      "error_family": "motion_force",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "articulated_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001",
+      "video_path": "videos/9177_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9177_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001.mp4",
+      "video_sha256": "fcf9b5f4e4905adcfbfb7b9443d9fe503d27216d6ba902d25eeb14a3921d4986",
+      "video_bytes": 285864,
+      "duration_seconds": 5.041666666666667,
+      "fps": 24.0,
+      "width": 832,
+      "height": 480,
+      "issues": [
+        {
+          "expected": "夹爪应先夹住或拉住把手，再以持续接触带动门绕铰链开启。",
+          "problem": "烤箱门在夹爪未接触时自行打开",
+          "timestamp": "1.5–2.2"
+        }
+      ],
+      "fix_problems": [
+        "烤箱门在夹爪未接触时自行打开"
+      ],
+      "fix_expected": [
+        "夹爪应先夹住或拉住把手，再以持续接触带动门绕铰链开启。"
+      ],
+      "fix_keep": "双机械臂与双指夹爪的结构和运动轨迹、黑色烤箱、铝托盘、两片黄色蔬菜及右侧厨具的外观和位置、第一人称俯视构图、镜头运动与室内厨房光照",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.5–2.2秒：烤箱门在夹爪未接触时自行打开\n【应修改为】\n1. 夹爪应先夹住或拉住把手，再以持续接触带动门绕铰链开启。\n请在保持双机械臂与双指夹爪的结构和运动轨迹、黑色烤箱、铝托盘、两片黄色蔬菜及右侧厨具的外观和位置、第一人称俯视构图、镜头运动与室内厨房光照不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__9177_robojudge_test_data__agibot_world__generated_data__cosmos3_prefix__task_0074__episode_0001__1__task_0074_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001",
+      "dir_name": "9259_robojudge_test_data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001",
+      "generator": "gigaworld_gr1_2b_f113_prefix",
+      "error_family": "contact_interaction",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001",
+      "video_path": "videos/9259_robojudge_test_data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9259_robojudge_test_data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001.mp4",
+      "video_sha256": "57b535bd574cbc1411de77f94286f3ab5486c98627c76f778cdb6ff543332eb3",
+      "video_bytes": 486874,
+      "duration_seconds": 7.0625,
+      "fps": 16.0,
+      "width": 648,
+      "height": 480,
+      "issues": [
+        {
+          "expected": "方盒离桌抬升应由上下两指对夹抓起 确认接触",
+          "problem": "方盒仅被上指尖压住顶面却悬空抬升平移",
+          "timestamp": "2.7–3.5"
+        }
+      ],
+      "fix_problems": [
+        "方盒仅被上指尖压住顶面却悬空抬升平移"
+      ],
+      "fix_expected": [
+        "方盒离桌抬升应由上下两指对夹抓起 确认接触"
+      ],
+      "fix_keep": "黑色机械夹爪、浅棕色方形茶盒及桌面其他物体的外观与位置关系、俯视镜头运动、场景光照与原有搬运轨迹",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第2.7–3.5秒：方盒仅被上指尖压住顶面却悬空抬升平移\n【应修改为】\n1. 方盒离桌抬升应由上下两指对夹抓起 确认接触\n请在保持黑色机械夹爪、浅棕色方形茶盒及桌面其他物体的外观与位置关系、俯视镜头运动、场景光照与原有搬运轨迹不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__9259_robojudge_test_data__robotwin__generated_data__gigaworld_gr1_2b_f113_prefix__task_0177__episode_0001__1__task_0177_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001",
+      "dir_name": "0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001",
+      "generator": "kling_rewrite",
+      "error_family": "agent_integrity+object_scene_consistency",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001",
+      "video_path": "videos/0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001.mp4",
+      "video_sha256": "e101f84c817a486d02cfcff366aaa8c8099140f6507671bd5ba0355324baf3d2",
+      "video_bytes": 2444441,
+      "duration_seconds": 5.041666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "机械夹爪应该对准这个视频杯子，才能夹起来",
+          "problem": "夹爪和杯子没有对准，但是还是夹起来了",
+          "timestamp": "0.49-1.52"
+        },
+        {
+          "expected": "夹爪释放时，物体应该是自由下落，而不是直接有水平速度落到其他地方。",
+          "problem": "物体不是自由下落",
+          "timestamp": "2.75-3.05"
+        }
+      ],
+      "fix_problems": [
+        "夹爪和杯子没有对准，但是还是夹起来了",
+        "物体不是自由下落"
+      ],
+      "fix_expected": [
+        "机械夹爪应该对准这个视频杯子，才能夹起来",
+        "夹爪释放时，物体应该是自由下落，而不是直接有水平速度落到其他地方。"
+      ],
+      "fix_keep": "机械臂、黑色夹爪、黄色杯及其搬运与落地轨迹、白色桌面、书本、绿幕和背景设备的布局与画面风格",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.49-1.52秒：夹爪和杯子没有对准，但是还是夹起来了\n2. 第2.75-3.05秒：物体不是自由下落\n【应修改为】\n1. 机械夹爪应该对准这个视频杯子，才能夹起来\n2. 夹爪释放时，物体应该是自由下落，而不是直接有水平速度落到其他地方。\n请在保持机械臂、黑色夹爪、黄色杯及其搬运与落地轨迹、白色桌面、书本、绿幕和背景设备的布局与画面风格不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__0269_robojudge_test_data__droid__generated_data__kling_rewrite__task_0104__episode_0001__1__task_0104_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001",
+      "dir_name": "0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001",
+      "generator": "wan22_ti2v5b_1280x704_f169_prefix",
+      "error_family": "agent_integrity",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "cloth_folding",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001",
+      "video_path": "videos/0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001.mp4",
+      "video_sha256": "509850d4377255d6b20de83fa46c072b1d1b01d80ccc8b9df65ad3de0badc71b",
+      "video_bytes": 11262496,
+      "duration_seconds": 7.041666666666667,
+      "fps": 24.0,
+      "width": 1184,
+      "height": 736,
+      "issues": [
+        {
+          "expected": "场景应保持初始两条机械臂，仅一条右臂连续完成抓布动作，不应生成第三条机械臂。",
+          "problem": "第0.67s起右侧凭空多出一条完整白色机械臂（白前臂+黑色夹爪，从画面上缘进入），与原有右下抓布白臂及左侧黑色机械手形成三臂同框；该复制臂结构完整、独立运动并持续存在至约7.0s片尾；其间下方白臂腕部外壳还伴随灰白斑驳的形态畸变。",
+          "timestamp": "0.7–7"
+        }
+      ],
+      "fix_problems": [
+        "第0.67s起右侧凭空多出一条完整白色机械臂（白前臂+黑色夹爪，从画面上缘进入），与原有右下抓布白臂及左侧黑色机械手形成三臂同框；该复制臂结构完整、独立运动并持续存在至约7.0s片尾；其间下方白臂腕部外壳还伴随灰白斑驳的形态畸变。"
+      ],
+      "fix_expected": [
+        "场景应保持初始两条机械臂，仅一条右臂连续完成抓布动作，不应生成第三条机械臂。"
+      ],
+      "fix_keep": "左下机械臂、实际右夹爪及其连续抓布动作、米白布、木桌、实验室背景与第一人称镜头运动",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.7–7秒：第0.67s起右侧凭空多出一条完整白色机械臂（白前臂+黑色夹爪，从画面上缘进入），与原有右下抓布白臂及左侧黑色机械手形成三臂同框；该复制臂结构完整、独立运动并持续存在至约7.0s片尾；其间下方白臂腕部外壳还伴随灰白斑驳的形态畸变。\n【应修改为】\n1. 场景应保持初始两条机械臂，仅一条右臂连续完成抓布动作，不应生成第三条机械臂。\n请在保持左下机械臂、实际右夹爪及其连续抓布动作、米白布、木桌、实验室背景与第一人称镜头运动不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__0473_robojudge_test_data__gr1_inlab__generated_data__wan22_ti2v5b_1280x704_f169_prefix__task_0003__episode_0001__1__task_0003_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001",
+      "dir_name": "0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001",
+      "generator": "wan26_flash_prefix",
+      "error_family": "contact_interaction",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001",
+      "video_path": "videos/0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001.mp4",
+      "video_sha256": "5843e33f1ff8d6a1d15c9d2ec4a482c3eced45c53e55e33c75fc432dbaeabd71",
+      "video_bytes": 2099585,
+      "duration_seconds": 5.0,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "夹爪应先闭合并在瓶体两侧形成承重接触后再抬升运输；若未夹住，瓶应受重力留在台面或下落。",
+          "problem": "橙色瓶未被夹持却随夹爪悬空移动",
+          "timestamp": "2.3–3.5"
+        },
+        {
+          "expected": "机械臂移动时应该保持中间臂的刚性，只旋转关节处",
+          "problem": "机械臂移动不受关节电机限制，机械臂根部被拉伸扭曲变形",
+          "timestamp": "0.0-5.0"
+        }
+      ],
+      "fix_problems": [
+        "橙色瓶未被夹持却随夹爪悬空移动",
+        "机械臂移动不受关节电机限制，机械臂根部被拉伸扭曲变形"
+      ],
+      "fix_expected": [
+        "夹爪应先闭合并在瓶体两侧形成承重接触后再抬升运输；若未夹住，瓶应受重力留在台面或下落。",
+        "机械臂移动时应该保持中间臂的刚性，只旋转关节处"
+      ],
+      "fix_keep": "白色机械臂、黑色双指夹爪及其连续运动轨迹、橙色瓶、银色金属碗和洗衣机顶的既有外观与布局、周围彩色杯碗、窗户背景、光照与固定镜头画面风格",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第2.3–3.5秒：橙色瓶未被夹持却随夹爪悬空移动\n2. 第0.0-5.0秒：机械臂移动不受关节电机限制，机械臂根部被拉伸扭曲变形\n【应修改为】\n1. 夹爪应先闭合并在瓶体两侧形成承重接触后再抬升运输；若未夹住，瓶应受重力留在台面或下落。\n2. 机械臂移动时应该保持中间臂的刚性，只旋转关节处\n请在保持白色机械臂、黑色双指夹爪及其连续运动轨迹、橙色瓶、银色金属碗和洗衣机顶的既有外观与布局、周围彩色杯碗、窗户背景、光照与固定镜头画面风格不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__0296_robojudge_test_data__droid__generated_data__wan26_flash_prefix__task_0016__episode_0001__1__task_0016_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001",
+      "dir_name": "0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001",
+      "generator": "wan26_flash_prefix",
+      "error_family": "contact_interaction",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001",
+      "video_path": "videos/0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001.mp4",
+      "video_sha256": "deaf4f40a36efa5a97e78c4c1da6fa1faed43b7c2af20519ecce210a8d429d39",
+      "video_bytes": 3638789,
+      "duration_seconds": 5.0,
+      "fps": 30.0,
+      "width": 960,
+      "height": 960,
+      "issues": [
+        {
+          "expected": "双指应从碗沿内外对夹、或弯钩指勾住碗沿形成可靠承托后，再抬起并水平搬运蓝碗。",
+          "problem": "蓝碗仅靠一根伸入碗内的直指单点接触即悬空水平搬运，对侧夹指全程悬空，无对夹或弯钩承托，碗应倾斜或坠落。",
+          "timestamp": "1.5–2.8"
+        }
+      ],
+      "fix_problems": [
+        "蓝碗仅靠一根伸入碗内的直指单点接触即悬空水平搬运，对侧夹指全程悬空，无对夹或弯钩承托，碗应倾斜或坠落。"
+      ],
+      "fix_expected": [
+        "双指应从碗沿内外对夹、或弯钩指勾住碗沿形成可靠承托后，再抬起并水平搬运蓝碗。"
+      ],
+      "fix_keep": "白色机械臂与双指夹爪的结构和运动轨迹、蓝色小碗、蓝色塑料篮筐及桌面器具布局、固定镜头构图、光照与整体画面风格",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.5–2.8秒：蓝碗仅靠一根伸入碗内的直指单点接触即悬空水平搬运，对侧夹指全程悬空，无对夹或弯钩承托，碗应倾斜或坠落。\n【应修改为】\n1. 双指应从碗沿内外对夹、或弯钩指勾住碗沿形成可靠承托后，再抬起并水平搬运蓝碗。\n请在保持白色机械臂与双指夹爪的结构和运动轨迹、蓝色小碗、蓝色塑料篮筐及桌面器具布局、固定镜头构图、光照与整体画面风格不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__0330_robojudge_test_data__open_x_embodiment__generated_data__wan26_flash_prefix__task_0046__episode_0001__1__task_0046_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "robojudge::test::data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001",
+      "dir_name": "9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001",
+      "generator": "wow_wan14b_f105_prefix",
+      "error_family": "contact_interaction",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "pick_place_transfer",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001",
+      "video_path": "videos/9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001.mp4",
+      "video_sha256": "a1b146e9d9c03a1ea60c7deb79886968450f2a09e24e6b540c04567e2cb9cbe1",
+      "video_bytes": 557535,
+      "duration_seconds": 7.0,
+      "fps": 15.0,
+      "width": 832,
+      "height": 480,
+      "issues": [
+        {
+          "timestamp": "3.5–6.8",
+          "problem": "蓝盘缺少连续有效的夹持或承托接触，却仍悬空随手部搬运。",
+          "expected": "蓝盘随手移动时应保持连续有效的夹持或承托；失去支撑后应按实际受力运动。"
+        },
+        {
+          "timestamp": "3.5–6.8",
+          "problem": "蓝盘在搬运中盘沿和盘面发生不自然形变，前后无法保持同一刚性盘体轮廓。",
+          "expected": "盘子应保持稳定的盘面、盘沿和厚度，搬运只改变姿态，不应无因拉伸或重塑。"
+        }
+      ],
+      "fix_problems": [
+        "蓝盘缺少连续有效的夹持或承托接触，却仍悬空随手部搬运。",
+        "蓝盘在搬运中盘沿和盘面发生不自然形变，前后无法保持同一刚性盘体轮廓。"
+      ],
+      "fix_expected": [
+        "蓝盘随手移动时应保持连续有效的夹持或承托；失去支撑后应按实际受力运动。",
+        "盘子应保持稳定的盘面、盘沿和厚度，搬运只改变姿态，不应无因拉伸或重塑。"
+      ],
+      "fix_keep": "双机械手、蓝色圆盘、木质盘架和黑色晾碗架、俯视实验室桌面场景与原有镜头运动",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第3.5–6.8秒：蓝盘缺少连续有效的夹持或承托接触，却仍悬空随手部搬运。\n2. 第3.5–6.8秒：蓝盘在搬运中盘沿和盘面发生不自然形变，前后无法保持同一刚性盘体轮廓。\n【应修改为】\n1. 蓝盘随手移动时应保持连续有效的夹持或承托；失去支撑后应按实际受力运动。\n2. 盘子应保持稳定的盘面、盘沿和厚度，搬运只改变姿态，不应无因拉伸或重塑。\n请在保持双机械手、蓝色圆盘、木质盘架和黑色晾碗架、俯视实验室桌面场景与原有镜头运动不变的前提下，修正上述物理问题并重新生成视频。",
+      "review_status": "accepted",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__9344_robojudge_test_data__gr1_inlab__generated_data__wow_wan14b_f105_prefix__task_0097__episode_0001__1__task_0097_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      }
+    },
+    {
+      "record_id": "robojudge::test::data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001",
+      "dir_name": "0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001",
+      "generator": "wow_wan14b_f105_rewrite",
+      "error_family": "agent_integrity",
+      "scenario_domain": "embodied_robot_manipulation",
+      "interaction_primitive": "articulated_open_close",
+      "batch": "batch1-reviewed-194",
+      "source": "robojudge",
+      "video_id": "data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001",
+      "video_path": "videos/0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/robojudge__0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001.mp4",
+      "video_sha256": "d5aa732d72893f970cb13a1006bf18d27133b81120f282be1fb3fe10278c953b",
+      "video_bytes": 295462,
+      "duration_seconds": 7.0,
+      "fps": 15.0,
+      "width": 832,
+      "height": 480,
+      "issues": [
+        {
+          "expected": "机器人末端应始终保持机械夹爪结构，不应凭空生成人手或与人手融合。",
+          "problem": "机器人末端变为肤色人手并与矩形机械前臂融合（中段双手皆然）",
+          "timestamp": "0.3–6.8"
+        }
+      ],
+      "fix_problems": [
+        "机器人末端变为肤色人手并与矩形机械前臂融合（中段双手皆然）"
+      ],
+      "fix_expected": [
+        "机器人末端应始终保持机械夹爪结构，不应凭空生成人手或与人手融合。"
+      ],
+      "fix_keep": "黑白机械臂的原有运动轨迹与抽屉开合动作、浅棕双抽屉柜、白色内胆、灰色纹理台面与右侧圆环、单一蓝色沟槽皂块的合理位置轨迹与原有镜头构图",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.3–6.8秒：机器人末端变为肤色人手并与矩形机械前臂融合（中段双手皆然）\n【应修改为】\n1. 机器人末端应始终保持机械夹爪结构，不应凭空生成人手或与人手融合。\n请在保持黑白机械臂的原有运动轨迹与抽屉开合动作、浅棕双抽屉柜、白色内胆、灰色纹理台面与右侧圆环、单一蓝色沟槽皂块的合理位置轨迹与原有镜头构图不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/robojudge__0378_robojudge_test_data__robotwin__generated_data__wow_wan14b_f105_rewrite__task_0185__episode_0001__1__task_0185_episode_0001.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "videophy2::test::vp2_0010_cogvideo",
+      "dir_name": "0056_videophy2_test_vp2_0010_cogvideo",
+      "generator": "CogVideoX",
+      "error_family": "material_state",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "videophy2",
+      "video_id": "vp2_0010_cogvideo",
+      "video_path": "videos/0056_videophy2_test_vp2_0010_cogvideo.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0010_cogvideo.mp4",
+      "video_sha256": "d5889958c6c77d0735b5587fd53d54e7dba773cf1e9fd1ecdef58df1370a6f0b",
+      "video_bytes": 368084,
+      "duration_seconds": 6.125,
+      "fps": 8.0,
+      "width": 720,
+      "height": 480,
+      "issues": [
+        {
+          "expected": "泡沫液面应上升，到达杯口后溢出沿杯壁流下",
+          "problem": "啤酒持续倒入满杯，液面不升也不溢出",
+          "timestamp": "0.0–6.0"
+        }
+      ],
+      "fix_problems": [
+        "啤酒持续倒入满杯，液面不升也不溢出"
+      ],
+      "fix_expected": [
+        "泡沫液面应上升，到达杯口后溢出沿杯壁流下"
+      ],
+      "fix_keep": "近景构图、右上绿色酒瓶、右侧带柄玻璃杯、暖色暗背景、下落酒流、光照与机位",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–6.0秒：啤酒持续倒入满杯，液面不升也不溢出\n【应修改为】\n1. 泡沫液面应上升，到达杯口后溢出沿杯壁流下\n请在保持近景构图、右上绿色酒瓶、右侧带柄玻璃杯、暖色暗背景、下落酒流、光照与机位不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/vp2_0010_cogvideo.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "videophy2::test::vp2_2144_cosmos",
+      "dir_name": "0014_videophy2_test_vp2_2144_cosmos",
+      "generator": "Cosmos",
+      "error_family": "material_state",
+      "scenario_domain": "rigid_object_dynamics",
+      "interaction_primitive": "collision_impact",
+      "batch": "batch1-reviewed-194",
+      "source": "videophy2",
+      "video_id": "vp2_2144_cosmos",
+      "video_path": "videos/0014_videophy2_test_vp2_2144_cosmos.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2144_cosmos.mp4",
+      "video_sha256": "f51ce8cb9c3d831e0803b7233df689fb57e3d686092ce872133aaee2d0f15c54",
+      "video_bytes": 754274,
+      "duration_seconds": 5.041666666666667,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 704,
+      "issues": [
+        {
+          "expected": "易拉罐应保持各自圆柱形，至多轻微凹陷后倒下滚落",
+          "problem": "空易拉罐被轻推就压扁熔成锡箔状团块",
+          "timestamp": "1.75–3.0"
+        }
+      ],
+      "fix_problems": [
+        "空易拉罐被轻推就压扁熔成锡箔状团块"
+      ],
+      "fix_expected": [
+        "易拉罐应保持各自圆柱形，至多轻微凹陷后倒下滚落"
+      ],
+      "fix_keep": "室内游戏室、孩子与衣着、背景玩具、光照、机位、易拉罐初始堆放与孩子手臂动作",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第1.75–3.0秒：空易拉罐被轻推就压扁熔成锡箔状团块\n【应修改为】\n1. 易拉罐应保持各自圆柱形，至多轻微凹陷后倒下滚落\n请在保持室内游戏室、孩子与衣着、背景玩具、光照、机位、易拉罐初始堆放与孩子手臂动作不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/vp2_2144_cosmos.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "videophy2::test::vp2_2414_hunyuan",
+      "dir_name": "0045_videophy2_test_vp2_2414_hunyuan",
+      "generator": "HunyuanVideo",
+      "error_family": "material_state",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "videophy2",
+      "video_id": "vp2_2414_hunyuan",
+      "video_path": "videos/0045_videophy2_test_vp2_2414_hunyuan.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2414_hunyuan.mp4",
+      "video_sha256": "f773b76b5297ecc5fcc991531d49d42617c28f1cfd25dc892d3aa6bb53a475a0",
+      "video_bytes": 89460,
+      "duration_seconds": 4.066666666666666,
+      "fps": 15.0,
+      "width": 512,
+      "height": 320,
+      "issues": [
+        {
+          "expected": "杯中液面应随倒入稳步上升，落点处有涟漪或水花",
+          "problem": "橙汁持续倒入玻璃杯，液面却几乎不上升",
+          "timestamp": "0.0–3.75"
+        }
+      ],
+      "fix_problems": [
+        "橙汁持续倒入玻璃杯，液面却几乎不上升"
+      ],
+      "fix_expected": [
+        "杯中液面应随倒入稳步上升，落点处有涟漪或水花"
+      ],
+      "fix_keep": "桌面场景、绿色果汁盒、手的位置、杯子形状与摆放、橙汁颜色、镜头角度、背景与整体倒汁动作",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–3.75秒：橙汁持续倒入玻璃杯，液面却几乎不上升\n【应修改为】\n1. 杯中液面应随倒入稳步上升，落点处有涟漪或水花\n请在保持桌面场景、绿色果汁盒、手的位置、杯子形状与摆放、橙汁颜色、镜头角度、背景与整体倒汁动作不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/vp2_2414_hunyuan.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "videophy2::test::vp2_0281_ray2",
+      "dir_name": "0038_videophy2_test_vp2_0281_ray2",
+      "generator": "Ray2",
+      "error_family": "geometry_structure",
+      "scenario_domain": "fluid_thermal_optical_phenomena",
+      "interaction_primitive": "pour_flow",
+      "batch": "batch1-reviewed-194",
+      "source": "videophy2",
+      "video_id": "vp2_0281_ray2",
+      "video_path": "videos/0038_videophy2_test_vp2_0281_ray2.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0281_ray2.mp4",
+      "video_sha256": "769f0b8bd34945852fb3e30875c0d82323f765ff9e96bf69060f1dbef1f8bc8a",
+      "video_bytes": 1870305,
+      "duration_seconds": 5.208333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "沙子只应在球外表面撞击、附着或滑落弹开",
+          "problem": "沙粒穿过完好密封的玻璃球壁，在球内堆积",
+          "timestamp": "0.0–5.0"
+        }
+      ],
+      "fix_problems": [
+        "沙粒穿过完好密封的玻璃球壁，在球内堆积"
+      ],
+      "fix_expected": [
+        "沙子只应在球外表面撞击、附着或滑落弹开"
+      ],
+      "fix_keep": "近景构图、灰色背景、沙床、金顶透明玻璃球及挂钩、落沙流、机位、光照反光与球的轻微倾斜",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–5.0秒：沙粒穿过完好密封的玻璃球壁，在球内堆积\n【应修改为】\n1. 沙子只应在球外表面撞击、附着或滑落弹开\n请在保持近景构图、灰色背景、沙床、金顶透明玻璃球及挂钩、落沙流、机位、光照反光与球的轻微倾斜不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/vp2_0281_ray2.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "videophy2::test::vp2_0672_ray2",
+      "dir_name": "0067_videophy2_test_vp2_0672_ray2",
+      "generator": "Ray2",
+      "error_family": "material_state",
+      "scenario_domain": "deformable_materials",
+      "interaction_primitive": "deformation_state_change",
+      "batch": "batch1-reviewed-194",
+      "source": "videophy2",
+      "video_id": "vp2_0672_ray2",
+      "video_path": "videos/0067_videophy2_test_vp2_0672_ray2.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_0672_ray2.mp4",
+      "video_sha256": "e694820c6c9da1d3becb149413165269b1605e38f5313f059865e0eb9efae31f",
+      "video_bytes": 2235543,
+      "duration_seconds": 5.208333333333333,
+      "fps": 24.0,
+      "width": 1280,
+      "height": 720,
+      "issues": [
+        {
+          "expected": "面粉袋应随面粉流出逐渐变瘪起皱，粉流渐细",
+          "problem": "大量面粉流出堆积，面粉袋却不瘪不塌依旧饱满",
+          "timestamp": "0.0–5.0"
+        },
+        {
+          "expected": "面粉应该有口袋或者裂口，面粉从里面漏出来",
+          "problem": "面粉袋没有裂口，但是面粉漏出来。",
+          "timestamp": "0-5.25"
+        }
+      ],
+      "fix_problems": [
+        "大量面粉流出堆积，面粉袋却不瘪不塌依旧饱满",
+        "面粉袋没有裂口，但是面粉漏出来。"
+      ],
+      "fix_expected": [
+        "面粉袋应随面粉流出逐渐变瘪起皱，粉流渐细",
+        "面粉应该有口袋或者裂口，面粉从里面漏出来"
+      ],
+      "fix_keep": "厨房餐桌、人物、围裙与双手、取景、粉流方向、粉尘与木桌上面粉堆",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第0.0–5.0秒：大量面粉流出堆积，面粉袋却不瘪不塌依旧饱满\n2. 第0-5.25秒：面粉袋没有裂口，但是面粉漏出来。\n【应修改为】\n1. 面粉袋应随面粉流出逐渐变瘪起皱，粉流渐细\n2. 面粉应该有口袋或者裂口，面粉从里面漏出来\n请在保持厨房餐桌、人物、围裙与双手、取景、粉流方向、粉尘与木桌上面粉堆不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/vp2_0672_ray2.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    },
+    {
+      "record_id": "videophy2::test::vp2_2737_wan",
+      "dir_name": "0064_videophy2_test_vp2_2737_wan",
+      "generator": "Wan",
+      "error_family": "contact_interaction",
+      "scenario_domain": "rigid_object_dynamics",
+      "interaction_primitive": "other_multistep",
+      "batch": "batch1-reviewed-194",
+      "source": "videophy2",
+      "video_id": "vp2_2737_wan",
+      "video_path": "videos/0064_videophy2_test_vp2_2737_wan.mp4",
+      "video_url": "https://huggingface.co/datasets/HuggingFriends/PhysFixBench/resolve/ce67583873c46ffd6cd679edea9b22b60683b1ec/videos/vp2_2737_wan.mp4",
+      "video_sha256": "32d9b137b1f1163c2494ad1331e27fdf54bd4f65bafe1698a29b8ae2f38dcdf0",
+      "video_bytes": 2628063,
+      "duration_seconds": 3.8125,
+      "fps": 16.0,
+      "width": 832,
+      "height": 480,
+      "issues": [
+        {
+          "expected": "独轮车应靠轮子与支腿稳定着地，或受重力倾倒",
+          "problem": "松手后独轮车以陡峭倾斜姿态立住，无支撑不倒",
+          "timestamp": "2.5–3.5"
+        },
+        {
+          "expected": "工人从旁边拿取工具后手中才有工具，且工具应在工人拿取前入画",
+          "problem": "工人手中无故出现一把工具",
+          "timestamp": "1.4-1.9"
+        }
+      ],
+      "fix_problems": [
+        "松手后独轮车以陡峭倾斜姿态立住，无支撑不倒",
+        "工人手中无故出现一把工具"
+      ],
+      "fix_expected": [
+        "独轮车应靠轮子与支腿稳定着地，或受重力倾倒",
+        "工人从旁边拿取工具后手中才有工具，且工具应在工人拿取前入画"
+      ],
+      "fix_keep": "工地、混凝土模板、湿混凝土面、光照、机位、工人外貌与抹刀抹平动作",
+      "fixing_prompt_zh": "【存在的问题】\n1. 第2.5–3.5秒：松手后独轮车以陡峭倾斜姿态立住，无支撑不倒\n2. 第1.4-1.9秒：工人手中无故出现一把工具\n【应修改为】\n1. 独轮车应靠轮子与支腿稳定着地，或受重力倾倒\n2. 工人从旁边拿取工具后手中才有工具，且工具应在工人拿取前入画\n请在保持工地、混凝土模板、湿混凝土面、光照、机位、工人外貌与抹刀抹平动作不变的前提下，修正上述物理问题并重新生成视频。",
+      "upstream": {
+        "repo_id": "HuggingFriends/PhysFixBench",
+        "revision": "ce67583873c46ffd6cd679edea9b22b60683b1ec",
+        "video_file": "videos/vp2_2737_wan.mp4",
+        "original_metadata_labels_are_preannotation": true
+      },
+      "review_status": "accepted"
+    }
+  ]
+}
