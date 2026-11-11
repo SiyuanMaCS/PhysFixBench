@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T16:25:26+00:00",
+ "updated_at": "2026-11-11T17:01:47+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,40 +15,40 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 15,
+   "judged_items": 16,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
-     "partially_fixed": 5,
+     "partially_fixed": 6,
      "not_fixed": 20
     },
     "problem_only": {
      "fixed": 5,
      "partially_fixed": 5,
-     "not_fixed": 15
+     "not_fixed": 16
     },
     "problem_expected": {
      "fixed": 5,
      "partially_fixed": 6,
-     "not_fixed": 14
+     "not_fixed": 15
     }
    },
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
-     "partially_fixed": 1,
+     "partially_fixed": 2,
      "not_fixed": 14
     },
     "problem_only": {
      "fixed": 2,
      "partially_fixed": 2,
-     "not_fixed": 11
+     "not_fixed": 12
     },
     "problem_expected": {
      "fixed": 2,
      "partially_fixed": 2,
-     "not_fixed": 11
+     "not_fixed": 12
     }
    }
   },
@@ -1177,7 +1177,53 @@
    "item": 15,
    "id": "physion_eval::full::T1_07945",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "partially_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.7–1.2",
+        "problem": "右侧楼体外墙凭空出现烟花形光斑",
+        "expected": "无玻璃外墙仅呈漫射光和零星窗光",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题（0.7–1.2s 右侧楼体外墙凭空出现烟花形光斑，期望无玻璃外墙仅呈漫射光和零星窗光）：该变体全片被浓重绿色偏色与雾化覆盖，属于明显的视觉风格漂移；在 0.70s、0.83s、1.02s、1.21s 等窗口内帧中，最右侧高楼外墙只见规则的窗格灯光，未见原片 0.5–1.2s 那种白色放射状烟花形光斑；中右部尖顶塔楼外墙上保留的是位置固定的矩形点阵亮区，与原片同一位置的广场屏幕吻合，2.80s 帧仍呈矩形网格而非圆形烟花斑，全程未观察到凭空出现的圆形烟花光斑，原缺陷在标注位置未被原样复现。但绿色雾罩使外墙纹理细节明显受损，无法确认外墙已达到'仅呈漫射光和零星窗光'的期望状态，且整体视觉风格未保持，故判部分修复。",
+        "limitation_zh": "全局绿色偏色降低了外墙细节可读性，无法完全排除被绿雾掩盖的残留光斑；中右塔楼的矩形亮区是依据固定位置和矩形网格形状判断为应保留的屏幕，但其与烟花状残迹的区分受偏色和雾化影响，证据强度有限。"
+       }
+      ],
+      "montage": "evidence/wan_15_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.7–1.2",
+        "problem": "右侧楼体外墙凭空出现烟花形光斑",
+        "expected": "无玻璃外墙仅呈漫射光和零星窗光",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（0.7–1.2s 右侧楼体外墙凭空出现烟花形光斑，期望外墙仅呈漫射光和零星窗光）：该变体保留了写实夜景风格，但在 0.70s、1.02s、1.21s 帧，中右部深色塔楼外墙（楼体冠部屏幕下方）清晰出现白色圆形放射状（蒲公英/烟花形）亮斑，正落在标注窗口 0.7–1.2s 内，与原片右侧外墙凭空出现的烟花形光斑属同一物理缺陷类别，只是从最右侧白色高楼转移到了中右塔楼；1.53s 帧该塔楼外墙仍呈蓝紫色烟花状图案，说明该亮斑随时间明灭、并非固定窗光。期望的'外墙仅漫射光加零星窗光'未实现，判未修复。",
+        "limitation_zh": "生成画面的楼宇构图与原片略有重排，缺陷附着点由最右侧白楼转移至中右塔楼；但圆形放射光斑出现在无玻璃外墙表面、且无屏幕矩形边界，缺陷类别在标注窗口内确实复现。"
+       }
+      ],
+      "montage": "evidence/wan_15_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.7–1.2",
+        "problem": "右侧楼体外墙凭空出现烟花形光斑",
+        "expected": "无玻璃外墙仅呈漫射光和零星窗光",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（0.7–1.2s 右侧楼体外墙凭空出现烟花形光斑，期望外墙仅呈漫射光和零星窗光）：该变体与 problem_only 近乎同构，0.70s、1.02s、1.21s 帧中右部深色塔楼外墙均可见过曝的白色圆形烟花状亮斑，完整覆盖标注窗口；2.80s 帧同一塔楼外墙再次出现轮廓完整的白色蒲公英形放射光斑，说明缺陷在片中反复出现。即使提示词给出了期望行为描述，外墙凭空出现烟花形光斑的缺陷仍被复现（位置由原片最右侧白楼转移至中右塔楼），期望的漫射光加零星窗光状态未呈现，判未修复。",
+        "limitation_zh": "亮斑附着位置邻近塔楼自身的屏幕区域，但其圆形放射轮廓与矩形屏幕边界明显不同、且随时间明灭变化，判定为烟花形光斑而非固定屏幕内容；场景重排导致缺陷位置迁移，不影响缺陷类别判定。"
+       }
+      ],
+      "montage": "evidence/wan_15_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
