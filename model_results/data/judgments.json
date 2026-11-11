@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T15:52:16+00:00",
+ "updated_at": "2026-11-11T16:08:47+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,21 +15,21 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 13,
+   "judged_items": 14,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
-     "partially_fixed": 2,
+     "partially_fixed": 5,
      "not_fixed": 17
     },
     "problem_only": {
-     "fixed": 2,
+     "fixed": 5,
      "partially_fixed": 4,
      "not_fixed": 13
     },
     "problem_expected": {
-     "fixed": 2,
+     "fixed": 5,
      "partially_fixed": 5,
      "not_fixed": 12
     }
@@ -37,16 +37,16 @@
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
-     "partially_fixed": 0,
+     "partially_fixed": 1,
      "not_fixed": 13
     },
     "problem_only": {
-     "fixed": 1,
+     "fixed": 2,
      "partially_fixed": 2,
      "not_fixed": 10
     },
     "problem_expected": {
-     "fixed": 1,
+     "fixed": 2,
      "partially_fixed": 2,
      "not_fixed": 10
     }
@@ -961,7 +961,107 @@
    "item": 13,
    "id": "physion_eval::full::T1_06665",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "partially_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.2",
+        "problem": "篝火旁草地未接触火焰便开始变白",
+        "expected": "未受火草地保持绿色",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题1（1.2s篝火旁未接触火焰的草变白，期望不受火影响的草保持绿色）：0s到5.48s六帧中，火堆周围地面始终是深黑/暗褐色焦痕，未出现原片那种草在火焰外突然转灰白的现象，焦痕外的草地保持绿/黄绿色，该具体缺陷行为没有复现；但全片被重绘成油画笔触质感，背景换成光秃秃的大树、水塘和远山（原片是常绿针叶林和开阔草坪），场景与视觉风格漂移明显，且明火在2s后基本熄灭、只剩冒烟，'篝火持续燃烧'的原意动作退化，因此只能判部分修复。",
+        "limitation_zh": "油画质感使草叶级颜色变化难以逐帧分辨；背景场景身份改变、火焰退化为阴燃，期望行为的展示不充分。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "1.2–5.5",
+        "problem": "白色区域脱离火焰范围持续向外扩散",
+        "expected": "仅实际燃烧区域逐步焦黑成灰",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题2（1.2–5.5s白色区域持续向火焰范围外扩张，期望只有实际燃烧区逐步焦化成灰）：该变体中黑色焦痕的外边缘从0s到5.48s基本保持同一范围，没有出现原片那种灰白灰烬区不断向左侧和前方草坪推进的过程，'白色区域向外蔓延'这一动态缺陷被消除；但由于整体油画化重绘、背景换成水塘枯树场景且明火提前熄灭成烟柱，无法清楚展示'燃烧区逐步焦化'的正向过程，修复仅体现为缺陷行为缺失，判部分修复。",
+        "limitation_zh": "笔触纹理和阴燃画面限制了对地面细微颜色扩散的判读；未见新的草地被点燃，正向焦化成灰过程无法验证。"
+       },
+       {
+        "issue_index": 2,
+        "timestamp": "1.2–5.5",
+        "problem": "草地未燃烧却由绿色直接变成灰白",
+        "expected": "草地先受火燃烧焦黑后再形成灰烬",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题3（1.2–5.5s未燃烧的草由绿色直接变灰白，期望先烧黑焦化再成灰）：全程未观察到任何绿草直接跳变为灰白色的转换，焦痕外草地颜色稳定，原缺陷的错误颜色转换没有出现；但画面为油画风格且火焰2s后退化为烟雾，没有新的草被燃烧，期望的'绿→焦黑→灰'完整序列无从展示，加上场景背景（水塘、枯树、远山）相对原片漂移，判部分修复。",
+        "limitation_zh": "无新草燃烧事件，期望的完整焦化序列未被演示；油画纹理下地面颜色判读精度有限。"
+       }
+      ],
+      "montage": "evidence/wan_13_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.2",
+        "problem": "篝火旁草地未接触火焰便开始变白",
+        "expected": "未受火草地保持绿色",
+        "status": "fixed",
+        "visual_evidence_zh": "标注问题1（1.2s火焰外的草无故变白，期望不受火影响的草保持绿色）：1.02s、2.04s、3.06s、4.07s、5.48s各帧中，火焰 footprint 之外的草地全程保持绿色，没有任何草在未接触火焰的情况下转为白色；火堆旁的灰白色灰烬从首帧起就局限在木柴堆和黑色焦痕范围内，1.2s时刻不存在新的'变白色'事件，期望行为（未受火草保持绿色）在标注窗口内持续可见，原缺陷消除。",
+        "limitation_zh": "背景由原片的常绿林草坪漂移为黄昏营地（白色帐篷、落叶枯树、机位变低），但火-地面交界区域始终清晰可判；首帧火堆旁已有静态灰烬，属继承的初始场景而非窗口内新发变化。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "1.2–5.5",
+        "problem": "白色区域脱离火焰范围持续向外扩散",
+        "expected": "仅实际燃烧区域逐步焦黑成灰",
+        "status": "fixed",
+        "visual_evidence_zh": "标注问题2（1.2–5.5s白色区域不断向火焰外扩张，期望仅燃烧区逐步焦化成灰）：对比0s与5.48s，白色灰烬和黑色焦痕的外轮廓基本重合，右侧和前侧边缘在整段视频中没有向外推进，焦痕始终被限制在火堆 footprint 内；对比原片2.0s→5.5s灰白区大幅向左/前方草坪蔓延，该变体的蔓延动态完全消失，绿草边界稳定，符合'只有实际燃烧区成灰'的期望。",
+        "limitation_zh": "场景漂移为黄昏帐篷营地、机位和光照改变，但地面焦痕全程无遮挡；首帧已存在的灰烬范围不计为窗口内扩张。"
+       },
+       {
+        "issue_index": 2,
+        "timestamp": "1.2–5.5",
+        "problem": "草地未燃烧却由绿色直接变成灰白",
+        "expected": "草地先受火燃烧焦黑后再形成灰烬",
+        "status": "fixed",
+        "visual_evidence_zh": "标注问题3（未燃草由绿直接变灰白、跳过焦黑阶段，期望先烧黑再成灰）：0–5.48s内未出现任何绿色草面直接跳变为灰白色的转换事件，焦痕外绿色草地颜色逐帧稳定；可见的焦黑区域紧邻火焰、灰白色灰烬只覆盖木柴堆周边，未复现原片'绿→灰白'的错误直接转换，缺陷行为消除。",
+        "limitation_zh": "窗口内没有新的草地被点燃，因此'绿→焦黑→灰'的完整正向序列未被主动演示；判定依据是错误转换确实不存在且未燃草保持绿色。背景场景相对原片有漂移但不影响地面判读。"
+       }
+      ],
+      "montage": "evidence/wan_13_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.2",
+        "problem": "篝火旁草地未接触火焰便开始变白",
+        "expected": "未受火草地保持绿色",
+        "status": "fixed",
+        "visual_evidence_zh": "标注问题1（1.2s火焰外的草无故变白，期望未受火草保持绿色）：1.02s到5.48s各帧中，火焰范围之外的草地全程为绿色，未见任何草在无火焰接触下转白；火堆右侧那片灰白色灰烬和孤立灰团在0s首帧即存在且全程静止，1.2s标注时刻没有新的变白事件，'未受火影响的草保持绿色'这一期望行为在窗口内持续满足，原缺陷未复现。",
+        "limitation_zh": "背景漂移为枯树+营地场景、机位降低，但火-草交界区域清晰；首帧既有的静态灰烬团属初始场景，不计为窗口内新发缺陷。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "1.2–5.5",
+        "problem": "白色区域脱离火焰范围持续向外扩散",
+        "expected": "仅实际燃烧区域逐步焦黑成灰",
+        "status": "fixed",
+        "visual_evidence_zh": "标注问题2（1.2–5.5s白色区域持续向火焰外蔓延，期望仅燃烧区逐步成灰）：0s、2.04s、3.06s、4.07s、5.48s对比显示，灰白色灰烬场的前缘和右侧孤立灰团位置全程不变，焦痕没有像原片那样随时间向周围绿草扩张；灰烬始终局限在火堆周边的固定 footprint 内，外侧绿草边界稳定，原片的向外蔓延动态被消除，符合期望。",
+        "limitation_zh": "场景背景（枯树、帐篷轮廓、冷色光照）相对原片漂移，但地面无遮挡、足迹对比清楚；首帧已有灰烬范围不视为窗口内扩张。"
+       },
+       {
+        "issue_index": 2,
+        "timestamp": "1.2–5.5",
+        "problem": "草地未燃烧却由绿色直接变成灰白",
+        "expected": "草地先受火燃烧焦黑后再形成灰烬",
+        "status": "fixed",
+        "visual_evidence_zh": "标注问题3（未燃草绿色直接变灰白、跳过焦黑，期望先焦化变黑再成灰）：整段视频没有出现绿草直接跳变灰白的转换，焦痕外草地始终保持绿色；黑焦区紧邻火焰、白灰只覆盖木柴堆周边固定区域，原片那种无焦黑中间态的直接灰化未复现，缺陷行为消除。",
+        "limitation_zh": "窗口内无新草被点燃，'绿→黑焦→灰'的完整正向序列未被主动演示，判定基于错误转换不存在且未燃草持续保持绿色；场景背景有漂移但不影响地面颜色判读。"
+       }
+      ],
+      "montage": "evidence/wan_13_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
