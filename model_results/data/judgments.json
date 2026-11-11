@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T17:01:47+00:00",
+ "updated_at": "2026-11-11T17:34:57+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,40 +15,40 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 16,
+   "judged_items": 17,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
-     "partially_fixed": 6,
+     "partially_fixed": 8,
      "not_fixed": 20
     },
     "problem_only": {
      "fixed": 5,
      "partially_fixed": 5,
-     "not_fixed": 16
+     "not_fixed": 18
     },
     "problem_expected": {
      "fixed": 5,
      "partially_fixed": 6,
-     "not_fixed": 15
+     "not_fixed": 17
     }
    },
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
-     "partially_fixed": 2,
+     "partially_fixed": 3,
      "not_fixed": 14
     },
     "problem_only": {
      "fixed": 2,
      "partially_fixed": 2,
-     "not_fixed": 12
+     "not_fixed": 13
     },
     "problem_expected": {
      "fixed": 2,
      "partially_fixed": 2,
-     "not_fixed": 12
+     "not_fixed": 13
     }
    }
   },
@@ -1231,7 +1231,80 @@
    "item": 16,
    "id": "physion_eval::full::T1_00178",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "partially_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.8–2.2",
+        "problem": "手中单个白色刷头突变为叉勺两件",
+        "expected": "白色刷头保持原有物体身份",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题0（1.8–2.2s 手中单个白色刷头突变为叉勺两件，期望白色刷头保持单一物体身份）：该变体整体发生绿色偏色、黑色水槽变成蓝色盆、白色刷头被渲染成深色，属于明显风格与外观漂移；但在标注窗口 1.82s、2.01s、2.07s、2.13s 各帧中，右手始终只握持一个深色刷状物，刷头端在 2.01s 帧仍可见密集刷毛轮廓，未出现原片那种一个刷头突变成叉子加勺子两件金属餐具的 1→2 裂变，原缺陷未被原样复现。由于白色刷头被整体染黑且画面雾化，无法确认其完整保持了原物体的颜色与外观身份，故判部分修复。",
+        "limitation_zh": "全局绿色偏色与深色重渲染使物体颜色身份无法核对，刷状物在快速运动中存在运动模糊；结论基于窗口内始终单件、未见叉勺两件金属物，对刷毛形态的辨认受画质限制。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "4.2–4.5",
+        "problem": "右手白色刷子突然变成金属勺",
+        "expected": "右手刷子全程保持原有形态",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题1（4.2–4.5s 右手白色刷子突然变成金属勺，期望刷子全程保持原有形态）：该变体在 4.02s、4.14s 帧右手握持的仍是带刷毛端的深色刷状物；进入标注窗口后 4.27s、4.33s、4.39s、4.46s、4.52s 各帧中，右手物体始终为深色、无原片那种高反光金属勺面，4.46s 帧头部虽呈圆润椭圆但整体仍是同一深色长柄物，没有出现原片 nf000104–108 那种闪亮的金属勺碗，原缺陷未被原样复现。但刷头在窗口后段轮廓变得模糊圆滑、刷毛细节不可辨，且全片深色重渲染使白刷身份无法确认，故判部分修复。",
+        "limitation_zh": "4.33–4.52s 手部快速运动且物体被运动模糊拉长，头部轮廓介于刷背与勺碗之间，无法完全排除形态漂移；判定依据是无金属反光、全程同一深色单件物，证据强度中等。"
+       }
+      ],
+      "montage": "evidence/wan_16_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.8–2.2",
+        "problem": "手中单个白色刷头突变为叉勺两件",
+        "expected": "白色刷头保持原有物体身份",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题0（1.8–2.2s 单个白色刷头突变为叉勺两件）：该变体发生暖橙色风格漂移、黑锅变成白碗橙汤，但在标注窗口 2.01s 帧中，右手在电路板上方清晰握持叉子和勺子两件金属餐具（叉齿与勺碗同框可见），1.95s、2.13s 帧同样呈两件餐具组合，与原片 1→2 裂变属同一物体身份突变缺陷，期望的单一刷头身份未保持，判未修复。",
+        "limitation_zh": "场景色调与器物被重排，但两件金属餐具在窗口内多帧稳定可见，缺陷类别确认不受风格漂移影响。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "4.2–4.5",
+        "problem": "右手白色刷子突然变成金属勺",
+        "expected": "右手刷子全程保持原有形态",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1（4.2–4.5s 右手白刷突变为金属勺）：4.02s 帧右手仍是白色刷子，进入标注窗口后 4.33s、4.46s 帧右手明确握持一把高反光金属勺，圆形勺碗与细长勺柄清晰可辨，与原片 4.29–4.46s 的刷变勺缺陷同构，期望的刷子全程保持形态未实现，判未修复。",
+        "limitation_zh": "4.20–4.27s 为刷到勺的模糊转换段，但 4.33s 与 4.46s 帧金属勺碗反光和轮廓明确，缺陷在标注窗口内确认复现。"
+       }
+      ],
+      "montage": "evidence/wan_16_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.8–2.2",
+        "problem": "手中单个白色刷头突变为叉勺两件",
+        "expected": "白色刷头保持原有物体身份",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题0（1.8–2.2s 单个白色刷头突变为叉勺两件）：该变体与 problem_only 同样呈暖橙漂移，1.95s、2.01s、2.13s 帧中右手均握持叉子加勺子两件金属餐具，叉齿与勺碗在 2.01s 帧同框清晰可见，1→2 物体裂变在标注窗口内稳定复现，即使提示词给出期望行为也未保持单一刷头身份，判未修复。",
+        "limitation_zh": "无实质性遮挡，两件餐具多帧可见；场景重排不影响该物体身份突变的判定。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "4.2–4.5",
+        "problem": "右手白色刷子突然变成金属勺",
+        "expected": "右手刷子全程保持原有形态",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1（4.2–4.5s 右手白刷突变为金属勺）：4.02s、4.14s 帧右手仍是深色刷子，4.27s 为模糊转换段，4.33s 帧右手已明确握持高反光金属勺（圆形勺碗清晰），4.52s 帧金属勺仍在手中，与原片刷变勺缺陷同构且落在标注窗口内，期望行为未实现，判未修复。",
+        "limitation_zh": "转换瞬间有运动模糊，但窗口内 4.33s 与 4.52s 帧金属勺的勺碗反光和轮廓明确，缺陷复现判定可靠。"
+       }
+      ],
+      "montage": "evidence/wan_16_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
