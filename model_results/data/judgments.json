@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T15:18:43+00:00",
+ "updated_at": "2026-11-11T15:40:51+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,40 +15,40 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 11,
+   "judged_items": 12,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 2,
-     "not_fixed": 14
+     "not_fixed": 16
     },
     "problem_only": {
      "fixed": 2,
      "partially_fixed": 4,
-     "not_fixed": 10
+     "not_fixed": 12
     },
     "problem_expected": {
      "fixed": 2,
-     "partially_fixed": 4,
-     "not_fixed": 10
+     "partially_fixed": 5,
+     "not_fixed": 11
     }
    },
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 0,
-     "not_fixed": 11
+     "not_fixed": 12
     },
     "problem_only": {
      "fixed": 1,
      "partially_fixed": 2,
-     "not_fixed": 8
+     "not_fixed": 9
     },
     "problem_expected": {
      "fixed": 1,
      "partially_fixed": 2,
-     "not_fixed": 8
+     "not_fixed": 9
     }
    }
   },
@@ -826,7 +826,80 @@
    "item": 11,
    "id": "physion_eval::full::T1_01190",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.2–3.5",
+        "problem": "台灯在无人接触时自行弯曲并转动灯头。",
+        "expected": "无外力时台灯的颈部和灯头应保持原有姿态。",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1（0.2–3.5s台灯无人触碰时灯颈/灯头自行弯曲转动，期望无外力时保持初始姿态）：生成视频整体场景漂移为红色波点布景的摄影棚，出现多名工作人员、落地支架式影视灯、相机滑轨和监视器，原片桌面上的白色弯颈台灯、打开的书和笔记本电脑全部不可辨认。虽然画面中有人用手扶着影视灯，但那是另一个物体、另一套场景，原片那盏无人触碰却自行弯折的台灯已不存在，修复目标物体缺失，无法呈现'无外力保持姿态'的期望行为，场景身份改变本身即使修复失效。",
+        "limitation_zh": "无；0s、2.74s、5.48s三帧均为同一摄影棚场景，原台灯未出现，属场景漂移型失效，而非遮挡导致的不可判。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "0.3–2.7",
+        "problem": "桌上的书在没有可见接触或推动时自行滑移。",
+        "expected": "书的整体位置应保持稳定；若被移动，应有连续可见的接触和推动过程。",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题2（0.3–2.7s桌上的书无接触自行滑动，期望保持静止、若移动须有持续可见的接触推动）：该变体把场景重绘成摄影棚，桌面物品被替换为绿色文件夹、图纸和其他道具，原片那本打开的厚书不在画面中；全程没有与原片对应的书本，也无从观察'书保持静止或被持续推动'的期望行为，修复目标物体随场景漂移而消失。",
+        "limitation_zh": "无；目标书本在所有抽样帧中均不存在，属场景漂移型失效。"
+       }
+      ],
+      "montage": "evidence/wan_11_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.2–3.5",
+        "problem": "台灯在无人接触时自行弯曲并转动灯头。",
+        "expected": "无外力时台灯的颈部和灯头应保持原有姿态。",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1（台灯无人触碰自行弯转，期望保持初始姿态）：场景中的书桌、白弯颈台灯、绿色文件夹和打开的书基本保留，但台灯从0s灯头朝右上、灯颈直立，到2.04s灯头明显下压、灯颈弯向桌面，再到2.74s和5.48s灯头完全弯折到书本上方，全程没有任何手或物体接触台灯，'无人触碰自行弯曲转动'的缺陷在0.2–3.5s窗口内完整复现。",
+        "limitation_zh": "无；0s至5.48s八帧均无手部入镜，灯颈姿态变化连续且无外力来源，缺陷明确可见。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "0.3–2.7",
+        "problem": "桌上的书在没有可见接触或推动时自行滑移。",
+        "expected": "书的整体位置应保持稳定；若被移动，应有连续可见的接触和推动过程。",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题2（书本无接触自行滑动，期望静止或有持续可见的接触推动）：全程没有任何手进入画面，打开的书却在2.74s前后出现书页自行掀起、书本位置相对0s发生挪动，5.48s时书本姿态进一步改变；整个0.3–2.7s窗口内不存在任何接触源，'无接触自行移动'的原缺陷保留，期望的静止或被推动行为均未出现。",
+        "limitation_zh": "无；八帧抽样中画面下半部始终无手或其他施力物体，书页掀起过程清晰但无外力来源。"
+       }
+      ],
+      "montage": "evidence/wan_11_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.2–3.5",
+        "problem": "台灯在无人接触时自行弯曲并转动灯头。",
+        "expected": "无外力时台灯的颈部和灯头应保持原有姿态。",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1（台灯无人触碰自行弯转，期望无外力保持初始姿态）：该变体保留了书桌场景，但台灯依旧从0s灯头朝右上、灯颈直立，到1.02s开始低头、2.04s灯颈明显弯曲，再到2.74s和3.50s灯头弯到书本正上方，5.48s保持弯折姿态；画面中出现的手只接触书本、从未触碰台灯，灯颈/灯头在无任何外力来源的情况下完成与原片同型的自行弯转，缺陷未修复。",
+        "limitation_zh": "无；手的活动范围始终在书本区域，台灯周围无遮挡、无接触物，自行弯转过程连续可见。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "0.3–2.7",
+        "problem": "桌上的书在没有可见接触或推动时自行滑移。",
+        "expected": "书的整体位置应保持稳定；若被移动，应有连续可见的接触和推动过程。",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题2（书本无接触自行滑动，期望静止或有持续可见的接触推动）：该变体新增了一只手来提供物理接触——1.15s左右指尖从画面下缘进入并靠近书本，1.34s起手已落在打开的书页上，2.04s、2.74s、3.50s手持续在书页上接触并做出翻页/按压动作，书本后续的位移和翻页与手部接触在时间上对应，修正方向符合'移动须有可见接触'的期望；但手在约1.15s才进入，未覆盖0.3–2.7s窗口的前段，且手位于画面最下缘、多帧模糊半透明，接触是否持续、是否构成连续推动无法完全确认，因此只判部分修复。",
+        "limitation_zh": "0.3–1.0s窗口前段无手出现（该时段书本基本静止）；1.15s后的手-书接触位于画面边缘且多帧模糊，'持续可见的接触与推动'不能逐帧证实，存在遮挡与清晰度限制。"
+       }
+      ],
+      "montage": "evidence/wan_11_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
