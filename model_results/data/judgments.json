@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T15:40:51+00:00",
+ "updated_at": "2026-11-11T15:52:16+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,40 +15,40 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 12,
+   "judged_items": 13,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 2,
-     "not_fixed": 16
+     "not_fixed": 17
     },
     "problem_only": {
      "fixed": 2,
      "partially_fixed": 4,
-     "not_fixed": 12
+     "not_fixed": 13
     },
     "problem_expected": {
      "fixed": 2,
      "partially_fixed": 5,
-     "not_fixed": 11
+     "not_fixed": 12
     }
    },
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 0,
-     "not_fixed": 12
+     "not_fixed": 13
     },
     "problem_only": {
      "fixed": 1,
      "partially_fixed": 2,
-     "not_fixed": 9
+     "not_fixed": 10
     },
     "problem_expected": {
      "fixed": 1,
      "partially_fixed": 2,
-     "not_fixed": 9
+     "not_fixed": 10
     }
    }
   },
@@ -907,7 +907,53 @@
    "item": 12,
    "id": "physion_eval::full::T1_02632",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.8",
+        "problem": "南瓜上方大量粉尘凭空出现",
+        "expected": "粉尘应从可见源头连续喷出并扩散",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（0.8s起南瓜上方凭空出现大量粉尘，期望粉尘从可见源头持续排放并扩散）：0s和0.45s南瓜与支架上方空气干净、无任何发射装置；0.96s南瓜顶部突然冒出红紫色烟柱（同时凭空出现一只鸟形物体），1.53s已发展成巨大的紫红烟团，2.48s烟团完全吞没支架，3.76s烟团向右漂移、5.6s全屏残留蓝紫色霾。整个过程中画面里没有任何烟罐、喷口或其他可见排放源，粉尘依旧是在南瓜上方无中生有，与原片同型的核心缺陷完整复现，只是颜色由品红漂移成紫/蓝并多出一只凭空出现的鸟；期望的'可见源头持续排放'未出现。",
+        "limitation_zh": "无；首帧无粉尘、0.96s突然起烟的时间关系清晰，烟团来源位置周围无遮挡、无装置，缺陷可明确判定。"
+       }
+      ],
+      "montage": "evidence/wan_12_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.8",
+        "problem": "南瓜上方大量粉尘凭空出现",
+        "expected": "粉尘应从可见源头连续喷出并扩散",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（粉尘凭空出现，期望从可见源头持续排放并扩散）：0s南瓜上方无粉尘，0.96s南瓜顶部突然升起橙红色烟柱，1.53s形成向左倾倒的巨大红色烟团，2.48s烟团扩大到遮蔽整个支架，3.76s红褐色烟尘弥漫半空，5.6s烟尘向右扩散后南瓜重新露出；全程没有烟罐、喷嘴或任何人/装置作为可见排放源，粉尘仍是在南瓜上方无中生有地爆发，期望行为未实现。同时场景由原片的孤南瓜+黑色金属柱漂移成南瓜田（满地南瓜、木质立柱和南瓜底座、背景帐篷农舍），场景身份改变。",
+        "limitation_zh": "无；起烟前后对比明确，南瓜与立柱周围无遮挡物，不存在源头被遮挡的可能。"
+       }
+      ],
+      "montage": "evidence/wan_12_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.8",
+        "problem": "南瓜上方大量粉尘凭空出现",
+        "expected": "粉尘应从可见源头连续喷出并扩散",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（粉尘凭空出现，期望从可见源头持续排放并扩散）：与problem_only同型，0s南瓜上方空气干净，0.96s南瓜顶部凭空冒出粉红色烟柱，1.53s烟柱已弯成大团粉色烟尘，2.48s巨大粉团淹没支架，3.76s烟尘继续向四周弥漫，5.6s烟尘右移散开；任何一帧都看不到烟罐、喷口或其他可见排放装置，'从可见源头持续排放'的期望行为没有出现，无源头突发粉尘的原缺陷保留。场景同样漂移为南瓜田、木质立柱加南瓜底座，背景为帐篷农舍。",
+        "limitation_zh": "无；起烟时刻（约0.96s）与首帧对比清楚，源头位置无遮挡，未见任何排放装置。"
+       }
+      ],
+      "montage": "evidence/wan_12_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
