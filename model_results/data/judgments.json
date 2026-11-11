@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T14:49:02+00:00",
+ "updated_at": "2026-11-11T14:54:49+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,22 +15,22 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 8,
+   "judged_items": 9,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 2,
-     "not_fixed": 10
+     "not_fixed": 11
     },
     "problem_only": {
      "fixed": 2,
-     "partially_fixed": 3,
+     "partially_fixed": 4,
      "not_fixed": 7
     },
     "problem_expected": {
      "fixed": 2,
-     "partially_fixed": 3,
+     "partially_fixed": 4,
      "not_fixed": 7
     }
    },
@@ -38,16 +38,16 @@
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 0,
-     "not_fixed": 8
+     "not_fixed": 9
     },
     "problem_only": {
      "fixed": 1,
-     "partially_fixed": 1,
+     "partially_fixed": 2,
      "not_fixed": 6
     },
     "problem_expected": {
      "fixed": 1,
-     "partially_fixed": 1,
+     "partially_fixed": 2,
      "not_fixed": 6
     }
    }
@@ -637,7 +637,53 @@
    "item": 8,
    "id": "phyground::wan2.2-i2v-a14b::0188_perspective-center_trimmed-weight-on-ceramic",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.75–4.5",
+        "problem": "陶瓷杯在壶铃下像软物一样压扁起皱后才碎",
+        "expected": "杯子应保持刚性，超载后骤然碎成陶瓷碎片",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（陶瓷杯在壶铃下像软物一样压扁起皱后才碎，期望保持刚性、超载后骤然碎成陶瓷碎片）：1.5s绿色杯身上部已出现凹陷折痕，2.625s杯口像软塑料一样向内翻折起皱，3.5s杯体被压成褶皱折叠状、仍连成一个软体，4.5s才在壶铃下摊成碎片；原片'先软物式压扁起皱、最后才碎'的路径完整保留，没有刚性保持后骤然碎裂的过程。同时场景从白墙木桌漂移成健身房地面、壶铃变成浅蓝色卡通异形、杯子变黄绿色，物体身份整体改变。",
+        "limitation_zh": "无；软褶皱阶段在2.625s、3.5s两帧清晰可辨，场景漂移也独立使修复目标失效。"
+       }
+      ],
+      "montage": "evidence/wan_08_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "partially_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.75–4.5",
+        "problem": "陶瓷杯在壶铃下像软物一样压扁起皱后才碎",
+        "expected": "杯子应保持刚性，超载后骤然碎成陶瓷碎片",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "0.75s、1.5s杯子基本保持刚性圆筒形、比原片起皱更晚；但2.625s杯口仍出现横向褶皱、像软物一样被压卷，3.5s杯体在褶皱折叠的同时出现一条纵向裂纹、桌面落有白色小碎片，4.5s杯体摊成多块碎片。脆性开裂和碎片比原片增多，说明有向'陶瓷碎裂'修正的趋势；但2.625–3.5s的软物式起皱压扁阶段仍然存在，期望的'刚性保持→超载骤然碎成陶瓷片'没有干净呈现。",
+        "limitation_zh": "场景与壶铃身份保留、仅杯子由黄色变为淡绿色；裂纹与褶皱混合出现，碎裂不是骤然发生，只能判部分修复。"
+       }
+      ],
+      "montage": "evidence/wan_08_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "partially_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.75–4.5",
+        "problem": "陶瓷杯在壶铃下像软物一样压扁起皱后才碎",
+        "expected": "杯子应保持刚性，超载后骤然碎成陶瓷碎片",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "0.75s杯子刚性完整，但1.5s杯身侧面已出现软体式小凹痕，2.625s杯口横向起皱、向内翻卷，3.5s杯体被压出多道褶皱折痕、仅有一小块白色碎片落桌，4.5s杯体摊平成折叠状残片；与problem_only类似，脆性碎片比原片略多，但主导过程仍是软物式凹陷起皱后才碎，残片形态偏折叠而非锐利陶瓷碎块，期望的骤然碎裂未出现。",
+        "limitation_zh": "场景与壶铃身份保留、杯子变为淡绿色；3.5s帧裂纹不如problem_only明显，软褶皱证据更强，部分修复的把握主要来自末段碎片增多。"
+       }
+      ],
+      "montage": "evidence/wan_08_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
