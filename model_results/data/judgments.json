@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T15:12:33+00:00",
+ "updated_at": "2026-11-11T15:18:43+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,40 +15,40 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 10,
+   "judged_items": 11,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 2,
-     "not_fixed": 13
+     "not_fixed": 14
     },
     "problem_only": {
      "fixed": 2,
      "partially_fixed": 4,
-     "not_fixed": 9
+     "not_fixed": 10
     },
     "problem_expected": {
      "fixed": 2,
      "partially_fixed": 4,
-     "not_fixed": 9
+     "not_fixed": 10
     }
    },
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 0,
-     "not_fixed": 10
+     "not_fixed": 11
     },
     "problem_only": {
      "fixed": 1,
      "partially_fixed": 2,
-     "not_fixed": 7
+     "not_fixed": 8
     },
     "problem_expected": {
      "fixed": 1,
      "partially_fixed": 2,
-     "not_fixed": 7
+     "not_fixed": 8
     }
    }
   },
@@ -772,7 +772,53 @@
    "item": 10,
    "id": "physion_eval::full::T1_00755",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.0–5.5",
+        "problem": "草地火焰燃烧范围始终不扩散",
+        "expected": "火焰逐渐引燃邻近草叶并扩大焦痕",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（0.0–5.5s草地上的火始终不蔓延，期望火焰逐步点燃周围草、烧焦区域扩大）：整片场景被重绘成马赛克油画质感的抽象表面，原片的松针地面、树干、篝火全部不可辨认，画面中只剩一团静止的红色光晕和黄/红色块，0s到5.476s没有任何火焰前沿移动、没有可燃物被点燃的过程；修复目标（可识别的草地火蔓延）根本不存在，且场景身份完全漂移。",
+        "limitation_zh": "无；六帧（0、1.02、2.04、3.06、4.07、5.48s）均为同一静态抽象画面，无火行为可判，场景漂移独立使修复失效。"
+       }
+      ],
+      "montage": "evidence/wan_10_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.0–5.5",
+        "problem": "草地火焰燃烧范围始终不扩散",
+        "expected": "火焰逐渐引燃邻近草叶并扩大焦痕",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（火不蔓延，期望逐步点燃周围草、焦区扩大）：主火堆在0s、2.04s、3.06s、5.48s的火焰与灰烬覆盖范围基本不变，四周青草始终保持绿色、没有任何草被点燃或出现向外推进的火线，灰烬/焦黑区域也没有随时间扩大，'火不蔓延'的核心缺陷完整保留。树旁另有一处余烬堆，但它在0s首帧就已存在、与主火不相连且全程大小不变，属于静态第二火源而非主火蔓延的结果。同时地面由原片的干枯松针漂移成茂密青草，场景身份改变。",
+        "limitation_zh": "无；主火足迹六帧恒定、周围草无点火痕迹，树旁余烬首帧即存在且不增长，不能计为蔓延。"
+       }
+      ],
+      "montage": "evidence/wan_10_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.0–5.5",
+        "problem": "草地火焰燃烧范围始终不扩散",
+        "expected": "火焰逐渐引燃邻近草叶并扩大焦痕",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题（火不蔓延，期望火焰逐步点燃附近草并扩大烧焦区）：与problem_only几乎同型，主火堆从0s到5.48s火焰尺寸和灰烬范围恒定，周围青草全程未被引燃、没有向外扩展的焦黑环或移动火线，期望的渐进式蔓延没有出现。树旁余烬堆同样在首帧即存在、全程静态，不构成蔓延证据。场景同样由干松针地面漂移为青草地，树干纹理也被重绘。",
+        "limitation_zh": "无；末帧（5.48s）与首帧（0s）对比主火足迹无扩大、草色无变化，未观察到任何朝向期望行为的时间进展。"
+       }
+      ],
+      "montage": "evidence/wan_10_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
