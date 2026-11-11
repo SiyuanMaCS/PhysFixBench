@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T14:39:49+00:00",
+ "updated_at": "2026-11-11T14:49:02+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,40 +15,40 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 7,
+   "judged_items": 8,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 2,
-     "not_fixed": 8
+     "not_fixed": 10
     },
     "problem_only": {
      "fixed": 2,
      "partially_fixed": 3,
-     "not_fixed": 5
+     "not_fixed": 7
     },
     "problem_expected": {
      "fixed": 2,
      "partially_fixed": 3,
-     "not_fixed": 5
+     "not_fixed": 7
     }
    },
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 0,
-     "not_fixed": 7
+     "not_fixed": 8
     },
     "problem_only": {
      "fixed": 1,
      "partially_fixed": 1,
-     "not_fixed": 5
+     "not_fixed": 6
     },
     "problem_expected": {
      "fixed": 1,
      "partially_fixed": 1,
-     "not_fixed": 5
+     "not_fixed": 6
     }
    }
   },
@@ -556,7 +556,80 @@
    "item": 7,
    "id": "phyground::veo-3.1::b91QyJ0TRAI_000000_000010",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "5.0–6.75",
+        "problem": "落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌",
+        "expected": "落地应压出局部沙坑，只溅起少量沙粒",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题0（落地沙坑延迟巨爆、人深陷、沙像流体翻涌，期望压出局部沙坑只溅少量沙粒）：5.46s人物坐入地面后地面像液体一样环向起伏，5.83s落地材料在人身周炸成环形巨浪、人半截没入，6.45s尘浪仍像流体般翻涌到腰部高度，6.76s人坐在一个又大又深的坑中；原片'延迟巨爆+流体翻涌+深陷'的模式完整复现，期望的局部小坑和少量溅沙完全没有出现。且沙坑被改成鹅卵石网状地面、背景换成集装箱道路，场景整体漂移。",
+        "limitation_zh": "无；巨爆、深陷和流体翻涌在多帧均清晰可见。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "2.90-3.64",
+        "problem": "人体和沙子上的白线穿模",
+        "expected": "因为人在沙地上方，所以应当遮挡地上的白线",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1（人体与地上白线穿模，期望人在沙地上方时遮挡白线）：2.98s多条深色界线直接横过跑步者的小腿和脚面、线在腿轮廓内依然可见，3.22s前伸小腿压在界线上方而界线连续穿过小腿区域没有被遮挡，穿模关系与原片一致；白线虽随场景漂移变成深色石缝界线，但'线穿过人体'的缺陷仍在，期望的遮挡关系未建立。",
+        "limitation_zh": "运动模糊使边缘不够锐利，且线的颜色身份已改变；但2.98s与3.22s两帧界线在腿内连续可见，穿模可辨识。"
+       }
+      ],
+      "montage": "evidence/wan_07_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "5.0–6.75",
+        "problem": "落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌",
+        "expected": "落地应压出局部沙坑，只溅起少量沙粒",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题0：5.46s人物坐入沙中、沙面已呈流体状环向波动，5.83s沙在人身周延迟炸成环形巨浪、人深陷到胸肩，6.45s巨大尘浪像液体一样在两侧翻涌，6.76s人坐在深坑中沙尘仍在翻滚；原片的延迟巨爆、流体翻涌和深陷全部保留，期望的局部沙坑+少量溅沙未出现。背景草地变成蓝色水面、服装改变，场景同样漂移。",
+        "limitation_zh": "无；爆炸时序和深陷程度与原片同型，多帧可验证。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "2.90-3.64",
+        "problem": "人体和沙子上的白线穿模",
+        "expected": "因为人在沙地上方，所以应当遮挡地上的白线",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1：2.98s黑色界线横过跑步者小腿和脚踝、线在腿部轮廓内连续可见，3.22s前伸的小腿压在界线上方而界线依旧穿过小腿区域，未出现人体遮挡线条的关系；白线身份漂移为深色岩边界线，但穿模缺陷同型复现。",
+        "limitation_zh": "接触区有运动模糊且线色已变；但2.98s帧线在腿内穿行清晰，3.22s帧也无遮挡，判定不受影响。"
+       }
+      ],
+      "montage": "evidence/wan_07_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "5.0–6.75",
+        "problem": "落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌",
+        "expected": "落地应压出局部沙坑，只溅起少量沙粒",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题0：5.46s人物坐入沙中沙面开始流体状起伏，5.83s沙环延迟爆炸、把人围在深坑中心，6.45s两侧尘浪如液体高墙般翻涌至人身侧，6.76s人深陷大坑、沙尘仍在四周翻卷；与原片完全同型的延迟巨爆+流体翻涌+深陷，期望的局部压坑和少量溅沙没有出现。草地背景变为灰蓝色水面，场景漂移。",
+        "limitation_zh": "无；各阶段缺陷表现稳定可辨。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "2.90-3.64",
+        "problem": "人体和沙子上的白线穿模",
+        "expected": "因为人在沙地上方，所以应当遮挡地上的白线",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1：2.98s多条界线同时横过跑步者的小腿和脚、线在腿轮廓内保持连续可见，3.22s前伸小腿越过界线时线直接穿过小腿区域而不是被腿遮挡，与原片白线穿模同型；期望的'人体在上方遮挡线条'关系未建立。",
+        "limitation_zh": "运动模糊存在且白线变为深色界线；但2.98s帧多条线在腿内连续可见，证据充分。"
+       }
+      ],
+      "montage": "evidence/wan_07_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
