@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-11T14:01:37+00:00",
+ "updated_at": "2026-11-11T14:39:49+00:00",
  "annotation_policy": "accepted_human_ground_truth",
  "status_labels": {
   "fixed": "已修复",
@@ -15,40 +15,40 @@
  "models": {
   "wan22_vace_fun_a14b_q8_0": {
    "name": "Wan 2.2 VACE Fun · A14B Q8_0",
-   "judged_items": 5,
+   "judged_items": 7,
    "total_items": 50,
    "issue_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 2,
-     "not_fixed": 5
+     "not_fixed": 8
     },
     "problem_only": {
      "fixed": 2,
-     "partially_fixed": 2,
-     "not_fixed": 3
+     "partially_fixed": 3,
+     "not_fixed": 5
     },
     "problem_expected": {
      "fixed": 2,
-     "partially_fixed": 2,
-     "not_fixed": 3
+     "partially_fixed": 3,
+     "not_fixed": 5
     }
    },
    "video_tally": {
     "self_fixing": {
      "fixed": 0,
      "partially_fixed": 0,
-     "not_fixed": 5
+     "not_fixed": 7
     },
     "problem_only": {
      "fixed": 1,
      "partially_fixed": 1,
-     "not_fixed": 3
+     "not_fixed": 5
     },
     "problem_expected": {
      "fixed": 1,
      "partially_fixed": 1,
-     "not_fixed": 3
+     "not_fixed": 5
     }
    }
   },
@@ -421,7 +421,53 @@
    "item": 5,
    "id": "phyground::ltx-2-19b-dev-1stage::mechanics_438",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.5–1.5",
+        "problem": "两人冰鞋和腿相互穿透，红衣者被突然甩平",
+        "expected": "冰鞋应实体碰撞勾绊，两人都有相应的失衡反应",
+        "status": "not_fixed",
+        "visual_evidence_zh": "0.51s两人冰鞋已贴近，0.83s右侧人物的抬起冰鞋与左侧人物冰鞋在接触区明显重叠、无实体阻挡边界，1.14s左侧人物后腿向后大幅伸出、两鞋仍重叠，1.46s左侧人物腿向侧面甩开、身体压低，与原片'鞋腿相互穿透+红衣者被甩平'的模式一致；同时冰场变成带草的石板地、红衣变粉色紧身裤、冰鞋变棕色靴子，场景与物体身份整体漂移，标注要求的冰鞋实体勾绊并未呈现。",
+        "limitation_zh": "画面只保留下半身且运动模糊较重，接触瞬间边界不锐利；但重叠穿模与甩腿过程可辨识，且场景漂移本身已使修复目标失效。"
+       }
+      ],
+      "montage": "evidence/wan_05_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.5–1.5",
+        "problem": "两人冰鞋和腿相互穿透，红衣者被突然甩平",
+        "expected": "冰鞋应实体碰撞勾绊，两人都有相应的失衡反应",
+        "status": "not_fixed",
+        "visual_evidence_zh": "冰场与红蓝紧身衣保留，但0.83s蓝衣者抬起的冰鞋与红衣者冰鞋在接触区直接重叠融合、看不到实体碰撞阻挡，1.14s两只冰鞋仍相互叠压、红衣者后腿开始外甩，1.46s红衣者一腿向侧面大幅甩开、手接近冰面；原标注的'冰鞋和腿相互穿透、红衣者被突然甩平'在同一时间窗内重复出现，未见冰鞋被实体勾绊后弹开或停住的接触响应。",
+        "limitation_zh": "两人均有身体压低、后腿伸展等失衡倾向，比原片的突然甩平略连续，属轻微缓解；但所有冰刀都套着异常蓝色刀套、接触区被运动模糊覆盖，无法确认实体阻挡，核心穿模仍可见。"
+       }
+      ],
+      "montage": "evidence/wan_05_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "0.5–1.5",
+        "problem": "两人冰鞋和腿相互穿透，红衣者被突然甩平",
+        "expected": "冰鞋应实体碰撞勾绊，两人都有相应的失衡反应",
+        "status": "not_fixed",
+        "visual_evidence_zh": "与problem_only几乎同轨迹：0.83s蓝衣者冰鞋叠到红衣者冰鞋/小腿区域、边界互相穿过，1.14s两鞋仍重叠且红衣者后腿外伸，1.46s红衣者一腿侧甩、身体压低，穿模式接触和异常甩腿都保留，没有出现'冰鞋实体勾绊、两人相应失衡'的期望碰撞过程。",
+        "limitation_zh": "冰场、服装与人物身份保留，两人也有压低身体的失衡反应；但冰刀带蓝色刀套伪影、接触瞬间模糊，重叠穿模这一核心缺陷未消除，失衡反应更像原片甩动的延续而非勾绊所致。"
+       }
+      ],
+      "montage": "evidence/wan_05_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
@@ -429,7 +475,80 @@
    "item": 6,
    "id": "phyground::ltx-2.3-22b-dev-1stage::mechanics_402",
    "models": {
-    "wan22_vace_fun_a14b_q8_0": {},
+    "wan22_vace_fun_a14b_q8_0": {
+     "self_fixing": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.0–3.75",
+        "problem": "木桩受锤击后像橡胶般平滑弯曲并保持弯折",
+        "expected": "木桩应局部开裂碎裂，断板脱落下坠",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题0（木桩像橡胶般平滑弯曲并保持弯折，期望局部开裂碎裂、断板脱落下坠）：2.74s受击长板已整体向后倾斜，3.56s板体继续平滑弯折、表面无清晰裂缝，3.75s板体大幅弯成弧形且保持弯折不回弹，板面还出现网状糊化纹理；全程没有局部断裂面、没有断板分离或下坠，原片的橡胶式弯曲模式原样保留。同时背景变为纯黑、人物红帽变成浅蓝色头盔面罩，场景身份整体漂移。",
+        "limitation_zh": "末尾板边有少量碎屑感，但未见明确开裂断裂；场景漂移本身已使修复目标失效，判定不受影响。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "0-3",
+        "problem": "锤柄锤头持续扭曲变形",
+        "expected": "锤柄锤头应该保持一致，维持刚性",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1（锤柄锤头持续扭曲变形，期望保持一致、维持刚性）：0.51s挥锤蓄力时锤头已是一团浅蓝色模糊块、轮廓不像金属锤头；1.84s击中瞬间锤头变成皱布状蓝色软块，锤柄明显弯曲；3.75s锤头又变成浅色方块，锤头形状在块状/软块/方块之间反复变化，锤柄随挥击弯折，刚性一致性始终未建立。",
+        "limitation_zh": "无；各帧变形均清晰可辨，不属于单纯运动模糊。"
+       }
+      ],
+      "montage": "evidence/wan_06_self_fixing.jpg"
+     },
+     "problem_only": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.0–3.75",
+        "problem": "木桩受锤击后像橡胶般平滑弯曲并保持弯折",
+        "expected": "木桩应局部开裂碎裂，断板脱落下坠",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题0：2.74s长板受击后仍整体向后倾斜弯曲，3.56s、3.75s板体保持弯折状态、没有断板分离下坠，橡胶式整体弯曲这一主模式仍在；但相比原片，板面上出现了深色劈裂痕与破损点，3.56s起空中有飞溅碎屑，局部受损有所表现，只是没有发展成期望的局部碎裂和断板脱落。",
+        "limitation_zh": "碎屑与劈裂痕说明损伤比原片更明显，但板体始终连接、弯曲主导，期望的断裂下坠未出现，只能给部分修复。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "0-3",
+        "problem": "锤柄锤头持续扭曲变形",
+        "expected": "锤柄锤头应该保持一致，维持刚性",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1：0.51s蓄力时锤头形状尚正常，但每次击中接触区锤头就变形——1.53s锤头变成蓝色软块、锤柄弯曲，1.84s锤头变成楔形斧状（与锤头身份不符）且锤柄呈弧线，2.35s锤头再次糊成蓝块；同一把锤在块状/楔形/软块之间反复变形，标注要求的刚性一致未达到。",
+        "limitation_zh": "非接触帧（如0.51s）锤头比原片更像正常锤子，有轻微改善；但0–3s窗口内每次击锤都发生明显形变，核心缺陷仍重复出现。"
+       }
+      ],
+      "montage": "evidence/wan_06_problem_only.jpg"
+     },
+     "problem_expected": {
+      "video_status": "not_fixed",
+      "judgments": [
+       {
+        "issue_index": 0,
+        "timestamp": "1.0–3.75",
+        "problem": "木桩受锤击后像橡胶般平滑弯曲并保持弯折",
+        "expected": "木桩应局部开裂碎裂，断板脱落下坠",
+        "status": "partially_fixed",
+        "visual_evidence_zh": "标注问题0：2.74s板体仍整体向后弯折并保持倾斜，3.56s、3.75s未见断板脱落下坠，橡胶式整体弯曲仍主导；但局部破坏比problem_only更明显——板面出现多处深色破洞和劈裂，3.56s有一段断裂木片横向翘起、空中持续有碎屑飞散，局部开裂碎裂部分呈现，只是断裂板没有下坠脱离。",
+        "limitation_zh": "局部劈裂和翘起断片接近期望效果，但板体仍靠弯曲变形吸收冲击、无断板下坠，期望行为只完成一半。"
+       },
+       {
+        "issue_index": 1,
+        "timestamp": "0-3",
+        "problem": "锤柄锤头持续扭曲变形",
+        "expected": "锤柄锤头应该保持一致，维持刚性",
+        "status": "not_fixed",
+        "visual_evidence_zh": "标注问题1：与problem_only同型，0.51s蓄力帧锤头正常，但1.53s击中时锤头糊成蓝色软块、锤柄弯转，1.84s锤头变成楔形斧状、锤柄弧线弯曲，2.35s锤头再次呈不规则蓝块；锤头身份在块状/楔形/软块间反复切换，0–3s窗口内每次击锤都伴随形变，刚性一致的期望未实现。",
+        "limitation_zh": "非接触帧锤头保持正常、比原片有改善；接触瞬间的重复形变无法用运动模糊完全解释，核心扭曲缺陷仍在。"
+       }
+      ],
+      "montage": "evidence/wan_06_problem_expected.jpg"
+     }
+    },
     "minimax_h3_base_ref2va_bf16_fastvideo": {}
    }
   },
